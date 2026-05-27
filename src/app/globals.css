@@ -1,26 +1,277 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* ============================================
+       CREATIKAI DESIGN SYSTEM — CSS VARIABLES
+       ============================================ */
+
+    /* Brand Colors */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-dark: #1e40af;
+
+    /* Accent Colors */
+    --color-purple: #9333ea;
+    --color-cyan: #0891b2;
+    --color-emerald: #10b981;
+    --color-amber: #f59e0b;
+
+    /* Background Colors */
+    --color-bg: #ffffff;
+    --color-bg-hover: #f8fafc;
+    --color-nav-bg: #ffffff;
+    --color-nav-bg-scroll: rgba(255, 255, 255, 0.95);
+    --color-section-alt: #f8fafc;
+    --color-section-alt-2: #f1f5f980;
+    --color-card-bg: #ffffff;
+
+    /* Text Colors */
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748b;
+    --color-text-faint: #94a3b8;
+
+    /* Border Colors */
+    --color-border: #e2e8f0;
+    --color-border-light: #f1f5f9;
+    --color-border-hover: #dbeafe;
+
+    /* Badge Colors */
+    --color-badge-bg: #eff6ff;
+    --color-badge-border: #dbeafe;
+    --color-badge-text: #1d4ed8;
+
+    /* Tag Colors */
+    --color-tag-bestseller: #f59e0b;
+    --color-tag-popular: #3b82f6;
+    --color-tag-new: #10b981;
+
+    /* Icon Backgrounds */
+    --color-icon-bg-1: #eff6ff;
+    --color-icon-bg-2: #faf5ff;
+    --color-icon-bg-3: #ecfeff;
+    --color-icon-bg-4: #ecfdf5;
+
+    /* Robot / Hero Glow */
+    --color-robot-bg: #eff6ff;
+    --color-robot-border: #dbeafe;
+    --color-glow: #dbeafe;
+    --color-glow-strong: #bfdbfe;
+     /* Bubble Background */
+  --color-bubble-bg: #dbeafe;
+    /* Course Gradients */
+    --gradient-course-1: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --gradient-course-2: linear-gradient(135deg, #581c87 0%, #312e81 100%);
+    --gradient-course-3: linear-gradient(135deg, #164e63 0%, #134e4a 100%);
+    --gradient-course-4: linear-gradient(135deg, #064e3b 0%, #14532d 100%);
+
+    /* Course Icon Colors */
+    --color-course-icon-1: #60a5fa;
+    --color-course-icon-2: #c084fc;
+    --color-course-icon-3: #22d3ee;
+    --color-course-icon-4: #34d399;
+
+    /* Star / Gold */
+    --color-star: #fbbf24;
+    --color-gold: #f59e0b;
+    --color-gold-bg: #fffbeb;
+    --color-gold-border: #fcd34d;
+
+    /* Avatar */
+    --color-avatar-bg: #e2e8f0;
+
+    /* Microsoft Logo Colors */
+    --color-ms-red: #f25022;
+    --color-ms-green: #7fba00;
+    --color-ms-blue: #00a4ef;
+    --color-ms-yellow: #ffb900;
+
+    /* NVIDIA */
+    --color-nvidia: #76b900;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-nav: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-btn-primary: 0 4px 6px -1px rgb(37 99 235 / 0.2), 0 2px 4px -2px rgb(37 99 235 / 0.2);
+    --shadow-btn-primary-hover: 0 10px 15px -3px rgb(37 99 235 / 0.3), 0 4px 6px -4px rgb(37 99 235 / 0.3);
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+
+    /* Layout */
+    --container-max: 1280px;
+    --container-padding: 1rem;
+    --nav-height: 4rem;
+    --nav-height-lg: 5rem;
+    --hero-pt: 7rem;
+    --hero-pb: 4rem;
+    --section-py: 5rem;
+    --section-title-size: clamp(1.75rem, 4vw, 2.25rem);
+    --hero-title-size: clamp(2.5rem, 6vw, 3.75rem);
+
+    /* Typography */
+    --font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+    /* Effects */
+    --blur-nav: blur(12px);
+    --filter-logo: grayscale(100%);
+    --opacity-logo: 0.6;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-family);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 50%, var(--color-primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  /* about-us page bubble floating */
+   @keyframes bubble-float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(30px, -40px) scale(1.05);
+    }
+    50% {
+      transform: translate(-20px, -60px) scale(0.95);
+    }
+    75% {
+      transform: translate(40px, -20px) scale(1.02);
+    }
+  }
+
+  .animate-bubble-float {
+    animation: bubble-float linear infinite;
+  }
+
+  /* Bounce for scroll indicator */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 2s ease-in-out infinite;
+  }
+  /* Floating Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes float-slower {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 4s ease-in-out infinite;
+  }
+
+  .animate-float-slower {
+    animation: float-slower 5s ease-in-out infinite;
+  }
+}
+
+/* Responsive Container Padding */
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 1.5rem;
+    --hero-pt: 8rem;
+    --hero-pb: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+    --hero-pt: 9rem;
+    --hero-pb: 6rem;
+    --section-py: 7rem;
+  }
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-border-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-faint);
+}
+
+/* for why choose section (home) */
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-10px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-30px) translateX(15px); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(15px) translateX(-20px); }
+  66% { transform: translateY(-25px) translateX(10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 12s ease-in-out infinite;
 }
