@@ -713,13 +713,13 @@ export default function AITrainingPage(): JSX.Element {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg)] font-[var(--font-family)]">
+    <div className="min-h-screen  bg-[var(--color-bg)] font-[var(--font-family)]">
       <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} />
 
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="relative min-h-[92vh] pt-32 flex items-center overflow-hidden">
+      <section className="relative min-h-[92vh]  pt-32 flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0" style={{ backgroundColor: "var(--color-section-alt)" }} />
         <div className="absolute inset-0">
@@ -923,128 +923,177 @@ export default function AITrainingPage(): JSX.Element {
       {/* ============================================
           WHY CHOOSE US — Image Left, Content Right
           ============================================ */}
-      <section
-        className="py-[var(--section-py)]"
-        style={{ backgroundColor: "var(--color-section-alt)" }}
-      >
-        <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left: Robot + Visual */}
-            <Reveal>
-              <div className="relative flex justify-center">
-                <div
-                  className="absolute -inset-8 rounded-full blur-3xl opacity-30"
-                  style={{ backgroundColor: "var(--color-glow)" }}
-                />
-                <div className="relative">
-                  <RobotVisual size="small" />
-                  {/* Floating cards around robot */}
-                  <div className="absolute -top-4 -left-8 animate-float-slow">
-                    <div
-                      className="p-3 rounded-xl border flex items-center gap-2"
-                      style={{
-                        backgroundColor: "var(--color-card-bg)",
-                        borderColor: "var(--color-border-light)",
-                        boxShadow: "var(--shadow-card)",
-                      }}
-                    >
-                      <BookOpen className="w-4 h-4" style={{ color: "var(--color-primary)" }} />
-                      <span className="text-xs font-semibold" style={{ color: "var(--color-text-primary)" }}>Live Labs</span>
-                    </div>
-                  </div>
-                  <div className="absolute top-8 -right-10 animate-float">
-                    <div
-                      className="p-3 rounded-xl border flex items-center gap-2"
-                      style={{
-                        backgroundColor: "var(--color-card-bg)",
-                        borderColor: "var(--color-border-light)",
-                        boxShadow: "var(--shadow-card)",
-                      }}
-                    >
-                      <Award className="w-4 h-4" style={{ color: "var(--color-emerald)" }} />
-                      <span className="text-xs font-semibold" style={{ color: "var(--color-text-primary)" }}>Certified</span>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-2 left-0 animate-float-slower">
-                    <div
-                      className="p-3 rounded-xl border flex items-center gap-2"
-                      style={{
-                        backgroundColor: "var(--color-card-bg)",
-                        borderColor: "var(--color-border-light)",
-                        boxShadow: "var(--shadow-card)",
-                      }}
-                    >
-                      <Users className="w-4 h-4" style={{ color: "var(--color-purple)" }} />
-                      <span className="text-xs font-semibold" style={{ color: "var(--color-text-primary)" }}>Mentorship</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
+   <section
+  className="py-[var(--section-py)] overflow-hidden"
+  style={{ backgroundColor: "var(--color-section-alt)" }}
+>
+  <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* Left: Robot + Visual */}
+      <Reveal>
+        <div className="relative flex justify-center">
+          <div
+            className="absolute -inset-4 sm:-inset-8 rounded-full blur-3xl opacity-30"
+            style={{ backgroundColor: "var(--color-glow)" }}
+          />
 
-            {/* Right: Content */}
-            <Reveal delay={200}>
-              <div>
+          <div className="relative w-full max-w-[280px] sm:max-w-[380px] md:max-w-[450px]">
+            <RobotVisual size="small" />
+
+            {/* Floating cards around robot */}
+
+            <div className="absolute top-2 left-0 sm:-top-4 sm:-left-8 animate-float-slow">
+              <div
+                className="p-2 sm:p-3 rounded-xl border flex items-center gap-2"
+                style={{
+                  backgroundColor: "var(--color-card-bg)",
+                  borderColor: "var(--color-border-light)",
+                  boxShadow: "var(--shadow-card)",
+                }}
+              >
+                <BookOpen
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                  style={{ color: "var(--color-primary)" }}
+                />
                 <span
-                  className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4"
-                  style={{ backgroundColor: "var(--color-badge-bg)", color: "var(--color-badge-text)" }}
-                >
-                  Why CreatiKai Training
-                </span>
-                <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-[10px] sm:text-xs font-semibold"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  Not Just Courses — A Complete Career Launchpad
-                </h2>
-                <p
-                  className="text-base leading-relaxed mb-8"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  We go beyond traditional online learning. Our programs combine rigorous technical training with career coaching, portfolio building, and direct industry connections.
-                </p>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {whyChoose.map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-3 p-4 rounded-xl border transition-all duration-300 hover:-translate-y-1"
-                      style={{
-                        borderColor: "var(--color-border-light)",
-                        backgroundColor: "var(--color-card-bg)",
-                        boxShadow: "var(--shadow-sm)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = "var(--color-border-hover)";
-                        e.currentTarget.style.boxShadow = "var(--shadow-md)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = "var(--color-border-light)";
-                        e.currentTarget.style.boxShadow = "var(--shadow-sm)";
-                      }}
-                    >
-                      <div
-                        className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                        style={{ backgroundColor: "var(--color-icon-bg-1)", color: "var(--color-primary)" }}
-                      >
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-bold mb-0.5" style={{ color: "var(--color-text-primary)" }}>
-                          {item.title}
-                        </h4>
-                        <p className="text-xs leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                  Live Labs
+                </span>
               </div>
-            </Reveal>
+            </div>
+
+            <div className="absolute top-6 right-0 sm:top-8 sm:-right-10 animate-float">
+              <div
+                className="p-2 sm:p-3 rounded-xl border flex items-center gap-2"
+                style={{
+                  backgroundColor: "var(--color-card-bg)",
+                  borderColor: "var(--color-border-light)",
+                  boxShadow: "var(--shadow-card)",
+                }}
+              >
+                <Award
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                  style={{ color: "var(--color-emerald)" }}
+                />
+                <span
+                  className="text-[10px] sm:text-xs font-semibold"
+                  style={{ color: "var(--color-text-primary)" }}
+                >
+                  Certified
+                </span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-2 left-2 sm:-bottom-2 sm:left-0 animate-float-slower">
+              <div
+                className="p-2 sm:p-3 rounded-xl border flex items-center gap-2"
+                style={{
+                  backgroundColor: "var(--color-card-bg)",
+                  borderColor: "var(--color-border-light)",
+                  boxShadow: "var(--shadow-card)",
+                }}
+              >
+                <Users
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                  style={{ color: "var(--color-purple)" }}
+                />
+                <span
+                  className="text-[10px] sm:text-xs font-semibold"
+                  style={{ color: "var(--color-text-primary)" }}
+                >
+                  Mentorship
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </Reveal>
+
+      {/* Right: Content */}
+      <Reveal delay={200}>
+        <div>
+          <span
+            className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4"
+            style={{
+              backgroundColor: "var(--color-badge-bg)",
+              color: "var(--color-badge-text)",
+            }}
+          >
+            Why CreatiKai Training
+          </span>
+
+          <h2
+            className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+            style={{ color: "var(--color-text-primary)" }}
+          >
+            Not Just Courses — A Complete Career Launchpad
+          </h2>
+
+          <p
+            className="text-base leading-relaxed mb-8"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            We go beyond traditional online learning. Our programs combine
+            rigorous technical training with career coaching, portfolio
+            building, and direct industry connections.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {whyChoose.map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-3 p-4 rounded-xl border transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  borderColor: "var(--color-border-light)",
+                  backgroundColor: "var(--color-card-bg)",
+                  boxShadow: "var(--shadow-sm)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor =
+                    "var(--color-border-hover)";
+                  e.currentTarget.style.boxShadow = "var(--shadow-md)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor =
+                    "var(--color-border-light)";
+                  e.currentTarget.style.boxShadow = "var(--shadow-sm)";
+                }}
+              >
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                  style={{
+                    backgroundColor: "var(--color-icon-bg-1)",
+                    color: "var(--color-primary)",
+                  }}
+                >
+                  {item.icon}
+                </div>
+
+                <div>
+                  <h4
+                    className="text-sm font-bold mb-0.5"
+                    style={{ color: "var(--color-text-primary)" }}
+                  >
+                    {item.title}
+                  </h4>
+
+                  <p
+                    className="text-xs leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
       {/* ============================================
           CURRICULUM TIMELINE

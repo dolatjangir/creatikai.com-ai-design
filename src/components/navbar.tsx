@@ -17,7 +17,7 @@ interface SubmenuCategory {
   items: { label: string; href: string }[];
 }
 
-// ── Submenu Data (FIXED: removed duplicates, empty titles, wrong labels) ─
+
 const submenuProducts: SubmenuCategory[] = [
   {
     title: "AI Agents",
@@ -45,9 +45,9 @@ const submenuService: SubmenuCategory[] = [
   {
     title: "AI Studio",
     items: [
-      { label: "Business Enhance", href: "/services/ai-automation/business-enhance" },
-      { label: "Video Creation", href: "/services/ai-automation/video-creation" },
-      { label: "Content Creation", href: "/services/ai-automation/content-creation" },
+      { label: "Business Enhance", href: "/services/ai-studio/bussiness-enhance" },
+      { label: "Video Creation", href: "/services/ai-studio/video-creation" },
+      { label: "Content Creation", href: "/services/ai-studio/content-creation" },
     ],
   },
   {
@@ -56,6 +56,14 @@ const submenuService: SubmenuCategory[] = [
       { label: "Business Automation", href: "/services/ai-automation/business-automation" },
       { label: "Lead Automation", href: "/services/ai-automation/lead-automation" },
       { label: "Workflow Automation", href: "/services/ai-automation/workflow-automation" },
+    ],
+  },
+    {
+    title: "Ai Tools Consulting",
+    items: [
+      { label: "AI Chatbot", href: "/services/ai-tools-consulting/ai-chatbot" },
+      { label: "Ai Personal Assistent", href: "/services/ai-tools-consulting/ai-personal-assistent" },
+      { label: "Ai Tools Course", href: "/services/ai-tools-consulting/ai-tools-course" },
     ],
   },
 ];
@@ -123,19 +131,13 @@ function getSubmenuLayout(categories: SubmenuCategory[]) {
   const categoryCount = categories.length;
   const maxItemsInCategory = Math.max(...categories.map((c) => c.items.length));
 
-  // Determine columns: 1 for small, 2 for medium, 3 for large
-  let cols = 1;
-  if (categoryCount >= 3 || totalItems >= 10) {
-    cols = 3;
-  } else if (categoryCount === 2 || totalItems >= 6) {
-    cols = 2;
-  }
+  const cols = categoryCount;
 
   // Determine width based on content density
   let widthClass = "min-w-[280px] max-w-[320px]";
   if (cols === 2) {
     widthClass = "min-w-[440px] max-w-[560px]";
-  } else if (cols === 3) {
+  } else if (cols >= 3) {
     widthClass = "min-w-[640px] max-w-[780px]";
   }
 
@@ -298,7 +300,7 @@ export default function Navbar() {
         {/* Left Side: Brand Logo */}
         <div className="flex items-center gap-2.5 group cursor-pointer select-none">
           <div className="relative flex items-center justify-center">
-            <img width={40} src="/creatikai-logo.png" alt="Creatik AI Logo" />
+           <Link href="/"> <img width={40} src="/creatikai-logo.png" alt="Creatik AI Logo" /></Link>
             <Sparkles className="w-3 h-3 text-indigo-400 absolute -top-1 -right-1 opacity-80" />
           </div>
           <span className="font-bold text-lg md:text-xl tracking-tight text-slate-900 dark:text-white">
@@ -387,8 +389,9 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="absolute top-24 left-4 right-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl shadow-xl p-5 md:hidden flex flex-col gap-4 animate-in fade-in slide-in-from-top-5 duration-200 z-40 max-h-[80vh] overflow-y-auto">
-          <div className="flex flex-col gap-1">
+       <div className="absolute top-24 left-4 right-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl shadow-xl md:hidden flex flex-col z-40 overflow-hidden"
+  style={{ maxHeight: "80vh", animation: "mobileMenuDown 0.35s cubic-bezier(0.4,0,0.2,1) forwards" }}>
+         <div className="flex flex-col gap-1 overflow-y-auto px-5 pt-5 pb-2">
             {navItems.map((item) => {
               const isActive = activeTab === item.label;
               const hasSubmenu = !!item.submenu;
@@ -454,14 +457,14 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="h-[1px] bg-slate-100 dark:bg-slate-800 my-1" />
-
-          {/* Mobile CTA - FIXED: "Register" instead of "Do" */}
+           {/* Sticky Register Button */}
+        <div className="sticky bottom-0 left-0 right-0 bg-white dark:bg-slate-900 pt-3 pb-5 px-5 border-t border-slate-100 dark:border-slate-800">
           <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/10 active:scale-95 transition-transform">
             <span>Register</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
+      </div>
       )}
     </header>
   );

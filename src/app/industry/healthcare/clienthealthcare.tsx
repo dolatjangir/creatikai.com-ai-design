@@ -426,7 +426,7 @@ const faqs = [
 /* ─── Hero Section ─── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[92vh] flex items-center">
+    <section className="relative overflow-hidden pt-32 min-h-[92vh] flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[#0f172a]">
         {/* Large Gradient Orbs */}

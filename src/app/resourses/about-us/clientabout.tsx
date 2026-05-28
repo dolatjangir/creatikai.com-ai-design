@@ -81,46 +81,6 @@ const AnimatedCounter = ({
 };
 
 // ============================================
-// BUBBLE BACKGROUND COMPONENT
-// ============================================
-// const BubbleBackground = () => {
-//   const bubbles = [
-//     { size: 300, x: 10, y: 20, delay: 0, duration: 20 },
-//     { size: 200, x: 75, y: 60, delay: 2, duration: 25 },
-//     { size: 150, x: 85, y: 15, delay: 4, duration: 18 },
-//     { size: 250, x: 40, y: 80, delay: 1, duration: 22 },
-//     { size: 180, x: 60, y: 30, delay: 3, duration: 28 },
-//     { size: 120, x: 20, y: 70, delay: 5, duration: 15 },
-//     { size: 220, x: 90, y: 75, delay: 2, duration: 24 },
-//     { size: 160, x: 5, y: 45, delay: 6, duration: 19 },
-//     { size: 280, x: 55, y: 10, delay: 1, duration: 26 },
-//     { size: 140, x: 30, y: 55, delay: 4, duration: 21 },
-//   ];
-
-//   return (
-//     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-//       {bubbles.map((bubble, i) => (
-//         <div
-//           key={i}
-//           className="absolute rounded-full animate-bubble-float"
-//           style={{
-//             width: bubble.size,
-//             height: bubble.size,
-//             left: `${bubble.x}%`,
-//             top: `${bubble.y}%`,
-//             background: "var(--color-bubble-bg)",
-//             animationDelay: `${bubble.delay}s`,
-//             animationDuration: `${bubble.duration}s`,
-//             filter: "blur(60px)",
-//             opacity: 0.5,
-//           }}
-//         />
-//       ))}
-//     </div>
-//   );
-// };
-
-// ============================================
 // SECTION WRAPPER WITH REVEAL ANIMATION
 // ============================================
 const RevealSection = ({
@@ -555,14 +515,14 @@ export default function AboutPage(): JSX.Element {
                 </div>
                 {/* Floating badge */}
                 <div
-                  className="absolute -bottom-6 -right-6 lg:right-8 p-4 rounded-xl border"
+                  className="absolute bottom-4 right-4 md:-bottom-6 md:-right-6 lg:right-8 p-4 rounded-xl border"
                   style={{
                     backgroundColor: "var(--color-card-bg)",
                     borderColor: "var(--color-border-light)",
                     boxShadow: "var(--shadow-lg)",
                   }}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="hidden sm:flex items-center gap-3">
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center"
                       style={{ backgroundColor: "var(--color-icon-bg-1)" }}
@@ -728,14 +688,14 @@ export default function AboutPage(): JSX.Element {
                 </div>
                 {/* Floating stat */}
                 <div
-                  className="absolute -bottom-6 -left-6 lg:left-8 p-4 rounded-xl border"
+                  className="absolute bottom-4 left-4 md:-bottom-6 md:-left-6 lg:left-8 p-4 rounded-xl border"
                   style={{
                     backgroundColor: "var(--color-card-bg)",
                     borderColor: "var(--color-border-light)",
                     boxShadow: "var(--shadow-lg)",
                   }}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="hidden sm:flex items-center gap-3">
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center"
                       style={{ backgroundColor: "var(--color-icon-bg-3)" }}
@@ -1004,7 +964,7 @@ export default function AboutPage(): JSX.Element {
                 </div>
                 {/* Floating badge */}
                 <div
-                  className="absolute -bottom-6 -right-6 lg:right-8 p-4 rounded-xl border"
+                  className="absolute bottom-4 right-4 md:-bottom-6 md:-right-6 lg:right-8 p-4 rounded-xl border"
                   style={{
                     backgroundColor: "var(--color-card-bg)",
                     borderColor: "var(--color-border-light)",

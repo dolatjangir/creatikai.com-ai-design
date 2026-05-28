@@ -414,7 +414,7 @@ const faqs = [
 /* ─── Hero Section ─── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[92vh] flex items-center">
+    <section className="relative overflow-hidden pt-32 min-h-[92vh] flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[#0f172a]">
         <div className="hero-glow-1 absolute top-[5%] left-[0%] w-[600px] h-[600px] rounded-full opacity-[0.18] blur-[140px] bg-[#2563eb]" />

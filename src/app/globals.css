@@ -275,3 +275,16 @@
 .animate-float-slower {
   animation: float-slower 12s ease-in-out infinite;
 }
+
+
+/* for humburger */
+@keyframes mobileMenuDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

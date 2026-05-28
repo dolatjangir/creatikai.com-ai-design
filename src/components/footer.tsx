@@ -15,7 +15,7 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
-    <footer className="relative w-[95%] mx-8 bg-[var(--color-section-alt-2)] rounded-t-lg text-[var(--color-text-secondary)] font-sans overflow-hidden py-16 px-6 md:px-12 lg:px-24">
+    <footer className="relative w-[95%] mx-auto bg-[var(--color-section-alt-2)] rounded-t-lg text-[var(--color-text-secondary)] font-sans overflow-hidden py-16 px-6 md:px-12 lg:px-24">
 
       {/* Dynamic Background Abstract Lines & Glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -225,10 +225,6 @@ export default function Footer() {
             <span>© 2025 Creatik AI. All rights reserved.</span>
             <span>Made with <span className="text-[var(--color-purple)]">❤️</span> by Creatik AI Team</span>
           </div>
-
-        
-
-        
 
           {/* Right Selectors */}
           <div className="flex items-center space-x-3">

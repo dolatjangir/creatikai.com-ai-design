@@ -385,7 +385,7 @@ function ParticleField() {
 /* ─── Hero Section ─── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[120vh] pt-10 flex items-center">
+    <section className="relative overflow-hidden min-h-[120vh] pt-32 flex items-center">
       {/* Multi-layer Animated Background */}
       <div className="absolute inset-0">
         {/* Base Gradient */}
