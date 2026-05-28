@@ -14,7 +14,7 @@ interface NavItem {
 
 interface SubmenuCategory {
   title: string;
-  items: { label: string; href: string }[];
+  items: { label: string; href: string; icon?:string }[];
 }
 
 
@@ -22,21 +22,21 @@ const submenuProducts: SubmenuCategory[] = [
   {
     title: "AI Agents",
     items: [
-      { label: "Calling Agent", href: "/products/calling-agent" },
-      { label: "Content Creation Agent", href: "/products/content-creation-agent" },
-      { label: "SEO Content Agent", href: "/products/seo-content-agent" },
-      { label: "Follow Up Agent", href: "/products/follow-up-agent" },
-      { label: "Data Mining Agent", href: "/products/data-mining-agent" },
+      { label: "Calling Agent", href: "/products/calling-agent",icon:"/img-1.png" },
+      { label: "Content Creation Agent", href: "/products/content-creation-agent",icon:"/img-2.png" },
+      { label: "SEO Content Agent", href: "/products/seo-content-agent",icon:"/img-3.png" },
+      { label: "Follow Up Agent", href: "/products/follow-up-agent",icon:"/img-4.png" },
+      { label: "Data Mining Agent", href: "/products/data-mining-agent",icon:"/img-555.png" },
     ],
   },
   {
     title: "Automation",
     items: [
-      { label: "Campaign Automation", href: "/products/campaign-automation" },
-      { label: "Lead Capture Agent", href: "/products/lead-capture-agent" },
-      { label: "Lead Qualification Agent", href: "/products/lead-qualification-agent" },
-      { label: "Property Matching Agent", href: "/products/property-matching-agent" },
-      { label: "Social Media Agent", href: "/products/social-media-agent" },
+      { label: "Campaign Automation", href: "/products/campaign-automation",icon:"/img-6.png" },
+      { label: "Lead Capture Agent", href: "/products/lead-capture-agent",icon:"/img-7.png" },
+      { label: "Lead Qualification Agent", href: "/products/lead-qualification-agent",icon:"/img-8.png" },
+      { label: "Property Matching Agent", href: "/products/property-matching-agent",icon:"/img-9.png" },
+      { label: "Social Media Agent", href: "/products/social-media-agent",icon:"/img-10.png" },
     ],
   },
 ];
@@ -134,12 +134,7 @@ function getSubmenuLayout(categories: SubmenuCategory[]) {
   const cols = categoryCount;
 
   // Determine width based on content density
-  let widthClass = "min-w-[280px] max-w-[320px]";
-  if (cols === 2) {
-    widthClass = "min-w-[440px] max-w-[560px]";
-  } else if (cols >= 3) {
-    widthClass = "min-w-[640px] max-w-[780px]";
-  }
+  let widthClass ="w-max"
 
   // Determine gap based on density
   const gapClass = maxItemsInCategory > 5 ? "gap-x-8 gap-y-5" : "gap-x-6 gap-y-4";
@@ -182,7 +177,7 @@ function MegaMenu({
         <div
           className={`grid ${gapClass}`}
           style={{
-            gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+        gridTemplateColumns: `repeat(${cols}, max-content)`,
           }}
         >
           {categories.map((category, catIndex) => (
@@ -207,7 +202,13 @@ function MegaMenu({
                   >
                     {/* Hover indicator line */}
                     <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-0 rounded-full bg-blue-500 group-hover/item:h-5 transition-all duration-300" />
-                    
+                     {subItem.icon && (
+      <img
+        src={subItem.icon}
+        alt={subItem.label}
+        className="w-14 h-14 rounded-lg object-contain flex-shrink-0 border border-slate-100 dark:border-slate-700 shadow-sm"
+      />
+    )}
                     <span className="relative z-10">{subItem.label}</span>
                     
                     {/* Arrow on hover */}
