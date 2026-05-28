@@ -214,7 +214,7 @@ export default function ContactUsPage() {
     {
       icon: <Mail className="w-5 h-5 text-[var(--color-primary)]" />,
       title: "Email Us",
-      value: "hello@creatikai.com",
+      value: "sharan@creatik.com",
       subtext: "We reply within 2 hours",
       color: "bg-[var(--color-icon-bg-1)]",
     },
@@ -228,8 +228,8 @@ export default function ContactUsPage() {
     {
       icon: <MapPin className="w-5 h-5 text-[var(--color-cyan)]" />,
       title: "Visit Us",
-      value: "San Francisco, CA",
-      subtext: "123 Innovation Drive",
+      value: "30A,sultan nagar,gurjar ki thadi,jaipur-302019",
+      subtext: "168 Innovation Drive",
       color: "bg-[var(--color-icon-bg-3)]",
     },
     {

@@ -378,29 +378,21 @@ export default function HomePage(): JSX.Element {
         <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
           <p
             className="text-center text-[11px] font-bold tracking-widest uppercase mb-6"
-            style={{ color: "var(--color-text-faint)" }}
+            style={{ color: "var(--color-primary-dark)" }}
           >
             Trusted by innovative companies worldwide
           </p>
           <div
             className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-16 transition-all duration-500"
-            style={{ opacity: "var(--opacity-logo)", filter: "var(--filter-logo)" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.filter = "none";
-              e.currentTarget.style.opacity = "1";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.filter = "var(--filter-logo)";
-              e.currentTarget.style.opacity = "var(--opacity-logo)";
-            }}
+          
           >
-            {["/jaipur-rental.jfif", "/jaipur-plots.png", "/makemylead-logo.png", "/estateai.png", "ibigdata.in"].map((brand,index) => (
+            {["/jaipur-rental.png", "/jaipur-plots.png", "/makemylead-logo.png", "/estateai.png", "ibigdata.in"].map((brand,index) => (
               <span
                 key={index}
                 className="text-lg lg:text-xl font-bold  tracking-tight"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                {brand === "/jaipur-rental.jfif" && (
+                {brand === "/jaipur-rental.png" && (
                   <span className="flex items-center gap-1">
                   
                     <img className="w-48" src={brand}  alt="jaipurrental-logo"/>

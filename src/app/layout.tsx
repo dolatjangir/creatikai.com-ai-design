@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+
+import LayoutWrapper from "@/components/layoutwrapper/layoutwrapper";
 
 
 export const metadata: Metadata = {
@@ -21,9 +21,9 @@ export default function RootLayout({
       className={` h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/>
+    <LayoutWrapper>
         {children}
-        <Footer/>
+</LayoutWrapper>
         </body>
     </html>
   );

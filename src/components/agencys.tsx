@@ -55,7 +55,8 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
                 <Image
                   src="/laptop.png"
                   alt="Laptop"
-                  fill
+                 width={500}
+                 height={500}
                   priority
                   className="object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.18)]"
                 />

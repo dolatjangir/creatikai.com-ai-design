@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import Link from "next/link";
 import { 
   Disc, 
   ArrowRight, 
@@ -13,9 +15,69 @@ import {
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa6';
 
+// ── Types ───────────────────────────────────────────────────────────────
+interface SubmenuItem {
+  label: string;
+  href: string;
+}
+
+interface SubmenuCategory {
+  title: string;
+  items: SubmenuItem[];
+}
+
+// ── Navigation Data ─────────────────────────────────────────────────────
+const submenuService: SubmenuCategory[] = [
+  {
+    title: "",
+    items: [
+      { label: "Business Enhance", href: "/services/ai-studio/bussiness-enhance" },
+      { label: "Video Creation", href: "/services/ai-studio/video-creation" },
+      { label: "Content Creation", href: "/services/ai-studio/content-creation" },
+    ],
+  },
+  
+];
+
+const submenuTraining: SubmenuCategory[] = [
+  {
+    title: "",
+    items: [
+      { label: "AI Training", href: "/training/ai-courses/ai-training" },
+      { label: "Machine Learning Training", href: "/training/ai-courses/ai-machine-learning" },
+      { label: "Fullstack Training", href: "/training/ai-courses/fullstack-web-development" },
+    ],
+  },
+ 
+];
+
+const submenuIndustry: SubmenuCategory[] = [
+  {
+    title: "",
+    items: [
+      { label: "Education", href: "/industry/education" },
+      { label: "Real Estate", href: "/industry/real-estate" },
+      { label: "Healthcare", href: "/industry/healthcare" },
+    ],
+  },
+
+];
+
+const submenuResources: SubmenuCategory[] = [
+  {
+    title: "",
+    items: [
+      { label: "About Us", href: "/resourses/about-us" },
+      { label: "Contact Us", href: "/resourses/contact-us" },
+      { label: "Why Choose Us", href: "/resourses/why-choose-us" },
+    ],
+  },
+
+];
+
 export default function Footer() {
   return (
-    <footer className="relative w-[95%] mx-auto bg-[var(--color-section-alt-2)] rounded-t-lg text-[var(--color-text-secondary)] font-sans overflow-hidden py-16 px-6 md:px-12 lg:px-24">
+    <footer className="relative w-[95%] mx-auto bg-[var(--color-section-alt-2)] shadow-2xl shadow-purple-500/30 border border-[var(--color-border)] rounded-t-lg text-[var(--color-text-secondary)] font-sans overflow-hidden py-16 px-6 md:px-12 lg:px-24">
 
       {/* Dynamic Background Abstract Lines & Glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -37,8 +99,8 @@ export default function Footer() {
           {/* Brand Column (4/12 width) */}
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-purple)] shadow-md shadow-[var(--color-primary)]/30">
-                <span className="text-white font-black text-xl italic">C</span>
+              <div className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-purple)] shadow-md shadow-[var(--color-primary)]/30">
+               <img src="/creatikai-logo.png"/>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full flex items-center justify-center text-[8px] text-[var(--color-purple)]">✦</div>
               </div>
               <span className="text-xl font-bold text-[var(--color-text-primary)] tracking-tight">Creatik <span className="text-[var(--color-primary)]">AI</span></span>
@@ -77,54 +139,63 @@ export default function Footer() {
           {/* Links Columns (5/12 width total) */}
           <div className="lg:col-span-5 grid grid-cols-2 sm:grid-cols-4 gap-8">
 
-            {/* Product */}
+            {/* Services */}
             <div className="flex flex-col space-y-4">
-              <span className="text-xs font-bold text-[var(--color-purple)] tracking-wider uppercase border-b-2 border-[var(--color-purple)] w-max pb-1">Product</span>
+              <span className="text-xs font-bold text-[var(--color-purple)] tracking-wider uppercase border-b-2 border-[var(--color-purple)] w-max pb-1">Services</span>
               <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Tasks</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Scan</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Payments</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Changelog</a></li>
+                {submenuService.flatMap((category) => [
+                  <li key={`cat-${category.title}`} className="text-[11px] font-bold text-[var(--color-text-primary)] uppercase tracking-wider pt-2">{category.title}</li>,
+                  ...category.items.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="hover:text-[var(--color-text-primary)] transition-colors">{item.label}</Link>
+                    </li>
+                  ))
+                ])}
               </ul>
             </div>
 
-            {/* Resources */}
+            {/* Training */}
             <div className="flex flex-col space-y-4">
-              <span className="text-xs font-bold text-[var(--color-primary-dark)] tracking-wider uppercase border-b-2 border-[var(--color-primary-dark)] w-max pb-1">Resources</span>
+              <span className="text-xs font-bold text-[var(--color-primary-dark)] tracking-wider uppercase border-b-2 border-[var(--color-primary-dark)] w-max pb-1">Training</span>
               <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Docs</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Guides</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">API Reference</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Community</a></li>
+                {submenuTraining.flatMap((category) => [
+                  <li key={`cat-${category.title}`} className="text-[11px] font-bold text-[var(--color-text-primary)] uppercase tracking-wider pt-2">{category.title}</li>,
+                  ...category.items.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="hover:text-[var(--color-text-primary)] transition-colors">{item.label}</Link>
+                    </li>
+                  ))
+                ])}
+              </ul>
+            </div>
+
+            {/* Industries */}
+            <div className="flex flex-col space-y-4">
+              <span className="text-xs font-bold text-[var(--color-primary-dark)] tracking-wider uppercase border-b-2 border-[var(--color-primary-dark)] w-max pb-1">Industries</span>
+              <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
+                {submenuIndustry.flatMap((category) => [
+                  <li key={`cat-${category.title}`} className="text-[11px] font-bold text-[var(--color-text-primary)] uppercase tracking-wider pt-2">{category.title}</li>,
+                  ...category.items.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="hover:text-[var(--color-text-primary)] transition-colors">{item.label}</Link>
+                    </li>
+                  ))
+                ])}
               </ul>
             </div>
 
             {/* Company */}
             <div className="flex flex-col space-y-4">
-              <span className="text-xs font-bold text-[var(--color-primary-dark)] tracking-wider uppercase border-b-2 border-[var(--color-primary-dark)] w-max pb-1">Company</span>
+              <span className="text-xs font-bold text-[var(--color-purple)] tracking-wider uppercase border-b-2 border-[var(--color-purple)] w-max pb-1">Company</span>
               <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Press Kit</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Affiliates</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Partners</a></li>
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div className="flex flex-col space-y-4">
-              <span className="text-xs font-bold text-[var(--color-purple)] tracking-wider uppercase border-b-2 border-[var(--color-purple)] w-max pb-1">Legal</span>
-              <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Cookie Policy</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Refund Policy</a></li>
-                <li><a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Security</a></li>
+                {submenuResources.flatMap((category) => [
+                  <li key={`cat-${category.title}`} className="text-[11px] font-bold text-[var(--color-text-primary)] uppercase tracking-wider pt-2">{category.title}</li>,
+                  ...category.items.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="hover:text-[var(--color-text-primary)] transition-colors">{item.label}</Link>
+                    </li>
+                  ))
+                ])}
               </ul>
             </div>
           </div>
@@ -169,7 +240,7 @@ export default function Footer() {
         </div>
 
         {/* --- VALUE PROPOSITION STRIP --- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-6 px-8 rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-bg)]/70 backdrop-blur-md shadow-sm">
+        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-6 px-8 rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-bg)]/70 backdrop-blur-md shadow-sm">
 
           {/* Blazing Fast */}
           <div className="flex items-center space-x-4 border-r-0 sm:border-r border-[var(--color-border)] last:border-none pr-2">
