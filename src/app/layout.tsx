@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import LayoutWrapper from "@/components/layoutwrapper/layoutwrapper";
+import { AuthProvider } from "@/context/AuthContext";
+import NewsletterPopup from "@/components/newsLetterPopup";
 
 
 export const metadata: Metadata = {
@@ -21,9 +23,12 @@ export default function RootLayout({
       className={` h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <AuthProvider>
     <LayoutWrapper>
         {children}
+        <NewsletterPopup delay={5000}/>
 </LayoutWrapper>
+</AuthProvider>
         </body>
     </html>
   );
