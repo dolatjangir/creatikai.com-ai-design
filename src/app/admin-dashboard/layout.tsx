@@ -18,10 +18,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   const navItems = [
     { path: '/admin-dashboard', label: 'Dashboard', icon: Layout },
+     { path: '/admin-dashboard/blogs', label: 'Blog Manger', icon: Users },
     { path: '/admin-dashboard/brokers', label: 'Broker Manager', icon: Users },
     { path: '/admin-dashboard/properties', label: 'Property Manager', icon: Users },
     { path: '/admin-dashboard/requirements', label: 'Requirements', icon: Users },
     { path: '/admin-dashboard/broker-request', label: 'Broker Requests', icon: Users },
+
   ];
 
   const handleLogout = async () => {
@@ -41,9 +43,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <img 
                 src="/creatikai-logo.png" 
                 alt="CreatikAI" 
-                className=" object-cover"
+                className=" object-cover max-w-12"
               />
-            </div></Link>
+               <span className="font-bold text-xl tracking-tight text-slate-900">
+              Creatik <span className="text-indigo-600 font-extrabold">AI</span>
+            </span>
+            </div>
+            </Link>
           </div>
 
           {/* Navigation - Scrollable if needed */}

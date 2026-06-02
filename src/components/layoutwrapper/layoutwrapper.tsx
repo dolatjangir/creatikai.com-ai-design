@@ -20,11 +20,13 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
     ,"/dashboard/properties",
     "/dashboard/requirements","/dashboard/broker-request",
 
-     "/admin-dashboard/brokers"
-    ,"/admin-dashboard/properties",
-    "/admin-dashboard/requirements","/admin-dashboard/broker-request",
-    "/admin-dashboard"];
-  const hideLayout = hideRoutes.includes(pathname);
+    //  "/admin-dashboard/brokers"
+    // ,"/admin-dashboard/properties",
+    // "/admin-dashboard/requirements","/admin-dashboard/broker-request",
+    // "/admin-dashboard",
+  "/blogs","/blogs/new","/blog/[slug]"];
+  const hideLayout = hideRoutes.includes(pathname) ||
+  pathname.startsWith("/admin-dashboard/");
 
   return (
     <>

@@ -515,6 +515,7 @@ useEffect(() => {
   const navItems = [
     { id: 'dashboard', icon: Layout, label: 'Dashboard' },
     { id: 'seo',       icon: Search, label: 'SEO Manager', badge: stats.total },
+    
     { id: 'explore',       icon: Search, label: 'Broker Manager', badge: brokerCount },
      { id: 'properties',     icon: Users,  label: 'Property Manager' },
     { id: 'requirement',     icon: Users,  label: 'Added Requirements' },

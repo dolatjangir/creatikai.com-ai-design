@@ -155,6 +155,24 @@ model BrokerApplication {
   @@map("broker_applications")
 }
 
+model Blog {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String?  @db.Text
+  content     String   @db.LongText
+  featuredImg String?
+  pageName    String
+  tags        String?
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isPublished])
+  @@index([pageName])
+}
+
 enum ApplicationStatus {
   pending
   approved

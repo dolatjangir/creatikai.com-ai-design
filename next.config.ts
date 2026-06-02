@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
    images: {
-    domains: ["i.pravatar.cc"],
+      domains: ['res.cloudinary.com'],
+    unoptimized: true,
   },
 };
 
