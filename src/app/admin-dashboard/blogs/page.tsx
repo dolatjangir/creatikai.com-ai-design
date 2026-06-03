@@ -41,7 +41,7 @@ export default async function BlogDashboard() {
             </p>
           </div>
           <Link
-            href="/blogs/new"
+            href="/admin-dashboard/blogs/new"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--color-primary)] text-white rounded-xl font-medium hover:bg-[var(--color-primary-hover)] transition-all shadow-[var(--shadow-btn-primary)] hover:shadow-[var(--shadow-btn-primary-hover)]"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

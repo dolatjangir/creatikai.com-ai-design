@@ -106,140 +106,7 @@ export default function HomePage(): JSX.Element {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] font-[var(--font-family)] text-[var(--color-text-primary)]">
-      {/* Navbar */}
-      {/* <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-        style={{
-          backgroundColor: scrolled ? "var(--color-nav-bg-scroll)" : "var(--color-nav-bg)",
-          backdropFilter: scrolled ? "var(--blur-nav)" : "none",
-          borderBottom: scrolled ? "1px solid var(--color-border-light)" : "1px solid transparent",
-          boxShadow: scrolled ? "var(--shadow-nav)" : "none",
-        }}
-      >
-        <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
-          <div className="flex items-center justify-between h-[var(--nav-height)] lg:h-[var(--nav-height-lg)]">
-          
-            <div className="flex items-center gap-2">
-              <div
-                className="w-8 h-8 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: "var(--color-primary)" }}
-              >
-                <span className="text-white font-bold text-sm">C</span>
-              </div>
-              <span className="text-xl font-bold tracking-tight" style={{ color: "var(--color-text-primary)" }}>
-                CreatiKai
-              </span>
-            </div>
-
-            
-            <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <button
-                  key={link.label}
-                  className="flex items-center gap-1 text-sm font-medium transition-colors"
-                  style={{ color: "var(--color-text-secondary)" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-primary)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-text-secondary)")}
-                >
-                  {link.label}
-                  {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                </button>
-              ))}
-            </div>
-
-            
-            <div className="hidden lg:flex items-center gap-4">
-              <button
-                className="p-2 transition-colors"
-                style={{ color: "var(--color-text-muted)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-text-primary)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-text-muted)")}
-              >
-                <Search className="w-5 h-5" />
-              </button>
-              <button
-                className="text-sm font-medium transition-colors"
-                style={{ color: "var(--color-text-secondary)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-primary)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-text-secondary)")}
-              >
-                Client Login
-              </button>
-              <button
-                className="px-5 py-2.5 text-white text-sm font-semibold rounded-lg transition-all"
-                style={{
-                  backgroundColor: "var(--color-primary)",
-                  boxShadow: "var(--shadow-btn-primary)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--color-primary-hover)";
-                  e.currentTarget.style.boxShadow = "var(--shadow-btn-primary-hover)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--color-primary)";
-                  e.currentTarget.style.boxShadow = "var(--shadow-btn-primary)";
-                }}
-              >
-                Get Started
-              </button>
-            </div>
-
-        
-            <button
-              className="lg:hidden p-2"
-              style={{ color: "var(--color-text-secondary)" }}
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-   
-        {mobileMenuOpen && (
-          <div
-            className="lg:hidden border-t"
-            style={{
-              backgroundColor: "var(--color-bg)",
-              borderColor: "var(--color-border-light)",
-              boxShadow: "var(--shadow-lg)",
-            }}
-          >
-            <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <button
-                  key={link.label}
-                  className="flex items-center justify-between w-full py-2 text-sm font-medium"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  {link.label}
-                  {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                </button>
-              ))}
-              <div className="pt-3 border-t flex flex-col gap-3" style={{ borderColor: "var(--color-border-light)" }}>
-                <button className="flex items-center gap-2 text-sm font-medium" style={{ color: "var(--color-text-secondary)" }}>
-                  <Search className="w-4 h-4" /> Search
-                </button>
-                <button
-                  className="w-full py-2.5 text-sm font-medium rounded-lg border"
-                  style={{
-                    color: "var(--color-text-secondary)",
-                    borderColor: "var(--color-border)",
-                  }}
-                >
-                  Client Login
-                </button>
-                <button
-                  className="w-full py-2.5 text-white text-sm font-semibold rounded-lg"
-                  style={{ backgroundColor: "var(--color-primary)" }}
-                >
-                  Get Started
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav> */}
+     
 
       {/* Hero Section */}
       <section className="pt-[var(--hero-pt)] pb-[var(--hero-pb)] relative overflow-hidden">
@@ -351,13 +218,9 @@ export default function HomePage(): JSX.Element {
             </div>
 
             {/* Right Visual */}
-            <div className="relative flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-md lg:max-w-xl">
-                {/* Background glow */}
-                {/* <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full blur-3xl opacity-60"
-                  style={{ backgroundColor: "var(--color-glow)" }}
-                /> */}
+            <div className="relative flex items-center  justify-end lg:justify-end">
+              <div className="relative w-full max-w-md  sm:ml-10 lg:ml-16 lg:max-w-xl">
+           
 
                 <img  src="/new12.png"/>
             

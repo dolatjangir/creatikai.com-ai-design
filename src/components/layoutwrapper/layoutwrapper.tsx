@@ -19,7 +19,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
     "/dashboard/brokers"
     ,"/dashboard/properties",
     "/dashboard/requirements","/dashboard/broker-request",
-
+"/admin-dashboard",
     //  "/admin-dashboard/brokers"
     // ,"/admin-dashboard/properties",
     // "/admin-dashboard/requirements","/admin-dashboard/broker-request",

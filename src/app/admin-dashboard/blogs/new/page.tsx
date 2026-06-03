@@ -8,20 +8,20 @@ import TiptapEditor from '@/components/tiptap-editor';
 import ImageUpload from '@/components/blog-img-upload';
 import TagInput from '@/components/blog-tag-input';
 import MasterProtectedRoute from '@/utils/masterProtectedRoute';
-
+  
 
 const PAGES = ['Home', 'calling-agent', 'content-creation-agent', 'seo-content-agent',
    'follow-up-agent',
    'data-mining-agent', 'campaign-automation',"lead-capture-agent" , 
    "lead-qualification-agent","property-maching-agent"
-  ,"social-media-agent","ai-training","machine-learning-training"
+  ,"social-media-agent","ai-training","ai-machine-learning"
   ,"fullstack-development-training",
 "digital-marketing-training","social-media-training", "google-ads-training",
 "education","real-estate","healthcare","technology","tour-&-tourism","customer-goods-retail",
 "business-enhance","video-creation","content-creation","business-automation",
 "lead-automation","workflow-automation",
 "ai-chatbot","ai-personal-assistent", "ai-tools-course","about-us","contact-us",
-"why-choose-us","help-center","community","blog"];
+"why-choose-us","help-center","community","blog","blog-insights"];
 
 export default function NewBlogPage() {
   const router = useRouter();

@@ -312,7 +312,7 @@ export default function AICallingAgentLanding() {
                           : "opacity-0 translate-y-10"
                       }`}
                     >
-                      <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold  leading-[0.9] mb-8 tracking-tight text-[var(--color-primary-800)]">
+                      <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold  leading-[0.9] mb-8 tracking-tight text-[var(--color-primary-800)]">
                        AI That Makes{" "} <br/>
                         <span className="relative inline-block">
                           <span className="text-gradient animate-gradient">
@@ -407,7 +407,7 @@ export default function AICallingAgentLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="inline-block text-sm font-medium text-[var(--color-primary-600)] uppercase tracking-widest mb-4">Capabilities</span>
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-[var(--color-primary-900)]">
+            <h2 className="text-5xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-900)]">
               Voice AI That{' '}
               <span className="text-gradient">Actually Works</span>
             </h2>
@@ -442,7 +442,7 @@ export default function AICallingAgentLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <span className="inline-block text-sm font-medium text-[var(--color-primary-600)] uppercase tracking-widest mb-4">How It Works</span>
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-[var(--color-primary-900)]">
+            <h2 className="text-5xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-900)]">
               Deploy in{' '}
               <span className="text-gradient">5 Minutes</span>
             </h2>
@@ -496,7 +496,7 @@ export default function AICallingAgentLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <span className="inline-block text-sm font-medium text-[var(--color-primary-600)] uppercase tracking-widest mb-4">Voice Technology</span>
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-[var(--color-primary-900)]">
+            <h2 className="text-5xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-900)]">
               Why Our AI Voice{' '}
               <span className="text-gradient">Converts Better</span>
             </h2>
@@ -526,7 +526,7 @@ export default function AICallingAgentLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <span className="inline-block text-sm font-medium text-[var(--color-primary-600)] uppercase tracking-widest mb-4">Results</span>
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-[var(--color-primary-900)]">
+            <h2 className="text-5xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-900)]">
               Sales Teams{' '}
               <span className="text-gradient">Love the Voice</span>
             </h2>
@@ -566,7 +566,7 @@ export default function AICallingAgentLanding() {
       <section className="relative py-32 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <span className="inline-block text-sm font-medium text-[var(--color-primary-600)] uppercase tracking-widest mb-4">Connected</span>
-          <h2 className="text-5xl lg:text-6xl font-bold mb-16 text-[var(--color-primary-900)]">
+          <h2 className="text-5xl lg:text-5xl font-bold mb-16 text-[var(--color-primary-900)]">
             Works With Your{' '}
             <span className="text-gradient">Stack</span>
           </h2>
@@ -615,7 +615,7 @@ export default function AICallingAgentLanding() {
                 <Phone className="w-12 h-12 text-white" />
               </div>
 
-              <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-[var(--color-primary-900)]">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-900)]">
                 Let AI Handle Your{' '}
                 <span className="text-gradient">Calling</span>
               </h2>
@@ -644,27 +644,7 @@ export default function AICallingAgentLanding() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="relative py-12 px-4 border-t border-[var(--color-primary-200)] bg-white/50">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-primary-700)] flex items-center justify-center shadow-md">
-              <Phone className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-bold text-xl text-[var(--color-primary-900)]">AICaller</span>
-          </div>
-          
-          <div className="flex gap-8 text-sm text-[var(--color-primary-600)]">
-            <a href="#" className="hover:text-[var(--color-primary-900)] transition-colors">Privacy</a>
-            <a href="#" className="hover:text-[var(--color-primary-900)] transition-colors">Terms</a>
-            <a href="#" className="hover:text-[var(--color-primary-900)] transition-colors">Contact</a>
-          </div>
-
-          <div className="text-sm text-[var(--color-primary-500)]">
-            © 2026 AICaller AI
-          </div>
-        </div>
-      </footer>
+     
     </main>
   );
 }

@@ -120,7 +120,7 @@ const submenuResources: SubmenuCategory[] = [
     items: [
       { label: "Help Center", href: "/resourses/help-center" },
       { label: "Community", href: "/resourses/community" },
-      { label: "Blog", href: "/resourses/blog" },
+      { label: "Blog", href: "/blog" },
     ],
   },
 ];

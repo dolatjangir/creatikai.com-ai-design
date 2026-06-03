@@ -25,8 +25,8 @@ export default async function BlogListingPage() {
           <span className="inline-block px-3 py-1 rounded-full bg-[var(--color-badge-bg)] border border-[var(--color-badge-border)] text-[var(--color-badge-text)] text-sm font-medium mb-4">
             Our Blog
           </span>
-          <h1 className="text-[var(--hero-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
-            Latest Insights & Updates
+          <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-4">
+            Latest Insights & <span className='text-[var(--color-primary-dark)]'> Updates </span>
           </h1>
           <p className="text-[var(--color-text-secondary)] text-lg">
             Discover tips, guides, and news about our platform and industry.

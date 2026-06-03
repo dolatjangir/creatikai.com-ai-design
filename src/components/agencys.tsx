@@ -6,23 +6,23 @@ import { forwardRef } from "react";
 const steps = [
   {
     id: "1",
-    title: "Contact us",
-    text: "Nullam ac urna eu felis dapibus",
+    title: "Discovery & Strategy",
+    text: "Understanding your business goals, challenges, and growth opportunities.",
   },
   {
     id: "2",
-    title: "Consult",
-    text: "Nullam ac urna eu felis dapibus",
+    title: "Planning & Design",
+    text: "Creating user-focused experiences and scalable digital architectures.",
   },
   {
     id: "3",
-    title: "Place order",
-    text: "Duis sed odio sit amet nibh vulputate cursus",
+    title: "Development & Integration",
+    text: "Building secure, high-performance solutions using modern technologies.",
   },
   {
     id: "4",
-    title: "Payment",
-    text: "Duis sed odio sit amet nibh vulputate cursus",
+    title: "Launch & Growth",
+    text: "Continuous support, optimization, and innovation for long-term success.",
   },
 ];
 
@@ -66,13 +66,13 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
             {/* Right Content */}
             <div className="w-full max-w-[470px] text-white">
               <h1 className="text-[46px] font-bold leading-tight tracking-[-1px]">
-                Simple Solutions!
+          CreatikAI Delivers Digital Innovation
               </h1>
 
               <p className="mt-6 text-[15px] leading-[30px] text-white/70">
-                Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                consequat ipsum, nec sagittis sem nibh id elit. Sed non mauris
-                vitae erat.
+              We help businesses transform ideas into powerful digital experiences through modern
+               web development, AI solutions, cloud technologies, and scalable 
+              software products. From strategy to deployment, we build solutions that drive growth.
               </p>
 
               {/* Steps */}
@@ -97,10 +97,10 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
               {/* Buttons */}
               <div className="mt-12 flex flex-wrap gap-5">
                 <button className="rounded-md bg-white px-9 py-3 text-[14px] font-semibold text-[#313FA8] shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  Get Started
+               Get a Free Consultation
                 </button>
                 <button className="rounded-md border border-white/40 px-9 py-3 text-[14px] font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#313FA8]">
-                  Read more
+                 Explore Services
                 </button>
               </div>
             </div>
@@ -124,19 +124,19 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
             {/* Left Text */}
             <div className="w-full max-w-[430px]">
               <h2 className="text-[44px] font-bold leading-tight tracking-[-1px] text-[#222]">
-                Our Agency
+              Who We Are
               </h2>
               <p className="mt-6 text-[15px] leading-[30px] text-[#8A8A8A]">
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos.
+                CreatikAI is a technology-driven company focused on delivering innovative digital 
+                solutions for startups, enterprises, and growing businesses worldwide.
               </p>
               <p className="mt-6 text-[15px] leading-[30px] text-[#8A8A8A]">
-                Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum
-                sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.
-                Proin condimentum fermentum nunc.
+                Our team specializes in web development, AI-powered applications, cloud solutions,
+                 UI/UX design, and digital transformation. We combine creativity, 
+                technology, and strategy to help organizations achieve measurable business results.
               </p>
               <button className="mt-10 rounded-md bg-[#4B5AE8] px-10 py-3 text-[14px] font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1">
-                Read more
+               About CreatikAI
               </button>
             </div>
 

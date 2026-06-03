@@ -2,7 +2,7 @@
 'use client';
 
 import { useRouter, usePathname } from 'next/navigation';
-import { Layout, Users, Settings, Zap, Shield, Menu, X, LogOut } from 'lucide-react';
+import { Layout, Users, Settings, Zap, Shield, Menu, X, LogOut, SquareLibrary, BrickWall, UsersRound, SquareUser, HousePlus, TouchpadOff } from 'lucide-react';
 import { useState } from 'react';
 
 import ProtectedRoute from '@/utils/ProtectedRoute';
@@ -18,11 +18,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   const navItems = [
     { path: '/admin-dashboard', label: 'Dashboard', icon: Layout },
-     { path: '/admin-dashboard/blogs', label: 'Blog Manger', icon: Users },
-    { path: '/admin-dashboard/brokers', label: 'Broker Manager', icon: Users },
-    { path: '/admin-dashboard/properties', label: 'Property Manager', icon: Users },
-    { path: '/admin-dashboard/requirements', label: 'Requirements', icon: Users },
-    { path: '/admin-dashboard/broker-request', label: 'Broker Requests', icon: Users },
+     { path: '/admin-dashboard/blogs', label: 'Blog Manger', icon: BrickWall },
+     { path: '/admin-dashboard/socialmedia-manager', label: 'Social Media Manager', icon: SquareLibrary },
+    { path: '/admin-dashboard/brokers', label: 'Broker Manager', icon: SquareUser },
+    { path: '/admin-dashboard/properties', label: 'Property Manager', icon: HousePlus },
+    { path: '/admin-dashboard/requirements', label: 'Requirements', icon: UsersRound },
+    { path: '/admin-dashboard/broker-request', label: 'Broker Requests', icon: TouchpadOff },
 
   ];
 

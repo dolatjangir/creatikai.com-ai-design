@@ -19,4 +19,32 @@ ADMIN: {
     UPDATE_PASSWORD: (id: String) => `${BASE_URL}/admin/${id}/password`,
     DELETE: (id: String) => `${BASE_URL}/admin/${id}`,
   },
+
+
+  
+  // social media manager routes
+
+  SOCIALMEDIA: {
+    INSTAGRAM: {
+      GET_LIVE_POST: `${BASE_URL}/social-auth/get-instagram-posts`,
+      GET_ANALYTICS: `${BASE_URL}/social-auth/get-instagram-analytics`,
+      DISCONNECT_ACCOUNT: `${BASE_URL}/social-auth/disconnect-instagram`,
+      SCHEDULE_POST: `${BASE_URL}/social-auth/schedule-instagram-post`,
+      GET_SCHEDULED_POST: (params: string) => `${BASE_URL}/social-auth/scheduled-posts-data?platform=${params}`,
+
+    },
+    FACEBOOK: {
+      GET_LIVE_POST: `${BASE_URL}/social-auth/get-facebook-posts`,
+      GET_ANALYTICS: `${BASE_URL}/social-auth/get-facebook-analytics`,
+      DISCONNECT_ACCOUNT: `${BASE_URL}/social-auth/disconnect-facebook`,
+      SCHEDULE_POST: `${BASE_URL}/social-auth/schedule-facebook-post`,
+      GET_SCHEDULED_POST: (params: string) => `${BASE_URL}/social-auth/scheduled-posts-data?platform=${params}`,
+    },
+    AUTOSOCIALAGENT: {
+      RUN: `${BASE_URL}/social-auth/auto-social-agent`
+    }
+  },
   }
+
+
+  

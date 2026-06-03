@@ -1,11 +1,19 @@
 import React from 'react'
 import TechnologyTrainingPage from './clienttech'
 import { generateSEOMetadata } from '../../../../lib/seometadata';
+import RelatedBlogs from '@/components/related-blogs';
+import { getPageBlogs } from '../../../../lib/blogs';
 
 
 
 export const generateMetadata = generateSEOMetadata;
 
-export default function page() {
-  return <TechnologyTrainingPage/>
+export default async function  page() {
+   const blogs = await getPageBlogs('technology');
+  return(
+    <>
+   <TechnologyTrainingPage/>
+     <RelatedBlogs blogs={blogs} />
+     </>
+    )
 }

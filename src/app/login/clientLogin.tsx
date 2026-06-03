@@ -1,8 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
+
 import {
   Eye,
   EyeOff,
@@ -14,6 +17,7 @@ import {
   Lock,
   AlertCircle,
 } from "lucide-react";
+import { EstateAILoading } from "@/components/loadingpages/loginLoding";
 
 // ── Types ───────────────────────────────────────────────────────────────
 interface FormData {
@@ -34,10 +38,11 @@ export default function LoginPage() {
     password: "",
     rememberMe: false,
   });
-
+const router = useRouter();
+const { admin, isLoading, login } = useAuth();
   const [errors, setErrors] = useState<FormErrors>({});
   const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+ const[loading,setLoading]= useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
@@ -57,16 +62,33 @@ export default function LoginPage() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+useEffect(() => {
+  if (admin) {
+    if (admin.role === "administrator") {
+      router.push("/admin-dashboard");
+    } else {
+      router.push("/login");
+    }
+  }
+}, [admin, router]);
 
+  if (isLoading || loading) {
+    return (
+      <EstateAILoading message="Loading your Dashboard..."/>
+    );
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    setIsLoading(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsLoading(false);
-    setIsSuccess(true);
+ setLoading(true);
+
+await login({
+  email: formData.email,
+  password: formData.password,
+});
+
+setLoading(false);
   };
 
   const handleChange = (field: keyof FormData, value: string | boolean) => {
@@ -76,27 +98,27 @@ export default function LoginPage() {
     }
   };
 
-  if (isSuccess) {
-    return (
-      <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 px-4">
-        <div className="w-full max-w-md text-center animate-in fade-in zoom-in-95 duration-500">
-          <div className="bg-white rounded-3xl shadow-xl shadow-blue-900/5 border border-slate-100 p-10">
-            <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-10 h-10 text-emerald-500" />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">Welcome Back!</h2>
-            <p className="text-slate-500 mb-8 leading-relaxed">
-              You've successfully signed in. Redirecting you to your Creatik AI dashboard...
-            </p>
-            <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full animate-[shimmer_2s_infinite]" 
-                   style={{ width: '100%', animation: 'shimmer 2s ease-in-out infinite' }} />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // if (isSuccess) {
+  //   return (
+  //     <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 px-4">
+  //       <div className="w-full max-w-md text-center animate-in fade-in zoom-in-95 duration-500">
+  //         <div className="bg-white rounded-3xl shadow-xl shadow-blue-900/5 border border-slate-100 p-10">
+  //           <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6">
+  //             <CheckCircle2 className="w-10 h-10 text-emerald-500" />
+  //           </div>
+  //           <h2 className="text-2xl font-bold text-slate-900 mb-3">Welcome Back!</h2>
+  //           <p className="text-slate-500 mb-8 leading-relaxed">
+  //             You've successfully signed in. Redirecting you to your Creatik AI dashboard...
+  //           </p>
+  //           <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+  //             <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full animate-[shimmer_2s_infinite]" 
+  //                  style={{ width: '100%', animation: 'shimmer 2s ease-in-out infinite' }} />
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 flex items-center justify-center px-4 py-12">
