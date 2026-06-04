@@ -635,7 +635,7 @@ export default function LeadAutomationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Leads are expensive.{" "}
               <span className="text-[var(--color-text-faint)]">
@@ -698,7 +698,7 @@ export default function LeadAutomationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Capture leads from{" "}
               <span className="gradient-text">every touchpoint</span>
@@ -775,7 +775,7 @@ export default function LeadAutomationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Nurture every lead like{" "}
               <span className="gradient-text">your best SDR would</span>
@@ -978,7 +978,7 @@ export default function LeadAutomationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Turn interest into{" "}
               <span className="gradient-text">revenue</span>
@@ -1038,7 +1038,7 @@ export default function LeadAutomationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               See everything.{" "}
               <span className="gradient-text">Optimize anything.</span>
@@ -1102,7 +1102,7 @@ export default function LeadAutomationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Results that speak{" "}
               <span className="gradient-text">for themselves</span>
@@ -1235,7 +1235,7 @@ export default function LeadAutomationPage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Frequently asked{" "}
                 <span className="gradient-text">questions</span>
               </h2>

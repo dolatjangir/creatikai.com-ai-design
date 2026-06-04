@@ -622,7 +622,7 @@ export default function ConsumerGoodsRetailPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Retail moves fast.{" "}
               <span className="text-[var(--color-text-faint)]">
@@ -688,7 +688,7 @@ export default function ConsumerGoodsRetailPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Everything you need to run a{" "}
               <span className="gradient-text">smarter retail operation</span>
@@ -756,7 +756,7 @@ export default function ConsumerGoodsRetailPage() {
               </motion.div>
               <motion.h2
                 variants={fadeInUp}
-                className="text-[var(--section-title-size)] font-bold tracking-tight mb-6"
+                className="text-2xl font-bold tracking-tight mb-6"
               >
                 One customer.{" "}
                 <span className="gradient-text">One profile. Every channel.</span>
@@ -920,7 +920,7 @@ export default function ConsumerGoodsRetailPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Trusted by retail leaders{" "}
               <span className="gradient-text">worldwide</span>
@@ -1001,7 +1001,7 @@ export default function ConsumerGoodsRetailPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Plays nice with your{" "}
               <span className="gradient-text">existing stack</span>
@@ -1056,7 +1056,7 @@ export default function ConsumerGoodsRetailPage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Frequently asked{" "}
                 <span className="gradient-text">questions</span>
               </h2>

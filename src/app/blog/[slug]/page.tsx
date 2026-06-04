@@ -79,7 +79,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <div className="max-w-[1400px] mx-auto px-[var(--container-padding)] py-12 lg:py-20">
         
         {/* Back Link */}
-        <div className="mb-8">
+        <div className="mt-12 pb-6">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"

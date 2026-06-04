@@ -671,7 +671,7 @@ export default function WorkflowAutomationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Automation shouldn't require{" "}
               <span className="text-[var(--color-text-faint)]">
@@ -734,7 +734,7 @@ export default function WorkflowAutomationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Build anything visually.{" "}
               <span className="gradient-text">Deploy instantly.</span>
@@ -811,7 +811,7 @@ export default function WorkflowAutomationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Start with battle-tested{" "}
               <span className="gradient-text">workflow templates</span>
@@ -900,7 +900,7 @@ export default function WorkflowAutomationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Connects to{" "}
               <span className="gradient-text">everything you use</span>
@@ -965,7 +965,7 @@ export default function WorkflowAutomationPage() {
               </motion.div>
               <motion.h2
                 variants={fadeInUp}
-                className="text-[var(--section-title-size)] font-bold tracking-tight mb-6"
+                className="text-2xl font-bold tracking-tight mb-6"
               >
                 Built for the{" "}
                 <span className="gradient-text">enterprise</span>
@@ -1060,7 +1060,7 @@ export default function WorkflowAutomationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Trusted by teams that ship{" "}
               <span className="gradient-text">fast</span>
@@ -1193,7 +1193,7 @@ export default function WorkflowAutomationPage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Frequently asked{" "}
                 <span className="gradient-text">questions</span>
               </h2>

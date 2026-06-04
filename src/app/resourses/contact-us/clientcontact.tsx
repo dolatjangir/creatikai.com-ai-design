@@ -288,7 +288,7 @@ export default function ContactUsPage() {
               <motion.h1
                 variants={fadeUp}
                 custom={1}
-                className="text-2xl font-bold text-[var(--color-text-primary)] leading-tight mb-5"
+                className="sm:text-2xl lg:text-3xl font-bold text-[var(--color-text-primary)] leading-tight mb-5"
               >
                 Let&apos;s{" "}
                 <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-purple)] to-[var(--color-cyan)] bg-clip-text text-transparent">

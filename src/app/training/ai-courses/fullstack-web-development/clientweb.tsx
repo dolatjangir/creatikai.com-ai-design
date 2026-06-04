@@ -997,7 +997,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                 Complete Tech Stack
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Everything You Need to Build Production Apps
@@ -1038,7 +1038,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                 Curriculum
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 4-Phase Learning Journey
@@ -1145,7 +1145,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                 Portfolio Projects
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Build 25+ Production-Ready Projects
@@ -1295,7 +1295,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                   Enroll Now
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   Your Tech Career Starts Here
@@ -1517,7 +1517,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                 Success Stories
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Where Our Alumni Work
@@ -1587,7 +1587,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                 FAQ
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Common Questions

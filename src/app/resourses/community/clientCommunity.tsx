@@ -590,7 +590,7 @@ export default function CommunityPage() {
               <Users className="w-4 h-4" />
               CreatiKai Community
             </div>
-            <h1 className="text-[var(--hero-title-size)] font-bold text-[var(--color-text-primary)] leading-tight mb-4">
+            <h1 className="text-2xl font-bold text-[var(--color-text-primary)] leading-tight mb-4">
               Learn, Share, and{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-purple)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Grow Together

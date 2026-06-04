@@ -664,7 +664,7 @@ export default function AIToolsCoursePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Courses designed for{" "}
               <span className="gradient-text">real-world impact</span>
@@ -795,7 +795,7 @@ export default function AIToolsCoursePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Not just theory.{" "}
               <span className="gradient-text">Pure practice.</span>
@@ -855,7 +855,7 @@ export default function AIToolsCoursePage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Your path to{" "}
               <span className="gradient-text">AI mastery</span>
@@ -1028,7 +1028,7 @@ export default function AIToolsCoursePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Learn from the{" "}
               <span className="gradient-text">best in the field</span>
@@ -1112,7 +1112,7 @@ export default function AIToolsCoursePage() {
               </motion.div>
               <motion.h2
                 variants={fadeInUp}
-                className="text-[var(--section-title-size)] font-bold tracking-tight mb-6"
+                className="text-2xl font-bold tracking-tight mb-6"
               >
                 Earn credentials that{" "}
                 <span className="gradient-text">open doors</span>
@@ -1234,7 +1234,7 @@ export default function AIToolsCoursePage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Student success{" "}
               <span className="gradient-text">stories</span>
@@ -1367,7 +1367,7 @@ export default function AIToolsCoursePage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Questions?{" "}
                 <span className="gradient-text">We've got answers.</span>
               </h2>

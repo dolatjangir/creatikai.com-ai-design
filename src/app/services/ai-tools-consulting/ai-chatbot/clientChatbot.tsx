@@ -1051,7 +1051,7 @@ export default function AIChatbotPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="text-[var(--hero-title-size)] font-bold text-[var(--color-text-primary)] leading-tight mb-6"
+                className="text-2xl font-bold text-[var(--color-text-primary)] leading-tight mb-6"
               >
                 Meet Your New{" "}
                 <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-purple)] to-[var(--color-cyan)] bg-clip-text text-transparent">
@@ -1237,7 +1237,7 @@ export default function AIChatbotPage() {
               <Cpu className="w-3.5 h-3.5" />
               Core Capabilities
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Intelligence That{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-purple)] bg-clip-text text-transparent">
                 Understands
@@ -1278,7 +1278,7 @@ export default function AIChatbotPage() {
               <Target className="w-3.5 h-3.5" />
               Use Cases
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               One Platform,{" "}
               <span className="bg-gradient-to-r from-purple-600 to-[var(--color-primary)] bg-clip-text text-transparent">
                 Infinite Applications
@@ -1320,7 +1320,7 @@ export default function AIChatbotPage() {
                 <Wand2 className="w-3.5 h-3.5" />
                 Superpowers
               </span>
-              <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
                 Capabilities That{" "}
                 <span className="bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-primary)] bg-clip-text text-transparent">
                   Redefine Possible
@@ -1474,7 +1474,7 @@ export default function AIChatbotPage() {
               <Layers className="w-3.5 h-3.5" />
               Integrations
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Connects With{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Everything
@@ -1521,7 +1521,7 @@ export default function AIChatbotPage() {
               <Star className="w-3.5 h-3.5" />
               Customer Love
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Loved by Teams{" "}
               <span className="bg-gradient-to-r from-[var(--color-amber)] to-orange-500 bg-clip-text text-transparent">
                 Worldwide
@@ -1561,7 +1561,7 @@ export default function AIChatbotPage() {
               <Gem className="w-3.5 h-3.5" />
               Pricing
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Simple, Transparent{" "}
               <span className="bg-gradient-to-r from-[var(--color-emerald)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Pricing
@@ -1643,7 +1643,7 @@ export default function AIChatbotPage() {
                 <MessageSquare className="w-3.5 h-3.5" />
                 FAQ
               </span>
-              <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
                 Questions?{" "}
                 <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-purple)] bg-clip-text text-transparent">
                   We've Got Answers

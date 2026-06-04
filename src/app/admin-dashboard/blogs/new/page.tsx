@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import TiptapEditor from '@/components/tiptap-editor';
@@ -26,6 +26,7 @@ const PAGES = ['Home', 'calling-agent', 'content-creation-agent', 'seo-content-a
 export default function NewBlogPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [isCustomPage, setIsCustomPage] = useState(false);
   const [form, setForm] = useState({
     title: '',
     slug: '',
@@ -36,7 +37,18 @@ export default function NewBlogPage() {
     tags: '',
     isPublished: false,
   });
+const [isOpen, setIsOpen] = useState(false);
+const selectRef = useRef<HTMLDivElement>(null);
 
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+  document.addEventListener('mousedown', handleClickOutside);
+  return () => document.removeEventListener('mousedown', handleClickOutside);
+}, []);
   const generateSlug = (title: string) => {
     return title
       .toLowerCase()
@@ -70,7 +82,7 @@ export default function NewBlogPage() {
 
       const data = await res.json();
       if (data.success) {
-        router.push('/blogs');
+        router.push('/admin-dashboard/blogs');
         router.refresh();
       } else {
         alert(data.error || 'Failed to create blog');
@@ -89,7 +101,7 @@ export default function NewBlogPage() {
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
           <Link
-            href="/blogs"
+            href="admin-dashboard/blogs"
             className="p-2 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] hover:bg-white transition-all"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -214,16 +226,100 @@ export default function NewBlogPage() {
                 <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
                   Page Name
                 </label>
-                <select
-                  value={form.pageName}
-                  onChange={(e) => setForm({ ...form, pageName: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-[var(--color-border)] bg-white text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-glow)] transition-all text-sm appearance-none cursor-pointer"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
-                >
-                  {PAGES.map((page) => (
-                    <option key={page} value={page}>{page}</option>
-                  ))}
-                </select>
+         <div className="flex items-center gap-2">
+  {isCustomPage ? (
+    <>
+      <input
+        type="text"
+        value={form.pageName}
+        onChange={(e) => setForm({ ...form, pageName: e.target.value })}
+        placeholder="Enter custom page name..."
+        className="flex-1 px-4 py-2.5 rounded-xl border border-[var(--color-border)] bg-white text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-glow)] transition-all text-sm"
+      />
+      <button
+        type="button"
+        onClick={() => { setIsCustomPage(false); setForm({ ...form, pageName: 'Home' }); }}
+        className="p-2.5 rounded-xl border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-section-alt)] transition-all shrink-0"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </>
+  ) : (
+    <>
+           <div className="relative flex-1" ref={selectRef}>
+  {/* Trigger Button — looks identical to your original select */}
+  <button
+    type="button"
+    onClick={() => setIsOpen(!isOpen)}
+    className="w-full px-4 py-2.5 rounded-xl border border-[var(--color-border)] bg-white text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-glow)] transition-all duration-200 text-sm flex items-center justify-between cursor-pointer"
+  >
+    <span className="truncate">{form.pageName || "Select a page"}</span>
+    <svg
+      className={`w-4 h-4 text-gray-500 transition-transform duration-200 ease-out ${isOpen ? 'rotate-180' : ''}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </button>
+
+  {/* Dropdown Panel — smooth scale + fade + slide */}
+  <div
+    className={`
+      absolute z-50 w-full mt-2 rounded-xl border border-[var(--color-border)] bg-white shadow-xl shadow-black/5 overflow-hidden
+      transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top
+      ${isOpen 
+        ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' 
+        : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
+      }
+    `}
+  >
+    <div className="py-1 max-h-60 overflow-auto">
+      {PAGES.map((page, index) => (
+        <div
+          key={page}
+          onClick={() => {
+            setForm({ ...form, pageName: page });
+            setIsOpen(false);
+          }}
+          className={`
+            px-4 py-2.5 text-sm cursor-pointer transition-all duration-150
+            ${form.pageName === page
+              ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-semibold'
+              : 'text-[var(--color-text-primary)] hover:bg-gray-50 hover:pl-5'
+            }
+          `}
+          style={{
+            transitionDelay: isOpen ? `${index * 30}ms` : '0ms',
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? 'translateX(0)' : 'translateX(-4px)',
+          }}
+        >
+          {page}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+      <button
+        type="button"
+        onClick={() => { setIsCustomPage(true); setForm({ ...form, pageName: '' }); }}
+        className="p-2.5 rounded-xl border border-[var(--color-border)] text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-all shrink-0"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+        </svg>
+      </button>
+    </>
+  )}
+</div>
               </div>
 
               <div>

@@ -440,7 +440,7 @@ const faqs = [
 /* ─── Hero Section ─── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[92vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[100vh] py-32 flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[#0f172a]">
         <div className="hero-glow-1 absolute top-[5%] left-[0%] w-[600px] h-[600px] rounded-full opacity-[0.18] blur-[140px] bg-[#2563eb]" />
@@ -468,7 +468,7 @@ function Hero() {
           <div className="orbit-3 absolute w-3 h-3 rounded-full bg-[#2563eb] opacity-30" />
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent" />
+        {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent" /> */}
       </div>
 
       <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
@@ -478,7 +478,7 @@ function Hero() {
             <span className="text-sm font-semibold text-white">The #1 Rated CRM Platform</span>
           </div>
 
-          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,3.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
             Why{" "}
             <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
               50,000+

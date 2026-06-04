@@ -595,7 +595,7 @@ export default function ContentCreationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Content marketing is hard.{" "}
               <span className="text-[var(--color-text-faint)]">
@@ -658,7 +658,7 @@ export default function ContentCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               One platform.{" "}
               <span className="gradient-text">Every content need.</span>
@@ -728,7 +728,7 @@ export default function ContentCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Write once.{" "}
               <span className="gradient-text">Publish everywhere.</span>
@@ -816,7 +816,7 @@ export default function ContentCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               From strategy to publish in{" "}
               <span className="gradient-text">four steps</span>
@@ -979,7 +979,7 @@ export default function ContentCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Content that ranks—{" "}
               <span className="gradient-text">by design</span>
@@ -1033,7 +1033,7 @@ export default function ContentCreationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Loved by content teams{" "}
               <span className="gradient-text">everywhere</span>
@@ -1166,7 +1166,7 @@ export default function ContentCreationPage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Questions?{" "}
                 <span className="gradient-text">We've got answers.</span>
               </h2>

@@ -545,7 +545,7 @@ export default function BusinessEnhancePage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               The hidden cost of{" "}
               <span className="text-[var(--color-text-faint)]">
@@ -608,7 +608,7 @@ export default function BusinessEnhancePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Intelligent tools for{" "}
               <span className="gradient-text">modern enterprises</span>
@@ -678,7 +678,7 @@ export default function BusinessEnhancePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               From diagnosis to{" "}
               <span className="gradient-text">continuous optimization</span>
@@ -854,7 +854,7 @@ export default function BusinessEnhancePage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Results that{" "}
               <span className="gradient-text">speak for themselves</span>
@@ -911,7 +911,7 @@ export default function BusinessEnhancePage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Trusted by transformation{" "}
               <span className="gradient-text">leaders</span>
@@ -1040,7 +1040,7 @@ export default function BusinessEnhancePage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Frequently asked{" "}
                 <span className="gradient-text">questions</span>
               </h2>

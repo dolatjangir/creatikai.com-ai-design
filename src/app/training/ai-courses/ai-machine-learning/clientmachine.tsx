@@ -943,7 +943,7 @@ export default function AIMachineLearningPage(): JSX.Element {
                 Curriculum
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 12-Week Learning Roadmap
@@ -1058,7 +1058,7 @@ export default function AIMachineLearningPage(): JSX.Element {
                 Portfolio Projects
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Build 15+ Real-World Projects
@@ -1196,7 +1196,7 @@ export default function AIMachineLearningPage(): JSX.Element {
                   Enroll Now
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   Start Your AI Career Today
@@ -1419,7 +1419,7 @@ export default function AIMachineLearningPage(): JSX.Element {
                 Success Stories
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Where Our Alumni Work
@@ -1489,7 +1489,7 @@ export default function AIMachineLearningPage(): JSX.Element {
                 FAQ
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Common Questions

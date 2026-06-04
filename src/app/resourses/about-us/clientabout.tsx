@@ -548,7 +548,7 @@ export default function AboutPage(): JSX.Element {
                   Who We Are
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   Pioneering AI-Powered Digital Transformation
@@ -611,7 +611,7 @@ export default function AboutPage(): JSX.Element {
                   Our Mission
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   Democratizing AI for Businesses of All Sizes
@@ -757,7 +757,7 @@ export default function AboutPage(): JSX.Element {
                   What We Do
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   End-to-End Digital Solutions Under One Roof
@@ -848,7 +848,7 @@ export default function AboutPage(): JSX.Element {
                 Our Services
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Solutions That Drive Real Results
@@ -888,7 +888,7 @@ export default function AboutPage(): JSX.Element {
                   Why Choose Us
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   The CreatiKai Advantage
@@ -1007,7 +1007,7 @@ export default function AboutPage(): JSX.Element {
                 Testimonials
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Trusted by Industry Leaders
@@ -1043,7 +1043,7 @@ export default function AboutPage(): JSX.Element {
         <div className="relative z-10 max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] text-center">
           <RevealSection>
             <h2
-              className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6 max-w-3xl mx-auto"
+              className="text-2xl font-extrabold tracking-tight mb-6 max-w-3xl mx-auto"
               style={{ color: "var(--color-text-primary)" }}
             >
               Ready to Transform Your Business with AI?

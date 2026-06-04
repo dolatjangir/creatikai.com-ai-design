@@ -568,7 +568,7 @@ export default function VideoCreationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Video production is broken.{" "}
               <span className="text-[var(--color-text-faint)]">
@@ -631,7 +631,7 @@ export default function VideoCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Everything you need to{" "}
               <span className="gradient-text">produce at scale</span>
@@ -701,7 +701,7 @@ export default function VideoCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               One creation.{" "}
               <span className="gradient-text">Infinite formats.</span>
@@ -789,7 +789,7 @@ export default function VideoCreationPage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               From idea to publish in{" "}
               <span className="gradient-text">four simple steps</span>
@@ -1002,7 +1002,7 @@ export default function VideoCreationPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-[var(--section-title-size)] font-bold tracking-tight mb-4"
+              className="text-2xl font-bold tracking-tight mb-4"
             >
               Loved by video teams{" "}
               <span className="gradient-text">worldwide</span>
@@ -1135,7 +1135,7 @@ export default function VideoCreationPage() {
             className="max-w-3xl mx-auto"
           >
             <motion.div variants={fadeInUp} className="text-center mb-12">
-              <h2 className="text-[var(--section-title-size)] font-bold tracking-tight mb-4">
+              <h2 className="text-2xl font-bold tracking-tight mb-4">
                 Questions?{" "}
                 <span className="gradient-text">We've got answers.</span>
               </h2>

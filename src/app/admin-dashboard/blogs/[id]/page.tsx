@@ -96,7 +96,7 @@ export default function EditBlogPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
-          isPublished: publish !== undefined ? publish : form.isPublished,
+          isPublished: form.isPublished,
         }),
       });
 
@@ -104,7 +104,7 @@ export default function EditBlogPage() {
       if (data.success) {
         router.refresh();
         if (isPublishAction) {
-          router.push('/blogs');
+          router.push('/admin-dashboard/blogs');
         }
       } else {
         alert(data.error || 'Failed to update blog');
@@ -131,7 +131,7 @@ export default function EditBlogPage() {
       <div className="max-w-[1280px] mx-auto px-[var(--container-padding)] py-8">
         <div className="flex items-center gap-4 mb-8">
           <Link
-            href="/blogs"
+            href="/admin-dashboard/blogs"
             className="p-2 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] hover:bg-white transition-all"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

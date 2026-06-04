@@ -463,7 +463,7 @@ export default function HelpCenterPage() {
       {/* ═══════════════════════════════════════
           HERO + SEARCH
       ═══════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[var(--color-bg-hover)] via-white to-white pt-[var(--hero-pt)] pb-16">
+      <section className="relative overflow-hidden  bg-gradient-to-b from-[var(--color-bg-hover)] via-white to-white pt-[var(--hero-pt)] pb-16">
         <ParticleBackground />
         <motion.div animate={{ y: [0, -20, 0] }} transition={{ duration: 8, repeat: Infinity }} className="absolute top-10 right-0 w-[500px] h-[500px] bg-blue-400/6 rounded-full blur-3xl" />
         <motion.div animate={{ y: [0, 15, 0] }} transition={{ duration: 10, repeat: Infinity }} className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-400/6 rounded-full blur-3xl" />
@@ -479,7 +479,7 @@ export default function HelpCenterPage() {
               <Sparkles className="w-4 h-4" />
               CreatiKai Help Center
             </div>
-            <h1 className="text-[var(--hero-title-size)] font-bold text-[var(--color-text-primary)] leading-tight mb-4">
+            <h1 className="text-2xl font-bold text-[var(--color-text-primary)] leading-tight mb-4">
               How Can We{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-purple)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Help You?
@@ -589,9 +589,9 @@ export default function HelpCenterPage() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center pt-32 justify-between mb-8">
                   <div>
-                    <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)]">
+                    <h2 className="text-2xl font-bold text-[var(--color-text-primary)]">
                       Browse by{" "}
                       <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-purple)] bg-clip-text text-transparent">
                         Category
@@ -632,7 +632,7 @@ export default function HelpCenterPage() {
               <Star className="w-3.5 h-3.5" />
               Most Popular
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)]">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)]">
               Trending{" "}
               <span className="bg-gradient-to-r from-[var(--color-amber)] to-orange-500 bg-clip-text text-transparent">
                 Articles
@@ -693,7 +693,7 @@ export default function HelpCenterPage() {
               <HelpCircle className="w-3.5 h-3.5" />
               Quick Answers
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)]">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)]">
               Frequently Asked{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-purple)] bg-clip-text text-transparent">
                 Questions

@@ -896,7 +896,7 @@ export default function AITrainingPage(): JSX.Element {
                 Training Programs
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Choose Your AI Learning Path
@@ -1025,7 +1025,7 @@ export default function AITrainingPage(): JSX.Element {
           </span>
 
           <h2
-            className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+            className="text-2xl font-extrabold tracking-tight mb-6"
             style={{ color: "var(--color-text-primary)" }}
           >
             Not Just Courses — A Complete Career Launchpad
@@ -1109,7 +1109,7 @@ export default function AITrainingPage(): JSX.Element {
                 Learning Path
               </span>
               <h2
-                className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-4"
+                className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Your 12-Week Journey to AI Mastery
@@ -1211,7 +1211,7 @@ export default function AITrainingPage(): JSX.Element {
                   Get Started
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   Ready to Start Your AI Journey?
@@ -1487,7 +1487,7 @@ export default function AITrainingPage(): JSX.Element {
                   Certification
                 </span>
                 <h2
-                  className="text-[var(--section-title-size)] font-extrabold tracking-tight mb-6"
+                  className="text-2xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
                   Earn an Industry-Recognized AI Certificate

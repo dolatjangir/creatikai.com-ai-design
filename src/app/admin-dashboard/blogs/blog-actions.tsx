@@ -37,7 +37,7 @@ export function BlogActions({ blogId, slug }: { blogId: string; slug: string }) 
           </svg>
         </Link>
         <Link
-          href={`/blogs/${blogId}`}
+          href={`/admin-dashboard/blogs/${blogId}`}
           className="p-2 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-primary)] hover:bg-[var(--color-icon-bg-1)] transition-all"
           title="Edit"
         >

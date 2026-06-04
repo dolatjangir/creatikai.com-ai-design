@@ -6,7 +6,7 @@ import { getPageBlogs } from '../../../../lib/blogs';
 export const generateMetadata = generateSEOMetadata;
 
 export default async function  page() {
-   const blogs = await getPageBlogs('blog-insights');
+   const blogs = await getPageBlogs('community');
   return(
     <>
  <CommunityPage/>

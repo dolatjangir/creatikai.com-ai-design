@@ -1036,7 +1036,7 @@ export default function AIPersonalAssistantPage() {
               <Brain className="w-3.5 h-3.5" />
               Core Capabilities
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Superpowers for{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-purple)] bg-clip-text text-transparent">
                 Your Productivity
@@ -1077,7 +1077,7 @@ export default function AIPersonalAssistantPage() {
               <Target className="w-3.5 h-3.5" />
               Automated Workflows
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Set It, Forget It,{" "}
               <span className="bg-gradient-to-r from-purple-600 to-[var(--color-primary)] bg-clip-text text-transparent">
                 Dominate It
@@ -1119,7 +1119,7 @@ export default function AIPersonalAssistantPage() {
                 <Gauge className="w-3.5 h-3.5" />
                 Performance
               </span>
-              <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
                 Real-Time{" "}
                 <span className="bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-primary)] bg-clip-text text-transparent">
                   Intelligence Dashboard
@@ -1227,7 +1227,7 @@ export default function AIPersonalAssistantPage() {
               <Layers className="w-3.5 h-3.5" />
               Integrations
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Plays Nice With{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Everything
@@ -1274,7 +1274,7 @@ export default function AIPersonalAssistantPage() {
               <Star className="w-3.5 h-3.5" />
               Customer Love
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Loved by Busy{" "}
               <span className="bg-gradient-to-r from-[var(--color-amber)] to-orange-500 bg-clip-text text-transparent">
                 Professionals
@@ -1314,7 +1314,7 @@ export default function AIPersonalAssistantPage() {
               <Gem className="w-3.5 h-3.5" />
               Pricing
             </span>
-            <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
               Simple, Transparent{" "}
               <span className="bg-gradient-to-r from-[var(--color-emerald)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Pricing
@@ -1399,7 +1399,7 @@ export default function AIPersonalAssistantPage() {
                 <MessageSquare className="w-3.5 h-3.5" />
                 FAQ
               </span>
-              <h2 className="text-[var(--section-title-size)] font-bold text-[var(--color-text-primary)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">
                 Questions?{" "}
                 <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-purple)] bg-clip-text text-transparent">
                   We Have Answers
