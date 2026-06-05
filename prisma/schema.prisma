@@ -77,6 +77,18 @@ model SeoEntry {
   @@map("seo_entries")
 }
 
+model Contactus {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  subject    String
+  department String   @default("general")
+  message    String   @db.Text
+  status     String   @default("unread") // unread, read, replied
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
 model Login {
   id        String   @id @default(cuid())
   email     String   @unique
@@ -89,6 +101,18 @@ model Subscriber {
   id        String   @id @default(cuid())
   email     String   @unique
   createdAt DateTime @default(now())
+}
+
+model Inquiry {
+  id              String   @id @default(cuid())
+  name            String
+  email           String
+  phone           String?
+  preferredCourse String
+  message         String?  @db.Text
+  status          String   @default("new") // new, contacted, enrolled, closed
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }
 
 model Broker {

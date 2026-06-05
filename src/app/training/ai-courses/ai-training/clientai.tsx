@@ -34,6 +34,7 @@ import {
   X,
   Loader2,
 } from "lucide-react";
+import InquiryForm from "@/components/inquirycomponent";
 
 /* ============================================
    ANIMATED COUNTER
@@ -335,231 +336,256 @@ const CourseCard = ({
 /* ============================================
    INQUIRY FORM MODAL
    ============================================ */
-const InquiryForm = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    course: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+// const InquiryForm = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     course: "",
+//     message: "",
+//   });
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [submitted, setSubmitted] = useState(false);
 
-  if (!isOpen) return null;
+//   if (!isOpen) return null;
+// const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+//   e.preventDefault();
+//   setIsSubmitting(true);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setTimeout(() => {
-      onClose();
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", course: "", message: "" });
-    }, 2000);
-  };
+//   try {
+//     const formData = new FormData(e.currentTarget);
+    
+//     const res = await fetch("/api/inquiry", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         name: formData.get("name"),
+//         email: formData.get("email"),
+//         phone: formData.get("phone"),
+//         preferredCourse: formData.get("preferredCourse"),
+//         message: formData.get("message"),
+//       }),
+//     });
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div
-        className="absolute inset-0 backdrop-blur-sm"
-        style={{ backgroundColor: "rgba(15,23,42,0.4)" }}
-        onClick={onClose}
-      />
-      <div
-        className="relative w-full max-w-lg rounded-2xl border p-6 lg:p-8 shadow-2xl animate-in fade-in zoom-in duration-300"
-        style={{
-          backgroundColor: "var(--color-card-bg)",
-          borderColor: "var(--color-border-light)",
-        }}
-      >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-lg transition-colors"
-          style={{ color: "var(--color-text-muted)" }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--color-bg-hover)")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
-        >
-          <X className="w-5 h-5" />
-        </button>
+//     const data = await res.json();
 
-        <div className="text-center mb-6">
-          <div
-            className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3"
-            style={{ backgroundColor: "var(--color-icon-bg-1)" }}
-          >
-            <Bot className="w-6 h-6" style={{ color: "var(--color-primary)" }} />
-          </div>
-          <h3
-            className="text-xl font-bold"
-            style={{ color: "var(--color-text-primary)" }}
-          >
-            {submitted ? "Thank You!" : "AI Training Inquiry"}
-          </h3>
-          <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
-            {submitted
-              ? "We'll contact you shortly with course details."
-              : "Fill in your details and our team will reach out."}
-          </p>
-        </div>
+//     if (data.success) {
+//       // Show success state
+//       alert(data.message);
+//       e.currentTarget.reset();
+//     } else {
+//       alert(data.message || "Failed to submit inquiry");
+//     }
+//   } catch (error) {
+//     alert("Network error. Please try again.");
+//   } finally {
+//     setIsSubmitting(false);
+//   }
+// };
 
-        {!submitted ? (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Full Name
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)]"
-                    style={{
-                      borderColor: "var(--color-border)",
-                      backgroundColor: "var(--color-bg)",
-                      color: "var(--color-text-primary)",
+//   return (
+//     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+//       <div
+//         className="absolute inset-0 backdrop-blur-sm"
+//         style={{ backgroundColor: "rgba(15,23,42,0.4)" }}
+//         onClick={onClose}
+//       />
+//       <div
+//         className="relative w-full max-w-lg rounded-2xl border p-6 lg:p-8 shadow-2xl animate-in fade-in zoom-in duration-300"
+//         style={{
+//           backgroundColor: "var(--color-card-bg)",
+//           borderColor: "var(--color-border-light)",
+//         }}
+//       >
+//         <button
+//           onClick={onClose}
+//           className="absolute top-4 right-4 p-2 rounded-lg transition-colors"
+//           style={{ color: "var(--color-text-muted)" }}
+//           onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--color-bg-hover)")}
+//           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+//         >
+//           <X className="w-5 h-5" />
+//         </button>
+
+//         <div className="text-center mb-6">
+//           <div
+//             className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3"
+//             style={{ backgroundColor: "var(--color-icon-bg-1)" }}
+//           >
+//             <Bot className="w-6 h-6" style={{ color: "var(--color-primary)" }} />
+//           </div>
+//           <h3
+//             className="text-xl font-bold"
+//             style={{ color: "var(--color-text-primary)" }}
+//           >
+//             {submitted ? "Thank You!" : "AI Training Inquiry"}
+//           </h3>
+//           <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
+//             {submitted
+//               ? "We'll contact you shortly with course details."
+//               : "Fill in your details and our team will reach out."}
+//           </p>
+//         </div>
+
+//         {!submitted ? (
+//           <form onSubmit={handleSubmit} className="space-y-4">
+//             <div className="grid sm:grid-cols-2 gap-4">
+//               <div>
+//                 <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
+//                   Full Name
+//                 </label>
+//                 <div className="relative">
+//                   <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
+//                   <input
+//                   name="name"
+//                     type="text"
+//                     required
+//                     value={formData.name}
+//                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+//                     className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)]"
+//                     style={{
+//                       borderColor: "var(--color-border)",
+//                       backgroundColor: "var(--color-bg)",
+//                       color: "var(--color-text-primary)",
                       
-                    }}
-                    placeholder="John Doe"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Email
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)]"
-                    style={{
-                      borderColor: "var(--color-border)",
-                      backgroundColor: "var(--color-bg)",
-                      color: "var(--color-text-primary)",
+//                     }}
+//                     placeholder="John Doe"
+//                   />
+//                 </div>
+//               </div>
+//               <div>
+//                 <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
+//                   Email
+//                 </label>
+//                 <div className="relative">
+//                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
+//                   <input
+//                   name="email"
+//                     type="email"
+//                     required
+//                     value={formData.email}
+//                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+//                     className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)]"
+//                     style={{
+//                       borderColor: "var(--color-border)",
+//                       backgroundColor: "var(--color-bg)",
+//                       color: "var(--color-text-primary)",
                       
-                    }}
-                    placeholder="john@company.com"
-                  />
-                </div>
-              </div>
-            </div>
+//                     }}
+//                     placeholder="john@company.com"
+//                   />
+//                 </div>
+//               </div>
+//             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Phone
-                </label>
-                <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)]"
-                    style={{
-                      borderColor: "var(--color-border)",
-                      backgroundColor: "var(--color-bg)",
-                      color: "var(--color-text-primary)",
+//             <div className="grid sm:grid-cols-2 gap-4">
+//               <div>
+//                 <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
+//                   Phone
+//                 </label>
+//                 <div className="relative">
+//                   <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
+//                   <input
+//                   name="phone"
+//                     type="tel"
+//                     value={formData.phone}
+//                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+//                     className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)]"
+//                     style={{
+//                       borderColor: "var(--color-border)",
+//                       backgroundColor: "var(--color-bg)",
+//                       color: "var(--color-text-primary)",
                      
-                    }}
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Interested Course
-                </label>
-                <div className="relative">
-                  <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
-                  <select
-                    value={formData.course}
-                    onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)] appearance-none"
-                    style={{
-                      borderColor: "var(--color-border)",
-                      backgroundColor: "var(--color-bg)",
-                      color: "var(--color-text-primary)",
+//                     }}
+//                     placeholder="+91 98765 43210"
+//                   />
+//                 </div>
+//               </div>
+//               <div>
+//                 <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
+//                   Interested Course
+//                 </label>
+//                 <div className="relative">
+//                   <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--color-text-faint)" }} />
+//                   <select
+//                   name="preferredCourse"
+//                     value={formData.course}
+//                     onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+//                     className="w-full pl-10 pr-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)] appearance-none"
+//                     style={{
+//                       borderColor: "var(--color-border)",
+//                       backgroundColor: "var(--color-bg)",
+//                       color: "var(--color-text-primary)",
                     
-                    }}
-                  >
-                    <option value="">Select a course</option>
-                    <option value="ai-fundamentals">AI Fundamentals</option>
-                    <option value="machine-learning">Machine Learning Mastery</option>
-                    <option value="deep-learning">Deep Learning & Neural Networks</option>
-                    <option value="nlp">Natural Language Processing</option>
-                    <option value="ai-agents">AI Agents & Automation</option>
-                    <option value="custom">Custom Corporate Training</option>
-                  </select>
-                  <ChevronRight className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rotate-90" style={{ color: "var(--color-text-faint)" }} />
-                </div>
-              </div>
-            </div>
+//                     }}
+//                   >
+//                     <option value="">Select a course</option>
+//                     <option value="ai-fundamentals">AI Fundamentals</option>
+//                     <option value="machine-learning">Machine Learning Mastery</option>
+//                     <option value="deep-learning">Deep Learning & Neural Networks</option>
+//                     <option value="nlp">Natural Language Processing</option>
+//                     <option value="ai-agents">AI Agents & Automation</option>
+//                     <option value="custom">Custom Corporate Training</option>
+//                   </select>
+//                   <ChevronRight className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rotate-90" style={{ color: "var(--color-text-faint)" }} />
+//                 </div>
+//               </div>
+//             </div>
 
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                Message (Optional)
-              </label>
-              <textarea
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                rows={3}
-                className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)] resize-none"
-                style={{
-                  borderColor: "var(--color-border)",
-                  backgroundColor: "var(--color-bg)",
-                  color: "var(--color-text-primary)",
+//             <div>
+//               <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
+//                 Message (Optional)
+//               </label>
+//               <textarea
+//               name="message"
+//                 value={formData.message}
+//                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+//                 rows={3}
+//                 className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 focus:ring-[var(--color-primary)] resize-none"
+//                 style={{
+//                   borderColor: "var(--color-border)",
+//                   backgroundColor: "var(--color-bg)",
+//                   color: "var(--color-text-primary)",
                  
-                }}
-                placeholder="Tell us about your learning goals..."
-              />
-            </div>
+//                 }}
+//                 placeholder="Tell us about your learning goals..."
+//               />
+//             </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all flex items-center justify-center gap-2 disabled:opacity-70"
-              style={{
-                backgroundColor: "var(--color-primary)",
-                boxShadow: "var(--shadow-btn-primary)",
-              }}
-            >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" /> Submitting...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" /> Submit Inquiry
-                </>
-              )}
-            </button>
-          </form>
-        ) : (
-          <div className="text-center py-8">
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ backgroundColor: "var(--color-icon-bg-4)" }}
-            >
-              <CheckCircle className="w-8 h-8" style={{ color: "var(--color-emerald)" }} />
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
+//             <button
+//               type="submit"
+//               disabled={isSubmitting}
+//               className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+//               style={{
+//                 backgroundColor: "var(--color-primary)",
+//                 boxShadow: "var(--shadow-btn-primary)",
+//               }}
+//             >
+//               {isSubmitting ? (
+//                 <>
+//                   <Loader2 className="w-4 h-4 animate-spin" /> Submitting...
+//                 </>
+//               ) : (
+//                 <>
+//                   <Send className="w-4 h-4" /> Submit Inquiry
+//                 </>
+//               )}
+//             </button>
+//           </form>
+//         ) : (
+//           <div className="text-center py-8">
+//             <div
+//               className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+//               style={{ backgroundColor: "var(--color-icon-bg-4)" }}
+//             >
+//               <CheckCircle className="w-8 h-8" style={{ color: "var(--color-emerald)" }} />
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
 
 /* ============================================
    MAIN AI TRAINING PAGE
@@ -714,7 +740,7 @@ export default function AITrainingPage(): JSX.Element {
 
   return (
     <div className="min-h-screen  bg-[var(--color-bg)] font-[var(--font-family)]">
-      <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} />
+      <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} courseName="AI Automation Training" />
 
       {/* ============================================
           HERO SECTION
@@ -1171,246 +1197,7 @@ export default function AITrainingPage(): JSX.Element {
         </div>
       </section>
 
-      {/* ============================================
-          INQUIRY CTA SECTION — Content Left, Form Right
-          ============================================ */}
-      <section
-        className="py-[var(--section-py)] relative overflow-hidden"
-        style={{ backgroundColor: "var(--color-section-alt)" }}
-      >
-        {/* Bubbles */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full animate-bubble-float"
-              style={{
-                width: 200 + i * 30,
-                height: 200 + i * 30,
-                left: `${15 + i * 15}%`,
-                top: `${10 + (i % 3) * 30}%`,
-                backgroundColor: "var(--color-bubble-bg)",
-                filter: "blur(60px)",
-                opacity: 0.35,
-                animationDelay: `${i * 3}s`,
-                animationDuration: `${20 + i * 3}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="relative z-10 max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left: Content */}
-            <Reveal>
-              <div>
-                <span
-                  className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4"
-                  style={{ backgroundColor: "var(--color-badge-bg)", color: "var(--color-badge-text)" }}
-                >
-                  Get Started
-                </span>
-                <h2
-                  className="text-2xl font-extrabold tracking-tight mb-6"
-                  style={{ color: "var(--color-text-primary)" }}
-                >
-                  Ready to Start Your AI Journey?
-                </h2>
-                <p
-                  className="text-base leading-relaxed mb-8"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  Whether you&apos;re a beginner curious about AI or a professional looking to upskill, we have the perfect program for you. Our admissions team will help you choose the right path.
-                </p>
-
-                <div className="space-y-4 mb-8">
-                  {[
-                    "Free career counseling session",
-                    "Flexible batch timings (Weekday/Weekend)",
-                    "Corporate training available for teams",
-                    "Scholarship opportunities for top performers",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
-                        style={{ backgroundColor: "var(--color-icon-bg-4)" }}
-                      >
-                        <CheckCircle className="w-4 h-4" style={{ color: "var(--color-emerald)" }} />
-                      </div>
-                      <span className="text-sm font-medium" style={{ color: "var(--color-text-secondary)" }}>
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center gap-4 p-4 rounded-xl border"
-                  style={{
-                    backgroundColor: "var(--color-card-bg)",
-                    borderColor: "var(--color-border-light)",
-                  }}
-                >
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "var(--color-icon-bg-1)" }}
-                  >
-                    <Phone className="w-5 h-5" style={{ color: "var(--color-primary)" }} />
-                  </div>
-                  <div>
-                    <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>Call us directly</p>
-                    <p className="text-lg font-bold" style={{ color: "var(--color-text-primary)" }}>+91 98765 43210</p>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-
-            {/* Right: Inline Form */}
-            <Reveal delay={200}>
-              <div
-                className="p-6 lg:p-8 rounded-2xl border shadow-xl"
-                style={{
-                  backgroundColor: "var(--color-card-bg)",
-                  borderColor: "var(--color-border-light)",
-                }}
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: "var(--color-icon-bg-1)" }}
-                  >
-                    <Bot className="w-5 h-5" style={{ color: "var(--color-primary)" }} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold" style={{ color: "var(--color-text-primary)" }}>
-                      Quick Inquiry
-                    </h3>
-                    <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                      We&apos;ll get back within 24 hours
-                    </p>
-                  </div>
-                </div>
-
-                <form onSubmit={(e) => { e.preventDefault(); setFormOpen(true); }} className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2"
-                        style={{
-                          borderColor: "var(--color-border)",
-                          backgroundColor: "var(--color-bg)",
-                          color: "var(--color-text-primary)",
-                        }}
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2"
-                        style={{
-                          borderColor: "var(--color-border)",
-                          backgroundColor: "var(--color-bg)",
-                          color: "var(--color-text-primary)",
-                        }}
-                        placeholder="you@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2"
-                        style={{
-                          borderColor: "var(--color-border)",
-                          backgroundColor: "var(--color-bg)",
-                          color: "var(--color-text-primary)",
-                        }}
-                        placeholder="+91 ..."
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                        Preferred Course *
-                      </label>
-                      <select
-                        required
-                        className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 appearance-none"
-                        style={{
-                          borderColor: "var(--color-border)",
-                          backgroundColor: "var(--color-bg)",
-                          color: "var(--color-text-primary)",
-                        }}
-                      >
-                        <option value="">Select course</option>
-                        <option>AI Fundamentals</option>
-                        <option>Machine Learning</option>
-                        <option>Deep Learning</option>
-                        <option>NLP</option>
-                        <option>AI Agents</option>
-                        <option>Corporate Training</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                      Message
-                    </label>
-                    <textarea
-                      rows={3}
-                      className="w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-all focus:ring-2 resize-none"
-                      style={{
-                        borderColor: "var(--color-border)",
-                        backgroundColor: "var(--color-bg)",
-                        color: "var(--color-text-primary)",
-                      }}
-                      placeholder="Tell us your goals..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all flex items-center justify-center gap-2"
-                    style={{
-                      backgroundColor: "var(--color-primary)",
-                      boxShadow: "var(--shadow-btn-primary)",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "var(--color-primary-hover)";
-                      e.currentTarget.style.boxShadow = "var(--shadow-btn-primary-hover)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "var(--color-primary)";
-                      e.currentTarget.style.boxShadow = "var(--shadow-btn-primary)";
-                    }}
-                  >
-                    <Send className="w-4 h-4" />
-                    Send Inquiry
-                  </button>
-
-                  <p className="text-[10px] text-center" style={{ color: "var(--color-text-faint)" }}>
-                    By submitting, you agree to our privacy policy and terms.
-                  </p>
-                </form>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+     
 
       {/* ============================================
           CERTIFICATE SHOWCASE

@@ -45,6 +45,7 @@ import {
 } from "lucide-react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import InquiryForm from "@/components/inquirycomponent";
 
 /* ============================================
    ANIMATED COUNTER
@@ -173,269 +174,6 @@ const SocialWaveBg = () => {
   );
 };
 
-/* ============================================
-   INQUIRY MODAL
-   ============================================ */
-const InquiryModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    experience: "",
-    goal: "",
-    preferredTime: "",
-    message: "",
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [done, setDone] = useState(false);
-
-  if (!isOpen) return null;
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitting(false);
-    setDone(true);
-    setTimeout(() => {
-      onClose();
-      setDone(false);
-      setData({ name: "", email: "", phone: "", experience: "", goal: "", preferredTime: "", message: "" });
-    }, 2500);
-  };
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div
-        className="absolute inset-0 backdrop-blur-md"
-        style={{ backgroundColor: "rgba(15,23,42,0.5)" }}
-        onClick={onClose}
-      />
-      <div
-        className="relative w-full max-w-xl rounded-2xl border p-6 lg:p-8 shadow-2xl"
-        style={{
-          backgroundColor: "var(--color-card-bg)",
-          borderColor: "var(--color-border-light)",
-        }}
-      >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-lg transition-colors"
-          style={{ color: "var(--color-text-muted)" }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--color-bg-hover)")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
-        >
-          <X className="w-5 h-5" />
-        </button>
-
-        <div className="text-center mb-6">
-          <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
-            style={{ backgroundColor: "var(--color-icon-bg-1)" }}
-          >
-            <Megaphone className="w-7 h-7" style={{ color: "var(--color-primary)" }} />
-          </div>
-          <h3
-            className="text-xl font-bold"
-            style={{ color: "var(--color-text-primary)" }}
-          >
-            {done ? "Enquiry Submitted!" : "Digital Marketing Course Enquiry"}
-          </h3>
-          <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
-            {done
-              ? "Our Jaipur team will contact you within 2 hours."
-              : "Fill details and get free career counseling."}
-          </p>
-        </div>
-
-        {!done ? (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Full Name *
-                </label>
-                <input
-                  required
-                  type="text"
-                  value={data.name}
-                  onChange={(e) => setData({ ...data, name: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2"
-                  style={{
-                    borderColor: "var(--color-border)",
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-primary)",
-                  }}
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Email *
-                </label>
-                <input
-                  required
-                  type="email"
-                  value={data.email}
-                  onChange={(e) => setData({ ...data, email: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2"
-                  style={{
-                    borderColor: "var(--color-border)",
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-primary)",
-                  }}
-                  placeholder="you@email.com"
-                />
-              </div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Phone *
-                </label>
-                <input
-                  required
-                  type="tel"
-                  value={data.phone}
-                  onChange={(e) => setData({ ...data, phone: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2"
-                  style={{
-                    borderColor: "var(--color-border)",
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-primary)",
-                  }}
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Experience *
-                </label>
-                <select
-                  required
-                  value={data.experience}
-                  onChange={(e) => setData({ ...data, experience: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2 appearance-none"
-                  style={{
-                    borderColor: "var(--color-border)",
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-primary)",
-                  }}
-                >
-                  <option value="">Select</option>
-                  <option value="student">Student/Fresher</option>
-                  <option value="1-2">1-2 Years Experience</option>
-                  <option value="3-5">3-5 Years Experience</option>
-                  <option value="5+">5+ Years Experience</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Career Goal *
-                </label>
-                <select
-                  required
-                  value={data.goal}
-                  onChange={(e) => setData({ ...data, goal: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2 appearance-none"
-                  style={{
-                    borderColor: "var(--color-border)",
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-primary)",
-                  }}
-                >
-                  <option value="">Select goal</option>
-                  <option value="job">Get Digital Marketing Job</option>
-                  <option value="freelance">Start Freelancing</option>
-                  <option value="business">Grow My Business</option>
-                  <option value="agency">Start Marketing Agency</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                  Preferred Batch *
-                </label>
-                <select
-                  required
-                  value={data.preferredTime}
-                  onChange={(e) => setData({ ...data, preferredTime: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2 appearance-none"
-                  style={{
-                    borderColor: "var(--color-border)",
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-primary)",
-                  }}
-                >
-                  <option value="">Select batch</option>
-                  <option value="morning">Morning (9 AM - 12 PM)</option>
-                  <option value="evening">Evening (6 PM - 9 PM)</option>
-                  <option value="weekend">Weekend Only</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
-                Message (Optional)
-              </label>
-              <textarea
-                rows={3}
-                value={data.message}
-                onChange={(e) => setData({ ...data, message: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-all focus:ring-2 resize-none"
-                style={{
-                  borderColor: "var(--color-border)",
-                  backgroundColor: "var(--color-bg)",
-                  color: "var(--color-text-primary)",
-                }}
-                placeholder="Tell us about your goals..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={submitting}
-              className="w-full py-3.5 rounded-xl text-sm font-semibold text-white transition-all flex items-center justify-center gap-2 disabled:opacity-70"
-              style={{
-                backgroundColor: "var(--color-primary)",
-                boxShadow: "var(--shadow-btn-primary)",
-              }}
-            >
-              {submitting ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" /> Submitting...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" /> Get Free Counseling
-                </>
-              )}
-            </button>
-          </form>
-        ) : (
-          <div className="text-center py-8">
-            <div
-              className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce"
-              style={{ backgroundColor: "var(--color-icon-bg-4)" }}
-            >
-              <CheckCircle className="w-10 h-10" style={{ color: "var(--color-emerald)" }} />
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
 
 /* ============================================
    ACCORDION
@@ -555,7 +293,7 @@ const ModuleCard = ({
    MAIN DIGITAL MARKETING JAIPUR PAGE
    ============================================ */
 export default function DigitalMarketingJaipurPage(): JSX.Element {
-  const [modalOpen, setModalOpen] = useState(false);
+ const [formOpen, setFormOpen] = useState(false);  
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const stats = [
@@ -720,7 +458,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] font-[var(--font-family)]">
-      <InquiryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+       <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} courseName="Full Stack Development" />
 
       {/* ============================================
           HERO SECTION — Jaipur Flavor
@@ -807,7 +545,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
-                    onClick={() => setModalOpen(true)}
+                    onClick={() => setFormOpen(true)}
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-xl transition-all text-sm"
                     style={{
                       backgroundColor: "var(--color-primary)",
@@ -936,7 +674,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                       </span>
                     </div>
                     <button
-                      onClick={() => setModalOpen(true)}
+                      onClick={() => setFormOpen(true)}
                       className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all flex items-center justify-center gap-2"
                       style={{
                         backgroundColor: "var(--color-primary)",
@@ -1407,7 +1145,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                   </div>
                 </div>
 
-                <form onSubmit={(e) => { e.preventDefault(); setModalOpen(true); }} className="space-y-4">
+                <form onSubmit={(e) => { e.preventDefault(); setFormOpen(true); }} className="space-y-4">
                   <div>
                     <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
                       Full Name *
@@ -1692,7 +1430,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={() => setFormOpen(true)}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl transition-all text-sm hover:bg-blue-50 hover:shadow-xl"
               >
                 <Send className="w-4 h-4" />

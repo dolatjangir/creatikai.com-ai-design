@@ -47,3 +47,33 @@ export async function POST(req:Request){
         )
     }
 }
+
+
+export async function GET() {
+  try {
+    const subscribers = await prisma.subscriber.findMany({
+      orderBy: {
+        id: "desc", // change according to your schema
+      },
+    });
+
+    return NextResponse.json(
+      {
+        success: true,
+        data: subscribers,
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Get subscribers error:", error);
+
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Server error",
+      },
+      { status: 500 }
+    );
+  }
+}
+

@@ -201,14 +201,37 @@ export default function ContactUsPage() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch("/api/contact-us", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        department: formData.department,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setIsSubmitted(true);
+      // formData is already cleared by your existing reset logic
+    } else {
+      alert(data.message || "Failed to send message");
+    }
+  } catch (error) {
+    alert("Network error. Please try again.");
+  } finally {
     setIsSubmitting(false);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 4000);
-  };
+  }
+};
 
   const contactCards = [
     {

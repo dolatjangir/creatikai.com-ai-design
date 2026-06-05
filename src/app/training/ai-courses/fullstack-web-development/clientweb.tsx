@@ -46,6 +46,7 @@ import {
   Flame,
   Gem,
 } from "lucide-react";
+import InquiryForm from "@/components/inquirycomponent";
 
 /* ============================================
    ANIMATED COUNTER
@@ -525,7 +526,7 @@ const AccordionItem = ({
    MAIN FULL STACK PAGE
    ============================================ */
 export default function FullStackTrainingPage(): JSX.Element {
-  const [modalOpen, setModalOpen] = useState(false);
+ const [formOpen, setFormOpen] = useState(false);  
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const stats = [
@@ -700,7 +701,7 @@ export default function FullStackTrainingPage(): JSX.Element {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] font-[var(--font-family)]">
-      <InquiryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+    <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} courseName="Full Stack Development" />
 
       {/* ============================================
           HERO SECTION — Code Rain + Bubbles
@@ -789,7 +790,7 @@ export default function FullStackTrainingPage(): JSX.Element {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
-                    onClick={() => setModalOpen(true)}
+                    onClick={() => setFormOpen(true)}
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-xl transition-all text-sm"
                     style={{
                       backgroundColor: "var(--color-primary)",
@@ -918,7 +919,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                       </span>
                     </div>
                     <button
-                      onClick={() => setModalOpen(true)}
+                      onClick={() => setFormOpen(true)}
                       className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all flex items-center justify-center gap-2"
                       style={{
                         backgroundColor: "var(--color-primary)",
@@ -1380,7 +1381,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                   </div>
                 </div>
 
-                <form onSubmit={(e) => { e.preventDefault(); setModalOpen(true); }} className="space-y-4">
+                <form onSubmit={(e) => { e.preventDefault(); setFormOpen(true); }} className="space-y-4">
                   <div>
                     <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--color-text-secondary)" }}>
                       Full Name *
@@ -1646,11 +1647,11 @@ export default function FullStackTrainingPage(): JSX.Element {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={() => setFormOpen(true)}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl transition-all text-sm hover:bg-blue-50 hover:shadow-xl"
               >
                 <Send className="w-4 h-4" />
-                Enroll Now — ₹12,999
+                Enroll Now — ₹17,999
               </button>
               <button
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl transition-all text-sm hover:bg-white/10"

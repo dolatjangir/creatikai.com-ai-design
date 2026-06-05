@@ -112,6 +112,7 @@ import {
   Lock,
   Check,
 } from "lucide-react";
+import InquiryForm from "@/components/inquirycomponent";
 
 /* ───────────────────────────────────────────────
    GOOGLE ADS CAMPAIGN TRAINING PAGE
@@ -309,18 +310,18 @@ const testimonials = [
     role: "E-commerce Owner, LuxeHome",
     image: "ER",
     quote:
-      "I went from wasting $3K/month on Google Ads to generating $18K/month in profitable revenue. The tracking setup module fixed everything I was doing wrong.",
+      "I went from wasting ₹3K/month on Google Ads to generating ₹18K/month in profitable revenue. The tracking setup module fixed everything I was doing wrong.",
     rating: 5,
-    metric: "$18K/mo Revenue",
+    metric: "₹18K/mo Revenue",
   },
   {
     name: "James Thompson",
     role: "Freelance PPC Consultant",
     image: "JT",
     quote:
-      "This course gave me the confidence to quit my agency job and go freelance. I now charge $5K/month per client and deliver results they never saw before.",
+      "This course gave me the confidence to quit my agency job and go freelance. I now charge ₹5K/month per client and deliver results they never saw before.",
     rating: 5,
-    metric: "$5K/mo Clients",
+    metric: "₹5K/mo Clients",
   },
 ];
 
@@ -382,157 +383,7 @@ function ParticleField() {
   );
 }
 
-/* ─── Hero Section ─── */
-function Hero() {
-  return (
-    <section className="relative overflow-hidden min-h-[120vh] pt-32 flex items-center">
-      {/* Multi-layer Animated Background */}
-      <div className="absolute inset-0">
-        {/* Base Gradient */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #1e3a5f 50%, #1e40af 75%, #2563eb 100%)",
-          }}
-        />
 
-        {/* Animated Gradient Orbs */}
-        <div
-          className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-30 blur-[100px]"
-          style={{
-            background: "radial-gradient(circle, #3b82f6 0%, transparent 70%)",
-            animation: "float 8s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[120px]"
-          style={{
-            background: "radial-gradient(circle, #60a5fa 0%, #2563eb 50%, transparent 70%)",
-            animation: "float-slow 12s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-15 blur-[80px]"
-          style={{
-            background: "radial-gradient(circle, #93c5fd 0%, transparent 70%)",
-            animation: "float-slower 15s ease-in-out infinite",
-          }}
-        />
-
-        {/* Grid Pattern Overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
-          }}
-        />
-
-        {/* Diagonal Lines */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.05) 40px, rgba(255,255,255,0.05) 41px)`,
-          }}
-        />
-
-        {/* Floating Particles */}
-        <ParticleField />
-
-        {/* Bottom Fade */}
-        <div
-          className="absolute bottom-0 left-0 right-0 h-32"
-          style={{
-            background: "linear-gradient(to top, #ffffff 0%, transparent 100%)",
-          }}
-        />
-      </div>
-
-      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-          className="max-w-3xl"
-        >
-          {/* Badge */}
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
-            <Sparkles className="w-4 h-4 text-[#fbbf24]" />
-            <span className="text-sm font-semibold text-white">2026 Google Ads Curriculum — Fully Updated</span>
-          </motion.div>
-
-          {/* Headline */}
-          <motion.h1
-            variants={fadeUp}
-            className="text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6"
-          >
-            Master{" "}
-            <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
-              Google Ads
-            </span>{" "}
-            and Turn Every Click Into Profit
-          </motion.h1>
-
-          {/* Subheadline */}
-          <motion.p
-            variants={fadeUp}
-            className="text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl"
-          >
-            The complete system for building, optimizing, and scaling Google Ads campaigns 
-            that deliver predictable revenue. From Search to Performance Max — 
-            master every campaign type with confidence.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a
-              href="#pricing"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-bold text-base hover:bg-[#f8fafc] transition-all shadow-[0_4px_6px_-1px_rgba(255,255,255,0.2)] hover:shadow-[0_10px_15px_-3px_rgba(255,255,255,0.3)]"
-            >
-              Enroll Now — $597
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
-              <Play className="w-5 h-5" />
-              Watch Free Preview
-            </button>
-          </motion.div>
-
-          {/* Trust Bar */}
-          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-6">
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                {["DP", "ER", "JT", "MK"].map((initial, i) => (
-                  <div
-                    key={i}
-                    className="w-9 h-9 rounded-full bg-[#2563eb] border-2 border-[#0f172a] flex items-center justify-center text-xs font-bold text-white"
-                  >
-                    {initial}
-                  </div>
-                ))}
-              </div>
-              <span className="text-sm text-[#94a3b8]">
-                <span className="font-semibold text-white">9,800+</span> enrolled
-              </span>
-            </div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-[#fbbf24] fill-[#fbbf24]" />
-              ))}
-              <span className="text-sm text-[#94a3b8] ml-1">
-                <span className="font-semibold text-white">4.9/5</span> rating
-              </span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-[#94a3b8]">
-              <Shield className="w-4 h-4 text-[#10b981]" />
-              <span>30-Day Money-Back Guarantee</span>
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
 
 /* ─── Stats Bar ─── */
 function StatsBar() {
@@ -851,10 +702,10 @@ function Pricing() {
               <p className="text-[#475569] mb-8">Everything you need to become a Google Ads expert</p>
 
               <div className="flex items-end justify-center gap-2 mb-2">
-                <span className="text-5xl md:text-6xl font-extrabold text-[#0f172a]">$597</span>
-                <span className="text-lg text-[#94a3b8] line-through mb-2">$2,497</span>
+                <span className="text-5xl md:text-6xl font-extrabold text-[#0f172a]">₹597</span>
+                <span className="text-lg text-[#94a3b8] line-through mb-2">₹2,497</span>
               </div>
-              <p className="text-sm text-[#10b981] font-semibold mb-8">Save $1,900 — Limited Time Offer</p>
+              <p className="text-sm text-[#10b981] font-semibold mb-8">Save ₹1,900 — Limited Time Offer</p>
 
               <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
                 {[
@@ -1002,7 +853,7 @@ function CTA() {
               href="#pricing"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-bold text-base hover:bg-[#1d4ed8] transition-all shadow-[0_4px_6px_-1px_rgba(37,99,235,0.2)] hover:shadow-[0_10px_15px_-3px_rgba(37,99,235,0.3)]"
             >
-              Enroll Now for $597
+              Enroll Now for ₹597
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
@@ -1020,9 +871,160 @@ function CTA() {
 
 /* ─── Main Page ─── */
 export default function GoogleAdsTrainingPage() {
+  const [formOpen, setFormOpen] = useState(false); 
   return (
     <main className="min-h-screen bg-white">
-      <Hero />
+       <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} courseName="Google ADS Training" />
+          <section className="relative overflow-hidden min-h-[120vh] pt-32 flex items-center">
+      {/* Multi-layer Animated Background */}
+      <div className="absolute inset-0">
+        {/* Base Gradient */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #1e3a5f 50%, #1e40af 75%, #2563eb 100%)",
+          }}
+        />
+
+        {/* Animated Gradient Orbs */}
+        <div
+          className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-30 blur-[100px]"
+          style={{
+            background: "radial-gradient(circle, #3b82f6 0%, transparent 70%)",
+            animation: "float 8s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[120px]"
+          style={{
+            background: "radial-gradient(circle, #60a5fa 0%, #2563eb 50%, transparent 70%)",
+            animation: "float-slow 12s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-15 blur-[80px]"
+          style={{
+            background: "radial-gradient(circle, #93c5fd 0%, transparent 70%)",
+            animation: "float-slower 15s ease-in-out infinite",
+          }}
+        />
+
+        {/* Grid Pattern Overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
+          }}
+        />
+
+        {/* Diagonal Lines */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.05) 40px, rgba(255,255,255,0.05) 41px)`,
+          }}
+        />
+
+        {/* Floating Particles */}
+        <ParticleField />
+
+        {/* Bottom Fade */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32"
+          style={{
+            background: "linear-gradient(to top, #ffffff 0%, transparent 100%)",
+          }}
+        />
+      </div>
+
+      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+          className="max-w-3xl"
+        >
+          {/* Badge */}
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
+            <Sparkles className="w-4 h-4 text-[#fbbf24]" />
+            <span className="text-sm font-semibold text-white">2026 Google Ads Curriculum — Fully Updated</span>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            variants={fadeUp}
+            className="text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6"
+          >
+            Master{" "}
+            <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
+              Google Ads
+            </span>{" "}
+            and Turn Every Click Into Profit
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            variants={fadeUp}
+            className="text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl"
+          >
+            The complete system for building, optimizing, and scaling Google Ads campaigns 
+            that deliver predictable revenue. From Search to Performance Max — 
+            master every campaign type with confidence.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-12">
+            <button
+            onClick={() => setFormOpen(true)}
+             
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-bold text-base hover:bg-[#f8fafc] transition-all shadow-[0_4px_6px_-1px_rgba(255,255,255,0.2)] hover:shadow-[0_10px_15px_-3px_rgba(255,255,255,0.3)]"
+            >
+              Enroll Now
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
+              <Play className="w-5 h-5" />
+              Watch Free Preview
+            </button>
+          </motion.div>
+
+          {/* Trust Bar */}
+          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-6">
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-2">
+                {["DP", "ER", "JT", "MK"].map((initial, i) => (
+                  <div
+                    key={i}
+                    className="w-9 h-9 rounded-full bg-[#2563eb] border-2 border-[#0f172a] flex items-center justify-center text-xs font-bold text-white"
+                  >
+                    {initial}
+                  </div>
+                ))}
+              </div>
+              <span className="text-sm text-[#94a3b8]">
+                <span className="font-semibold text-white">9,800+</span> enrolled
+              </span>
+            </div>
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 text-[#fbbf24] fill-[#fbbf24]" />
+              ))}
+              <span className="text-sm text-[#94a3b8] ml-1">
+                <span className="font-semibold text-white">4.9/5</span> rating
+              </span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-[#94a3b8]">
+              <Shield className="w-4 h-4 text-[#10b981]" />
+              <span>30-Day Money-Back Guarantee</span>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+
+
+    {/* components */}
       <StatsBar />
       <Curriculum />
       <Outcomes />
@@ -1033,3 +1035,5 @@ export default function GoogleAdsTrainingPage() {
     </main>
   );
 }
+
+

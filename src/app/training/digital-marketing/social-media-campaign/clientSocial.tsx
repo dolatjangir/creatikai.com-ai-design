@@ -55,6 +55,7 @@ import {
   Headphones,
 } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa6";
+import InquiryForm from "@/components/inquirycomponent";
 
 /* ───────────────────────────────────────────────
    SOCIAL MEDIA CAMPAIGN TRAINING PAGE
@@ -283,233 +284,6 @@ const faqs = [
 /* ─── Components ─── */
 
 
-
-function Hero() {
-  return (
-    <section
-      className="relative overflow-hidden"
-      style={{
-        paddingTop: "var(--hero-pt)",
-        paddingBottom: "var(--hero-pb)",
-        background: "linear-gradient(180deg, #ffffff 0%, #eff6ff 50%, #dbeafe 100%)",
-      }}
-    >
-      {/* Floating Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-20 left-[10%] w-72 h-72 rounded-full opacity-30"
-          style={{
-            background: "radial-gradient(circle, #dbeafe 0%, transparent 70%)",
-            animation: "float 6s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute top-40 right-[15%] w-96 h-96 rounded-full opacity-20"
-          style={{
-            background: "radial-gradient(circle, #bfdbfe 0%, transparent 70%)",
-            animation: "float-slow 8s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute bottom-20 left-[20%] w-64 h-64 rounded-full opacity-25"
-          style={{
-            background: "radial-gradient(circle, #eff6ff 0%, transparent 70%)",
-            animation: "float-slower 12s ease-in-out infinite",
-          }}
-        />
-      </div>
-
-      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="text-center lg:text-left"
-          >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#dbeafe] shadow-sm mb-6">
-              <Sparkles className="w-4 h-4 text-[#f59e0b]" />
-              <span className="text-sm font-semibold text-[#1d4ed8]">
-                2026 Updated Curriculum
-              </span>
-            </motion.div>
-
-            <motion.h1
-              variants={fadeUp}
-              className="text-[clamp(2.5rem,6vw,3.75rem)] font-extrabold leading-[1.1] tracking-tight text-[#0f172a] mb-6"
-            >
-              Master{" "}
-              <span
-                className="bg-gradient-to-r from-[#2563eb] via-[#1d4ed8] to-[#1e40af] bg-clip-text text-transparent"
-              >
-                Social Media
-              </span>{" "}
-              Campaigns That Convert
-            </motion.h1>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-lg md:text-xl text-[#475569] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
-            >
-              The complete blueprint for building, launching, and scaling profitable
-              social media campaigns across every major platform. From zero to
-              campaign mastery.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
-            >
-              <a
-                href="#pricing"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-semibold text-base hover:bg-[#1d4ed8] transition-all shadow-[0_4px_6px_-1px_rgba(37,99,235,0.2)] hover:shadow-[0_10px_15px_-3px_rgba(37,99,235,0.3)]"
-              >
-                Start Learning Today
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-semibold text-base border border-[#e2e8f0] hover:border-[#dbeafe] hover:bg-[#f8fafc] transition-all">
-                <Play className="w-5 h-5 text-[#2563eb]" />
-                Watch Preview
-              </button>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              className="flex items-center gap-4 justify-center lg:justify-start"
-            >
-              <div className="flex -space-x-3">
-                {["SC", "MJ", "PS", "AK"].map((initial, i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-[#e2e8f0] border-2 border-white flex items-center justify-center text-xs font-bold text-[#475569]"
-                  >
-                    {initial}
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm text-[#475569]">
-                <span className="font-semibold text-[#0f172a]">12,400+</span> students enrolled
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
-          >
-            <div className="relative bg-white rounded-3xl p-6 shadow-xl border border-[#e2e8f0]">
-              {/* Dashboard Mockup */}
-              <div className="space-y-4">
-                {/* Header */}
-                <div className="flex items-center justify-between pb-4 border-b border-[#f1f5f9]">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#eff6ff] flex items-center justify-center">
-                      <BarChart2 className="w-5 h-5 text-[#2563eb]" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[#0f172a]">Campaign Performance</p>
-                      <p className="text-xs text-[#94a3b8]">Last 30 days</p>
-                    </div>
-                  </div>
-                  <span className="px-3 py-1 rounded-full bg-[#ecfdf5] text-[#10b981] text-xs font-semibold">
-                    +24.5%
-                  </span>
-                </div>
-
-                {/* Stats Grid */}
-                <div className="grid grid-cols-3 gap-3">
-                  {[
-                    { label: "Impressions", value: "2.4M", icon: Eye, color: "#2563eb", bg: "#eff6ff" },
-                    { label: "Engagement", value: "8.7%", icon: Heart, color: "#ec4899", bg: "#fdf2f8" },
-                    { label: "Conversions", value: "3.2K", icon: MousePointerClick, color: "#10b981", bg: "#ecfdf5" },
-                  ].map((stat, i) => (
-                    <div key={i} className="p-3 rounded-xl bg-[#f8fafc] border border-[#f1f5f9]">
-                      <stat.icon className="w-4 h-4 mb-2" style={{ color: stat.color }} />
-                      <p className="text-lg font-bold text-[#0f172a]">{stat.value}</p>
-                      <p className="text-xs text-[#94a3b8]">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Chart Bar */}
-                <div className="p-4 rounded-xl bg-[#f8fafc] border border-[#f1f5f9]">
-                  <div className="flex items-end justify-between h-24 gap-2">
-                    {[40, 65, 45, 80, 55, 90, 70, 85, 60, 75, 95, 88].map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex-1 rounded-t-sm transition-all duration-500"
-                        style={{
-                          height: `${h}%`,
-                          background: i === 10 ? "#2563eb" : "#dbeafe",
-                          opacity: i === 10 ? 1 : 0.6,
-                        }}
-                      />
-                    ))}
-                  </div>
-                  <div className="flex justify-between mt-2 text-[10px] text-[#94a3b8]">
-                    <span>Jan</span>
-                    <span>Dec</span>
-                  </div>
-                </div>
-
-                {/* Platform Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {["Instagram", "TikTok", "LinkedIn", "X", "YouTube"].map((p, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1.5 rounded-lg bg-white border border-[#e2e8f0] text-xs font-medium text-[#475569]"
-                    >
-                      {p}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Floating Badge */}
-              <div
-                className="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-lg border border-[#e2e8f0]"
-                style={{ animation: "float 3s ease-in-out infinite" }}
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-[#ecfdf5] flex items-center justify-center">
-                    <Flame className="w-4 h-4 text-[#10b981]" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-[#0f172a]">Trending</p>
-                    <p className="text-[10px] text-[#94a3b8]">Top 1% course</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-        >
-          {stats.map((stat, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm border border-[#e2e8f0] hover:border-[#dbeafe] hover:bg-white transition-all"
-            >
-              <stat.icon className="w-6 h-6 text-[#2563eb] mb-3" />
-              <p className="text-2xl font-bold text-[#0f172a]">{stat.value}</p>
-              <p className="text-sm text-[#64748b]">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
 
 function PlatformStrip() {
   return (
@@ -993,10 +767,235 @@ function CTA() {
 
 /* ─── Main Page ─── */
 export default function SocialMediaTrainingPage() {
+    const [formOpen, setFormOpen] = useState(false); 
   return (
     <main className="min-h-screen bg-white">
+       <InquiryForm isOpen={formOpen} onClose={() => setFormOpen(false)} courseName="Social Media Campaign" />
       {/* <Navbar /> */}
-      <Hero />
+       <section
+      className="relative overflow-hidden"
+      style={{
+        paddingTop: "var(--hero-pt)",
+        paddingBottom: "var(--hero-pb)",
+        background: "linear-gradient(180deg, #ffffff 0%, #eff6ff 50%, #dbeafe 100%)",
+      }}
+    >
+      {/* Floating Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute top-20 left-[10%] w-72 h-72 rounded-full opacity-30"
+          style={{
+            background: "radial-gradient(circle, #dbeafe 0%, transparent 70%)",
+            animation: "float 6s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute top-40 right-[15%] w-96 h-96 rounded-full opacity-20"
+          style={{
+            background: "radial-gradient(circle, #bfdbfe 0%, transparent 70%)",
+            animation: "float-slow 8s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute bottom-20 left-[20%] w-64 h-64 rounded-full opacity-25"
+          style={{
+            background: "radial-gradient(circle, #eff6ff 0%, transparent 70%)",
+            animation: "float-slower 12s ease-in-out infinite",
+          }}
+        />
+      </div>
+
+      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="text-center lg:text-left"
+          >
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#dbeafe] shadow-sm mb-6">
+              <Sparkles className="w-4 h-4 text-[#f59e0b]" />
+              <span className="text-sm font-semibold text-[#1d4ed8]">
+                2026 Updated Curriculum
+              </span>
+            </motion.div>
+
+            <motion.h1
+              variants={fadeUp}
+              className="text-[clamp(2.5rem,6vw,3.75rem)] font-extrabold leading-[1.1] tracking-tight text-[#0f172a] mb-6"
+            >
+              Master{" "}
+              <span
+                className="bg-gradient-to-r from-[#2563eb] via-[#1d4ed8] to-[#1e40af] bg-clip-text text-transparent"
+              >
+                Social Media
+              </span>{" "}
+              Campaigns That Convert
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-[#475569] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
+            >
+              The complete blueprint for building, launching, and scaling profitable
+              social media campaigns across every major platform. From zero to
+              campaign mastery.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
+            >
+              <button
+                  onClick={() => setFormOpen(true)}
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-semibold text-base hover:bg-[#1d4ed8] transition-all shadow-[0_4px_6px_-1px_rgba(37,99,235,0.2)] hover:shadow-[0_10px_15px_-3px_rgba(37,99,235,0.3)]"
+              >
+                Start Learning Today
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-semibold text-base border border-[#e2e8f0] hover:border-[#dbeafe] hover:bg-[#f8fafc] transition-all">
+                <Play className="w-5 h-5 text-[#2563eb]" />
+                Watch Preview
+              </button>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="flex items-center gap-4 justify-center lg:justify-start"
+            >
+              <div className="flex -space-x-3">
+                {["SC", "MJ", "PS", "AK"].map((initial, i) => (
+                  <div
+                    key={i}
+                    className="w-10 h-10 rounded-full bg-[#e2e8f0] border-2 border-white flex items-center justify-center text-xs font-bold text-[#475569]"
+                  >
+                    {initial}
+                  </div>
+                ))}
+              </div>
+              <div className="text-sm text-[#475569]">
+                <span className="font-semibold text-[#0f172a]">12,400+</span> students enrolled
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Visual */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative"
+          >
+            <div className="relative bg-white rounded-3xl p-6 shadow-xl border border-[#e2e8f0]">
+              {/* Dashboard Mockup */}
+              <div className="space-y-4">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-4 border-b border-[#f1f5f9]">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#eff6ff] flex items-center justify-center">
+                      <BarChart2 className="w-5 h-5 text-[#2563eb]" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-[#0f172a]">Campaign Performance</p>
+                      <p className="text-xs text-[#94a3b8]">Last 30 days</p>
+                    </div>
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-[#ecfdf5] text-[#10b981] text-xs font-semibold">
+                    +24.5%
+                  </span>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { label: "Impressions", value: "2.4M", icon: Eye, color: "#2563eb", bg: "#eff6ff" },
+                    { label: "Engagement", value: "8.7%", icon: Heart, color: "#ec4899", bg: "#fdf2f8" },
+                    { label: "Conversions", value: "3.2K", icon: MousePointerClick, color: "#10b981", bg: "#ecfdf5" },
+                  ].map((stat, i) => (
+                    <div key={i} className="p-3 rounded-xl bg-[#f8fafc] border border-[#f1f5f9]">
+                      <stat.icon className="w-4 h-4 mb-2" style={{ color: stat.color }} />
+                      <p className="text-lg font-bold text-[#0f172a]">{stat.value}</p>
+                      <p className="text-xs text-[#94a3b8]">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Chart Bar */}
+                <div className="p-4 rounded-xl bg-[#f8fafc] border border-[#f1f5f9]">
+                  <div className="flex items-end justify-between h-24 gap-2">
+                    {[40, 65, 45, 80, 55, 90, 70, 85, 60, 75, 95, 88].map((h, i) => (
+                      <div
+                        key={i}
+                        className="flex-1 rounded-t-sm transition-all duration-500"
+                        style={{
+                          height: `${h}%`,
+                          background: i === 10 ? "#2563eb" : "#dbeafe",
+                          opacity: i === 10 ? 1 : 0.6,
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <div className="flex justify-between mt-2 text-[10px] text-[#94a3b8]">
+                    <span>Jan</span>
+                    <span>Dec</span>
+                  </div>
+                </div>
+
+                {/* Platform Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {["Instagram", "TikTok", "LinkedIn", "X", "YouTube"].map((p, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 rounded-lg bg-white border border-[#e2e8f0] text-xs font-medium text-[#475569]"
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Floating Badge */}
+              <div
+                className="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-lg border border-[#e2e8f0]"
+                style={{ animation: "float 3s ease-in-out infinite" }}
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-[#ecfdf5] flex items-center justify-center">
+                    <Flame className="w-4 h-4 text-[#10b981]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#0f172a]">Trending</p>
+                    <p className="text-[10px] text-[#94a3b8]">Top 1% course</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Stats Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+        >
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm border border-[#e2e8f0] hover:border-[#dbeafe] hover:bg-white transition-all"
+            >
+              <stat.icon className="w-6 h-6 text-[#2563eb] mb-3" />
+              <p className="text-2xl font-bold text-[#0f172a]">{stat.value}</p>
+              <p className="text-sm text-[#64748b]">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+
+    {/* components */}
       <PlatformStrip />
       <Curriculum />
       <Outcomes />

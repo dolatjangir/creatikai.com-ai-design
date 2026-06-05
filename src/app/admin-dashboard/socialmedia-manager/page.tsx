@@ -18,6 +18,8 @@ import {
 } from "@/store/social-media/social-media/socialMedia";
 import SchedulerPanel from "@/components/social/SchedulerPanel";
 import MasterProtectedRoute from "@/utils/masterProtectedRoute";
+import { Sparkles } from "lucide-react";
+import Link from "next/link";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -993,17 +995,35 @@ export default function SocialMediaManagerPage() {
       </div>
 
       {/* Platform pill tab bar */}
-      <div className="flex items-center gap-1 overflow-x-auto pb-0.5 -mx-1 px-1">
-        {PLATFORM_MODULES.map((m) => (
-          <PlatformPill
-            key={m.id}
-            module={m}
-            status={platformStatuses[m.id]}
-            active={activePlatformId === m.id}
-            onClick={() => setActivePlatformId(m.id)}
-          />
-        ))}
-      </div>
+     <div className="flex items-center gap-1 overflow-x-auto pb-0.5 -mx-1 px-1">
+  {PLATFORM_MODULES.map((m) => (
+    <PlatformPill
+      key={m.id}
+      module={m}
+      status={platformStatuses[m.id]}
+      active={activePlatformId === m.id}
+      onClick={() => setActivePlatformId(m.id)}
+    />
+  ))} 
+  <div className="ml-auto flex-shrink-0 pl-2">
+    <Link href="/admin-dashboard/socialmedia-manager/social-media-agent"><button
+      className={`
+        relative flex items-center gap-2 px-4 py-2 rounded-[var(--radius-xl)] text-sm text-white font-semibold
+        transition-all duration-200 whitespace-nowrap
+        bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-secondary-600)]
+        hover:shadow-[var(--shadow-btn-primary-hover)] hover:scale-[1.02]
+        active:scale-[0.98]
+      `}
+    >
+      <span
+        className="w-5 h-5 rounded-[var(--radius-md)] flex items-center justify-center text-white flex-shrink-0"
+      >
+        <Sparkles className="w-4 h-4 text-white" />
+      </span>
+      Ai Post Generator
+    </button></Link>
+  </div>
+</div>
 
       <div className="h-px bg-[var(--color-primary-200)]" />
 

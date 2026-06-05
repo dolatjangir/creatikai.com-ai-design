@@ -437,7 +437,7 @@ function useScrollReveal() {
 /* ─── Hero Section ─── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 min-h-[130vh] flex items-center">
+    <section className="relative overflow-hidden pt-24 min-h-[130vh] flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[#0f172a]">
         {/* Gradient Orbs */}
@@ -462,7 +462,7 @@ function Hero() {
         </div>
 
         {/* Bottom Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent" />
+        {/* <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent" /> */}
       </div>
 
       <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">

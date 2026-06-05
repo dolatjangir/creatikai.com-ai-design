@@ -20,10 +20,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     { path: '/admin-dashboard', label: 'Dashboard', icon: Layout },
      { path: '/admin-dashboard/blogs', label: 'Blog Manger', icon: BrickWall },
      { path: '/admin-dashboard/socialmedia-manager', label: 'Social Media Manager', icon: SquareLibrary },
-    { path: '/admin-dashboard/brokers', label: 'Broker Manager', icon: SquareUser },
-    { path: '/admin-dashboard/properties', label: 'Property Manager', icon: HousePlus },
+    // { path: '/admin-dashboard/brokers', label: 'Broker Manager', icon: SquareUser },
+    // { path: '/admin-dashboard/properties', label: 'Property Manager', icon: HousePlus },
     { path: '/admin-dashboard/requirements', label: 'Requirements', icon: UsersRound },
-    { path: '/admin-dashboard/broker-request', label: 'Broker Requests', icon: TouchpadOff },
+    { path: '/admin-dashboard/subscriber', label: 'Subscriber', icon: SquareUser },
+    { path: '/admin-dashboard/inquiry', label: 'Inquiry', icon: UsersRound },
+    // { path: '/admin-dashboard/broker-request', label: 'Broker Requests', icon: TouchpadOff },
 
   ];
 

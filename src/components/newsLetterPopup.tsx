@@ -59,7 +59,7 @@ export default function NewsletterPopup({ delay = 5000 }: NewsletterPopupProps) 
 
     try {
       // Replace with your actual API endpoint
-      const res = await fetch('/api/newsletter', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
