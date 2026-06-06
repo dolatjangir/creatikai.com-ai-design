@@ -366,8 +366,8 @@ export default function Navbar() {
 
         {/* Right Side: CTA Button */}
         <div className="hidden md:flex items-center relative pr-4">
-        <Link href="/register">  <button className="relative group overflow-hidden bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm px-6 py-2.5 rounded-full flex items-center gap-2 shadow-md shadow-indigo-500/10 hover:shadow-indigo-500/20 active:scale-95 transition-all duration-200 cursor-pointer">
-            <span>Register</span>
+        <Link href="/resourses/contact-us">  <button className="relative group overflow-hidden bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm px-6 py-2.5 rounded-full flex items-center gap-2 shadow-md shadow-indigo-500/10 hover:shadow-indigo-500/20 active:scale-95 transition-all duration-200 cursor-pointer">
+            <span>Get Started</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </button></Link>
           <div className="absolute -top-3 -right-2 pointer-events-none flex gap-1 select-none">

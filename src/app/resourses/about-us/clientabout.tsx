@@ -505,12 +505,9 @@ export default function AboutPage(): JSX.Element {
                 >
                   <div
                     className="w-full h-full flex items-center justify-center"
-                    style={{ background: "var(--gradient-course-1)" }}
+                   
                   >
-                    <div className="text-center p-8">
-                      <Code2 className="w-20 h-20 mx-auto mb-4" style={{ color: "var(--color-course-icon-1)" }} />
-                      <p className="text-white/60 text-sm font-medium">Our Development Team</p>
-                    </div>
+                   <img src="/our-devlopment-team.png" alt="our development Team"/>
                   </div>
                 </div>
                 {/* Floating badge */}
@@ -678,12 +675,9 @@ export default function AboutPage(): JSX.Element {
                 >
                   <div
                     className="w-full h-full flex items-center justify-center"
-                    style={{ background: "var(--gradient-course-2)" }}
+                   
                   >
-                    <div className="text-center p-8">
-                      <BrainCircuit className="w-20 h-20 mx-auto mb-4" style={{ color: "var(--color-course-icon-2)" }} />
-                      <p className="text-white/60 text-sm font-medium">AI Innovation Lab</p>
-                    </div>
+                   <img src="/Ai-invovation-lab.png" alt="Ai Innovation Lab"/>
                   </div>
                 </div>
                 {/* Floating stat */}
@@ -736,12 +730,9 @@ export default function AboutPage(): JSX.Element {
                 >
                   <div
                     className="w-full h-full flex items-center justify-center"
-                    style={{ background: "var(--gradient-course-3)" }}
+                   
                   >
-                    <div className="text-center p-8">
-                      <MessageSquare className="w-20 h-20 mx-auto mb-4" style={{ color: "var(--color-course-icon-3)" }} />
-                      <p className="text-white/60 text-sm font-medium">AI Chatbot Solutions</p>
-                    </div>
+                   <img src="/ai-chatbot.png" alt="ai-chatbot-solution"/>
                   </div>
                 </div>
               </div>
@@ -954,12 +945,9 @@ export default function AboutPage(): JSX.Element {
                 >
                   <div
                     className="w-full h-full flex items-center justify-center"
-                    style={{ background: "var(--gradient-course-4)" }}
+                 
                   >
-                    <div className="text-center p-8">
-                      <TrendingUp className="w-20 h-20 mx-auto mb-4" style={{ color: "var(--color-course-icon-4)" }} />
-                      <p className="text-white/60 text-sm font-medium">Growth Analytics</p>
-                    </div>
+                   <img src="/growth-analytics.png" alt="growth-analytics"/>
                   </div>
                 </div>
                 {/* Floating badge */}

@@ -129,10 +129,8 @@ setLoading(false);
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="w-full max-w-lg relative z-10">
-        {/* Logo & Header */}
-        <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center gap-2.5 mb-6 group">
+      {/* logo creatikai */}
+ <Link href="/" className="hidden  absolute left-10 top-10 sm:inline-flex items-center gap-2.5 mb-6 group">
             <div className="relative">
               <Image
                 src="/creatikai-logo.png"
@@ -147,7 +145,12 @@ setLoading(false);
               Creatik <span className="text-indigo-600 font-extrabold">AI</span>
             </span>
           </Link>
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Sign In</h1>
+      <div className="w-full max-w-lg relative z-10">
+        
+        {/* Logo & Header */}
+        <div className=" text-center mb-8 ">
+         
+          <h1 className="text-3xl font-bold text-slate-900 mb-2  ">Sign In</h1>
           <p className="text-slate-500 text-sm">
             Welcome back! Please enter your details to continue
           </p>
@@ -158,9 +161,9 @@ setLoading(false);
           {/* Google Sign In */}
           <button
             type="button"
-            className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98] transition-all duration-200 mb-6"
+            className="w-full hidden sm:flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98] transition-all duration-200 mb-6"
           >
-            <svg className="w-5 h-5" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 " viewBox="0 0 24 24">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -182,7 +185,7 @@ setLoading(false);
           </button>
 
           {/* Divider */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="hidden sm:flex items-center gap-4 mb-6">
             <div className="h-px flex-1 bg-slate-100" />
             <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">or sign in with email</span>
             <div className="h-px flex-1 bg-slate-100" />
