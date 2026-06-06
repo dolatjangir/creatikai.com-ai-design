@@ -167,9 +167,9 @@ function MegaMenu({
       {/* Animated container */}
       <div
         className={`
-          bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl 
-          rounded-2xl border border-slate-100 dark:border-slate-700/50 
-          shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)]
+          bg-white/95  backdrop-blur-2xl 
+          rounded-2xl border border-slate-100 
+          shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] 
           p-6 ${widthClass}
           animate-in fade-in zoom-in-95 slide-in-from-top-2 duration-200
         `}
@@ -185,7 +185,7 @@ function MegaMenu({
               {/* Category Title with accent */}
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600" />
-                <h4 className="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-400 dark:text-slate-500">
+                <h4 className="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-400 ">
                   {category.title}
                 </h4>
               </div>
@@ -195,9 +195,9 @@ function MegaMenu({
                   <Link
                     key={subItem.href + subItem.label}
                     href={subItem.href}
-                    className="group/item relative px-3 py-2.5 text-[13px] font-medium text-slate-600 dark:text-slate-300 
-                      hover:text-blue-600 dark:hover:text-blue-400 
-                      hover:bg-blue-50/60 dark:hover:bg-blue-950/30 
+                    className="group/item relative px-3 py-2.5 text-[13px] font-medium text-slate-600 
+                      hover:text-blue-600 
+                      hover:bg-blue-50/60 
                       rounded-xl transition-all duration-200 flex items-center gap-2.5"
                   >
                     {/* Hover indicator line */}
@@ -206,7 +206,7 @@ function MegaMenu({
       <img
         src={subItem.icon}
         alt={subItem.label}
-        className="w-14 h-14 rounded-lg object-contain flex-shrink-0 border border-slate-100 dark:border-slate-700 shadow-sm"
+        className="w-14 h-14 rounded-lg object-contain flex-shrink-0 border border-slate-100  shadow-sm"
       />
     )}
                     <span className="relative z-10">{subItem.label}</span>
@@ -296,7 +296,7 @@ export default function Navbar() {
       }}
     >
       {/* Main Navbar Container */}
-      <nav className="w-full max-w-6xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full border border-slate-100 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 relative">
+      <nav className="w-full max-w-6xl bg-white/80  backdrop-blur-xl rounded-full border border-slate-100  shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 relative">
         
         {/* Left Side: Brand Logo */}
         <div className="flex items-center gap-2.5 group cursor-pointer select-none">
@@ -304,13 +304,13 @@ export default function Navbar() {
            <Link href="/"> <img width={40} src="/creatikai-logo.png" alt="Creatik AI Logo" /></Link>
             <Sparkles className="w-3 h-3 text-indigo-400 absolute -top-1 -right-1 opacity-80" />
           </div>
-          <span className="font-bold text-lg md:text-xl tracking-tight text-slate-900 dark:text-white">
-            Creatik <span className="text-indigo-600 dark:text-indigo-400 font-extrabold">AI</span>
+          <span className="font-bold text-lg md:text-xl tracking-tight text-slate-900 ">
+            Creatik <span className="text-indigo-600  font-extrabold">AI</span>
           </span>
         </div>
 
         {/* Center: Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-1 bg-slate-50/50 dark:bg-slate-900/90 p-1 rounded-full">
+        <div className="hidden md:flex items-center gap-1 bg-slate-50/50  p-1 rounded-full">
           {navItems.map((item, index) => {
             const isActive = activeTab === item.label;
             const hasSubmenu = !!item.submenu;
@@ -328,8 +328,8 @@ export default function Navbar() {
                   onClick={() => setActiveTab(item.label)}
                   className={`relative px-5 py-2.5 text-sm font-medium transition-all duration-300 rounded-full flex items-center gap-2 cursor-pointer outline-none
                     ${isActive
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40 shadow-sm"
-                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                      ? "text-blue-600  bg-blue-50/70  shadow-sm"
+                      : "text-slate-600  hover:text-slate-900 "
                     }
                   `}
                 >
@@ -341,7 +341,7 @@ export default function Navbar() {
                     />
                   )}
                   {isActive && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full" />
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-blue-600  rounded-full" />
                   )}
                 </Link>
 
@@ -357,7 +357,7 @@ export default function Navbar() {
 
                 {/* Divider */}
                 {index < navItems.length - 1 && (
-                  <div className="h-4 w-[1px] bg-slate-200/80 dark:bg-slate-700 mx-1" />
+                  <div className="h-4 w-[1px] bg-slate-200/80  mx-1" />
                 )}
               </div>
             );
@@ -380,7 +380,7 @@ export default function Navbar() {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors"
+            className="p-2 text-slate-600  hover:bg-slate-100  rounded-full transition-colors"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -390,7 +390,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-       <div className="absolute top-24 left-4 right-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl shadow-xl md:hidden flex flex-col z-40 overflow-hidden"
+       <div className="absolute top-24 left-4 right-4 bg-white  border border-slate-100  rounded-3xl shadow-xl md:hidden flex flex-col z-40 overflow-hidden"
   style={{ maxHeight: "80vh", animation: "mobileMenuDown 0.35s cubic-bezier(0.4,0,0.2,1) forwards" }}>
          <div className="flex flex-col gap-1 overflow-y-auto px-5 pt-5 pb-2">
             {navItems.map((item) => {
@@ -412,8 +412,8 @@ export default function Navbar() {
                     }}
                     className={`w-full px-4 py-3 text-left font-medium text-sm rounded-xl flex items-center justify-between gap-3 transition-colors
                       ${isActive
-                        ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30"
-                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                        ? "text-blue-600  bg-blue-50 "
+                        : "text-slate-600  hover:bg-slate-50 "
                       }
                     `}
                   >
@@ -430,11 +430,11 @@ export default function Navbar() {
 
                   {/* Mobile Submenu Accordion */}
                   {hasSubmenu && isMobileSubmenuExpanded && (
-                    <div className="ml-4 mt-1 mb-2 flex flex-col gap-4 border-l-2 border-blue-100 dark:border-blue-900/50 pl-4">
+                    <div className="ml-4 mt-1 mb-2 flex flex-col gap-4 border-l-2 border-blue-100  pl-4">
                       {item.submenu!.map((category, catIdx) => (
                         <div key={`mobile-${category.title}-${catIdx}`} className="flex flex-col gap-1.5">
                           {category.title && (
-                            <h4 className="text-[11px] font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400 px-2">
+                            <h4 className="text-[11px] font-bold uppercase tracking-wider text-blue-500  px-2">
                               {category.title}
                             </h4>
                           )}
@@ -443,9 +443,9 @@ export default function Navbar() {
                               key={subItem.href + subItem.label}
                               href={subItem.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="px-2 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-950/20 rounded-lg transition-colors flex items-center gap-2"
+                              className="px-2 py-2 text-sm text-slate-600  hover:text-blue-600  hover:bg-blue-50/50  rounded-lg transition-colors flex items-center gap-2"
                             >
-                              <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600" />
+                              <span className="w-1 h-1 rounded-full bg-slate-300 " />
                               {subItem.label}
                             </Link>
                           ))}
@@ -459,7 +459,7 @@ export default function Navbar() {
           </div>
 
            {/* Sticky Register Button */}
-        <div className="sticky bottom-0 left-0 right-0 bg-white dark:bg-slate-900 pt-3 pb-5 px-5 border-t border-slate-100 dark:border-slate-800">
+        <div className="sticky bottom-0 left-0 right-0 bg-white  pt-3 pb-5 px-5 border-t border-slate-100 ">
           <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/10 active:scale-95 transition-transform">
             <span>Register</span>
             <ArrowRight className="w-4 h-4" />
