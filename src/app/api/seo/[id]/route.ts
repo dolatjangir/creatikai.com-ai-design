@@ -18,6 +18,14 @@ export async function GET(
         { error: 'SEO entry not found' },
         { status: 404 }
       );
+    };
+
+    // added new thing
+     if (entry.status === 'draft') {
+      return NextResponse.json(
+        { error: 'SEO entry is not published' },
+        { status: 404 }
+      );
     }
 
     return NextResponse.json({

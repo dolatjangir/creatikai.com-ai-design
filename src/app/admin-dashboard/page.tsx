@@ -215,7 +215,7 @@ export default function DashboardPage() {
               </button>
             </a>
 
-            <Link href="/dashboard">
+            <Link href="/">
               <button className="px-6 py-2 text-sm font-medium border border-gray-200 rounded-lg bg-white hover:bg-gray-50 text-gray-700 shadow-sm transition">
                 Skip
               </button>

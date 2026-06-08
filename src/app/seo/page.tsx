@@ -956,7 +956,34 @@ useEffect(() => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-[var(--color-text-secondary)] mb-1.5">Canonical URL</label>
-                      <input type="text" value={formData.canonicalUrl || ''} onChange={(e) => handleInputChange('canonicalUrl', e.target.value)}
+                      <input type="text" value={formData.canonicalUrl || ''}
+                        onChange={(e) => {
+      const urlValue = e.target.value;
+      handleInputChange('canonicalUrl', urlValue);
+
+      // Auto-extract page name from URL (only in create mode)
+      if (isCreateMode && urlValue) {
+        try {
+          const url = new URL(urlValue);
+          let path = url.pathname.replace(/^\/+/, '');
+
+          if (!path) path = 'home';
+
+          // Auto-fill if pageName is empty
+          if (!formData.pageName) {
+            setFormData(prev => ({
+              ...prev,
+              pageName: path,
+              slug: generateSlug(path),
+              url: `/${path}`,
+              canonicalUrl: urlValue,
+            }));
+          }
+        } catch {
+          //if Invalid URL — ignore
+        }
+      }
+    }}
                         className="w-full px-4 py-2.5 bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
                         placeholder="https://creatikai.com/page" />
                     </div>
