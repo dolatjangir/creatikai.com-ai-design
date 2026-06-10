@@ -470,7 +470,7 @@ export default function HomePage(): JSX.Element {
             <div className="order-1 lg:order-2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-xl)]">
                 <Image
-                  src="/company.avif"
+                  src="/company.png"
                   alt="Creatik IT Solution Office Building"
                   width={600}
                   height={450}

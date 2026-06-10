@@ -146,8 +146,8 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
               className="relative flex w-full justify-center lg:w-1/2"
             >
               {/* Background Circles */}
-              <div className="absolute top-[-40px] h-[420px] w-[420px] rounded-full bg-[var(--color-primary)]" />
-              <div className="absolute top-[40px] h-[380px] w-[380px] rounded-full bg-[var(--color-section-alt)]" />
+              {/* <div className="absolute top-[-40px] h-[420px] w-[420px] rounded-full bg-[var(--color-primary)]" /> */}
+              {/* <div className="absolute top-[40px] h-[380px] w-[380px] rounded-full bg-[var(--color-section-alt)]" /> */}
               
               {/* Image */}
               <div className="relative z-10 h-[420px] w-[650px] max-w-full">
@@ -155,7 +155,7 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
                   src="/about-hero-img.png"
                   alt="Agency"
                   fill
-                  className="object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.16)]"
+                  className="object-contain  drop-shadow-[0_35px_35px_rgba(0,0,0,0.16)]"
                 />
               </div>
             </div>

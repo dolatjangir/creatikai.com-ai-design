@@ -421,124 +421,98 @@ const faqs = [
 function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 min-h-[92vh] flex items-center">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[#0f172a]">
-        {/* Large Gradient Orbs */}
-        <div className="hero-glow-1 absolute top-[5%] left-[0%] w-[600px] h-[600px] rounded-full opacity-[0.18] blur-[140px] bg-[#2563eb]" />
-        <div className="hero-glow-2 absolute bottom-[0%] right-[5%] w-[500px] h-[500px] rounded-full opacity-[0.12] blur-[120px] bg-[#60a5fa]" />
-        <div className="hero-glow-3 absolute top-[40%] left-[55%] w-[350px] h-[350px] rounded-full opacity-[0.10] blur-[90px] bg-[#93c5fd]" />
-        <div className="hero-glow-4 absolute top-[15%] right-[30%] w-[250px] h-[250px] rounded-full opacity-[0.08] blur-[70px] bg-[#1e40af]" />
+  {/* Background */}
+  <div className="absolute inset-0 bg-[#0f172a]" />
 
-        {/* Grid Pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.035]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)`,
-            backgroundSize: "70px 70px",
-          }}
-        />
-
-        {/* Diagonal Accent Lines */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `repeating-linear-gradient(30deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px)`,
-          }}
-        />
-
-        {/* Orbiting Elements */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="orbit-1 absolute w-2.5 h-2.5 rounded-full bg-[#60a5fa] opacity-50" />
-          <div className="orbit-2 absolute w-2 h-2 rounded-full bg-[#93c5fd] opacity-40" />
-          <div className="orbit-3 absolute w-3 h-3 rounded-full bg-[#2563eb] opacity-30" />
+  <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      {/* Left: Content */}
+      <div className="max-w-2xl">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+          <Sparkles className="w-4 h-4 text-[#fbbf24]" />
+          <span className="text-sm font-semibold text-white">Real Estate Industry Specialization</span>
         </div>
 
-        {/* Floating House Icons */}
-        <div className="absolute top-[20%] left-[15%] anim-float opacity-[0.06]">
-          <Home className="w-24 h-24 text-white" />
+        {/* Headline */}
+        <h1 className="text-[clamp(2.5rem,7vw,3.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+          The Complete{" "}
+          <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
+            Real Estate CRM
+          </span>{" "}
+          & Lead Generation System
+        </h1>
+
+        {/* Subheadline */}
+        <p className="text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-xl">
+          Master the technology, marketing, and systems that top-producing agents use to 
+          close more deals, nurture every lead, and scale from solo agent to brokerage owner.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <a
+            href="#pricing"
+            className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-bold text-base hover:bg-[#f8fafc] transition-all shadow-lg hover:shadow-xl"
+          >
+            Enroll Now — $797
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
+            <Play className="w-5 h-5" />
+            Watch Free Preview
+          </button>
         </div>
-        <div className="absolute bottom-[25%] right-[20%] anim-float-slow opacity-[0.05]" style={{ animationDelay: "2s" }}>
-          <Building2 className="w-20 h-20 text-white" />
-        </div>
-        <div className="absolute top-[60%] left-[70%] anim-float opacity-[0.04]" style={{ animationDelay: "4s" }}>
-          <Key className="w-16 h-16 text-white" />
-        </div>
 
-        {/* Bottom Fade */}
-        {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent" /> */}
-      </div>
-
-      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="anim-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-            <Sparkles className="w-4 h-4 text-[#fbbf24]" />
-            <span className="text-sm font-semibold text-white">Real Estate Industry Specialization</span>
-          </div>
-
-          {/* Headline */}
-          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
-            The Complete{" "}
-            <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
-              Real Estate CRM
-            </span>{" "}
-            & Lead Generation System
-          </h1>
-
-          {/* Subheadline */}
-          <p className="anim-fade-up delay-200 text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl">
-            Master the technology, marketing, and systems that top-producing agents use to 
-            close more deals, nurture every lead, and scale from solo agent to brokerage owner.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="anim-fade-up delay-300 flex flex-col sm:flex-row gap-4 mb-12">
-            <a
-              href="#pricing"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-bold text-base hover:bg-[#f8fafc] transition-all shadow-lg hover:shadow-xl"
-            >
-              Enroll Now — $797
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
-              <Play className="w-5 h-5" />
-              Watch Free Preview
-            </button>
-          </div>
-
-          {/* Trust Bar */}
-          <div className="anim-fade-up delay-400 flex flex-wrap items-center gap-6">
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                {["MT", "SC", "DP", "JK"].map((initial, i) => (
-                  <div
-                    key={i}
-                    className="w-9 h-9 rounded-full bg-[#2563eb] border-2 border-[#0f172a] flex items-center justify-center text-xs font-bold text-white"
-                  >
-                    {initial}
-                  </div>
-                ))}
-              </div>
-              <span className="text-sm text-[#94a3b8]">
-                <span className="font-semibold text-white">18,500+</span> agents enrolled
-              </span>
-            </div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-[#fbbf24] fill-[#fbbf24]" />
+        {/* Trust Bar */}
+        {/* <div className="flex flex-wrap items-center gap-6">
+          <div className="flex items-center gap-2">
+            <div className="flex -space-x-2">
+              {["MT", "SC", "DP", "JK"].map((initial, i) => (
+                <div
+                  key={i}
+                  className="w-9 h-9 rounded-full bg-[#2563eb] border-2 border-[#0f172a] flex items-center justify-center text-xs font-bold text-white"
+                >
+                  {initial}
+                </div>
               ))}
-              <span className="text-sm text-[#94a3b8] ml-1">
-                <span className="font-semibold text-white">4.9/5</span> rating
-              </span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-[#94a3b8]">
-              <Shield className="w-4 h-4 text-[#10b981]" />
-              <span>30-Day Money-Back Guarantee</span>
-            </div>
+            <span className="text-sm text-[#94a3b8]">
+              <span className="font-semibold text-white">18,500+</span> agents enrolled
+            </span>
           </div>
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 text-[#fbbf24] fill-[#fbbf24]" />
+            ))}
+            <span className="text-sm text-[#94a3b8] ml-1">
+              <span className="font-semibold text-white">4.9/5</span> rating
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-[#94a3b8]">
+            <Shield className="w-4 h-4 text-[#10b981]" />
+            <span>30-Day Money-Back Guarantee</span>
+          </div>
+        </div> */}
+      </div>
+
+      {/* Right: Image */}
+      <div className="relative hidden lg:block">
+        <div className="relative">
+          {/* Glow behind image */}
+          <div className="absolute -inset-4 bg-[#2563eb]/20 rounded-3xl blur-3xl" />
+          
+          {/* Image */}
+          <img
+            src="/real-estate.png"
+            alt="Real Estate CRM Dashboard"
+            className="relative w-full h-auto rounded-2xl border border-white/10 shadow-2xl"
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 }
 

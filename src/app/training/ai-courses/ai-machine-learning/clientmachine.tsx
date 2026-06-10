@@ -496,7 +496,7 @@ export default function AIMachineLearningPage(): JSX.Element {
                     }}
                   >
                     <Send className="w-4 h-4" />
-                    Enroll Now — ₹9,999
+                    Enroll Now — ₹19,999
                   </button>
                   <button
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold rounded-xl border transition-all text-sm"
@@ -597,8 +597,8 @@ export default function AIMachineLearningPage(): JSX.Element {
                       <div>
                         <p className="text-xs mb-1" style={{ color: "var(--color-text-muted)" }}>Early Bird Price</p>
                         <div className="flex items-baseline gap-2">
-                          <span className="text-3xl font-extrabold" style={{ color: "var(--color-text-primary)" }}>₹9,999</span>
-                          <span className="text-sm line-through" style={{ color: "var(--color-text-faint)" }}>₹14,999</span>
+                          <span className="text-3xl font-extrabold" style={{ color: "var(--color-text-primary)" }}>₹19,999</span>
+                          <span className="text-sm line-through" style={{ color: "var(--color-text-faint)" }}>₹29,999</span>
                         </div>
                       </div>
                       <span

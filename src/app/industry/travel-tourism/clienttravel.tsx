@@ -510,7 +510,7 @@ const faqs = [
 /* ─── Hero Section ─── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 min-h-[92vh] flex items-center">
+    <section className="relative overflow-hidden pt-32 min-h-[100vh] flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[#0f172a]">
         <div className="hero-glow-1 absolute top-[5%] left-[0%] w-[600px] h-[600px] rounded-full opacity-[0.18] blur-[140px] bg-[#2563eb]" />
@@ -551,14 +551,14 @@ function Hero() {
         {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent" /> */}
       </div>
 
-      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
+      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]  flex sm:flex-col flex-row items-center justify-between relative z-10 w-full">
         <div className="max-w-3xl">
           <div className="anim-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
             <Sparkles className="w-4 h-4 text-[#fbbf24]" />
             <span className="text-sm font-semibold text-white">Travel & Tourism Industry Specialization</span>
           </div>
 
-          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,3.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
             The Complete{" "}
             <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
               Travel CRM
@@ -566,7 +566,7 @@ function Hero() {
             & Guest Growth System
           </h1>
 
-          <p className="anim-fade-up delay-200 text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl">
+          <p className="anim-fade-up delay-200 text-sm md:text-lg text-[#94a3b8] leading-relaxed mb-10 max-w-2xl">
             Master the technology, marketing, and systems that top hotels, resorts, and travel agencies 
             use to fill rooms, delight guests, and maximize revenue per traveler — from boutique 
             properties to global hospitality brands.
@@ -577,16 +577,16 @@ function Hero() {
               href="#pricing"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-bold text-base hover:bg-[#f8fafc] transition-all shadow-lg hover:shadow-xl"
             >
-              Enroll Now — $847
+              Enroll Now — ₹847
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
+            {/* <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
               <Play className="w-5 h-5" />
               Watch Free Preview
-            </button>
+            </button> */}
           </div>
 
-          <div className="anim-fade-up delay-400 flex flex-wrap items-center gap-6">
+          {/* <div className="anim-fade-up delay-400 flex flex-wrap items-center gap-6">
             <div className="flex items-center gap-2">
               <div className="flex -space-x-2">
                 {["EV", "JN", "AO", "MK"].map((initial, i) => (
@@ -614,8 +614,22 @@ function Hero() {
               <Shield className="w-4 h-4 text-[#10b981]" />
               <span>IATA-Recognized & 30-Day Guarantee</span>
             </div>
-          </div>
+          </div> */}
         </div>
+            {/* Right: Image */}
+      <div className="relative hidden lg:block">
+        <div className="relative">
+          {/* Glow behind image */}
+          <div className="absolute -inset-4 bg-[#2563eb]/20 rounded-3xl blur-3xl" />
+          
+          {/* Image */}
+          <img
+            src="/travel-tourism.png"
+            alt="Real Estate CRM Dashboard"
+            className="relative w-full h-auto rounded-2xl border border-white/10 shadow-2xl"
+          />
+        </div>
+      </div>
       </div>
     </section>
   );

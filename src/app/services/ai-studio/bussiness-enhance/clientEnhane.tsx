@@ -305,7 +305,7 @@ export default function BusinessEnhancePage() {
 
               <motion.h1
                 variants={fadeInUp}
-                className="text-[var(--hero-title-size)] font-extrabold tracking-tight leading-[1.1] mb-6"
+                className="text-3xl font-extrabold tracking-tight leading-[1.1] mb-6"
               >
                 Supercharge Your Operations with{" "}
                 <span className="gradient-text">

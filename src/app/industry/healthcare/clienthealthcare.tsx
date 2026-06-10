@@ -474,7 +474,7 @@ function Hero() {
         {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent" /> */}
       </div>
 
-      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] relative z-10 w-full">
+      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] flex sm:flex-col flex-row items-center justify-between relative z-10 w-full">
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="anim-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
@@ -483,7 +483,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+          <h1 className="anim-fade-up delay-100 text-[clamp(2.5rem,7vw,3.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
             The Complete{" "}
             <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
               Healthcare CRM
@@ -492,7 +492,7 @@ function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="anim-fade-up delay-200 text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl">
+          <p className="anim-fade-up delay-200 text-sm md:text-lg text-[#94a3b8] leading-relaxed mb-10 max-w-2xl">
             Master HIPAA-compliant patient acquisition, automated appointment workflows, 
             and practice growth systems that fill your schedule while improving patient outcomes 
             — from solo practice to multi-location medical group.
@@ -514,7 +514,7 @@ function Hero() {
           </div>
 
           {/* Trust Bar */}
-          <div className="anim-fade-up delay-400 flex flex-wrap items-center gap-6">
+          {/* <div className="anim-fade-up delay-400 flex flex-wrap items-center gap-6">
             <div className="flex items-center gap-2">
               <div className="flex -space-x-2">
                 {["RK", "JM", "AP", "DL"].map((initial, i) => (
@@ -542,8 +542,22 @@ function Hero() {
               <Shield className="w-4 h-4 text-[#10b981]" />
               <span>HIPAA-Compliant & 30-Day Guarantee</span>
             </div>
-          </div>
+          </div> */}
         </div>
+           {/* Right: Image */}
+      <div className="relative hidden lg:block">
+        <div className="relative">
+          {/* Glow behind image */}
+          <div className="absolute -inset-4 bg-[#2563eb]/20 rounded-3xl blur-3xl" />
+          
+          {/* Image */}
+          <img
+            src="/Helthcare.png"
+            alt="Real Estate CRM Dashboard"
+            className="relative w-full h-auto rounded-2xl border border-white/10 shadow-2xl"
+          />
+        </div>
+      </div>
       </div>
     </section>
   );

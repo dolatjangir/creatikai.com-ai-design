@@ -53,7 +53,7 @@ const submenuService: SubmenuCategory[] = [
   {
     title: "AI Automation",
     items: [
-      { label: "Business Automation", href: "/services/ai-automation/business-automation" },
+      { label: "Business Automation", href: "/services/ai-automation/bussiness-automation" },
       { label: "Lead Automation", href: "/services/ai-automation/lead-automation" },
       { label: "Workflow Automation", href: "/services/ai-automation/workflow-automation" },
     ],
