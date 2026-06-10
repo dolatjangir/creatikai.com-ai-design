@@ -12,6 +12,8 @@ import BrokersPage from '@/components/explore-broker/exploreBroker';
 import RequirementsPage from '@/components/getRequirement/requirement';
 import AdminPropertiesPage from '@/components/property-admin/properties';
 import JoinBrokerApplicationsAdmin from '@/components/join-broker-network/joinNetwork';
+import AIGeneratePanel from '@/components/seo/ai-generate-panel';
+import { SEOPromptOutput } from '../../../lib/seo-prompt';
 
 // ── Types (untouched) ────────────────────────────────────────────────────────
 interface SEOEntry {
@@ -516,10 +518,10 @@ useEffect(() => {
     { id: 'dashboard', icon: Layout, label: 'Dashboard' },
     { id: 'seo',       icon: Search, label: 'SEO Manager', badge: stats.total },
     
-    { id: 'explore',       icon: Search, label: 'Broker Manager', badge: brokerCount },
-     { id: 'properties',     icon: Users,  label: 'Property Manager' },
-    { id: 'requirement',     icon: Users,  label: 'Added Requirements' },
-    { id: 'joinNetwork',     icon: Users,  label: 'Broker Request Manager' },
+    // { id: 'explore',       icon: Search, label: 'Broker Manager', badge: brokerCount },
+    //  { id: 'properties',     icon: Users,  label: 'Property Manager' },
+    // { id: 'requirement',     icon: Users,  label: 'Added Requirements' },
+    // { id: 'joinNetwork',     icon: Users,  label: 'Broker Request Manager' },
 
     { id: 'settings',  icon: Settings, label: 'Settings' },
   ];
@@ -933,7 +935,7 @@ useEffect(() => {
                 <div className="lg:col-span-2 p-4 sm:p-6 space-y-5 sm:space-y-6 lg:border-r border-[var(--color-border-hover)]">
 
                   {/* Basic Info */}
-                  <div className="space-y-4">
+                  {/* <div className="space-y-4">
                     <h4 className="text-xs font-semibold text-[var(--color-text-primary)] uppercase tracking-wider flex items-center gap-2">
                       <Globe className="w-4 h-4 text-[var(--color-primary)]" /> Basic Information
                     </h4>
@@ -987,7 +989,97 @@ useEffect(() => {
                         className="w-full px-4 py-2.5 bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
                         placeholder="https://creatikai.com/page" />
                     </div>
-                  </div>
+                  </div> */}
+                  {/* Basic Info */}
+<div className="space-y-4">
+  <h4 className="text-xs font-semibold text-[var(--color-text-primary)] uppercase tracking-wider flex items-center gap-2">
+    <Globe className="w-4 h-4 text-[var(--color-primary)]" /> Basic Information
+  </h4>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label className="block text-sm font-medium text-[var(--color-text-secondary)] mb-1.5">
+        Page Name <span className="text-red-500">*</span>
+      </label>
+      <input 
+        type="text" 
+        value={formData.pageName || ''} 
+        onChange={(e) => handleInputChange('pageName', e.target.value)}
+        className="w-full px-4 py-2.5 bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all"
+        placeholder="e.g., Home, About Us" 
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-medium text-[var(--color-text-secondary)] mb-1.5">Slug</label>
+      <div className="relative">
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-text-faint)] text-sm">/</span>
+        <input 
+          type="text" 
+          value={formData.slug || ''} 
+          onChange={(e) => handleInputChange('slug', e.target.value)}
+          className={`w-full pl-7 pr-4 py-2.5 border rounded-xl text-sm ${isCreateMode ? 'bg-[var(--color-card-bg)] border-[var(--color-border)] focus:ring-2 focus:ring-[var(--color-primary)]' : 'bg-[var(--color-section-alt)] border-[var(--color-border)] text-[var(--color-text-secondary)]'}`}
+          readOnly={!isCreateMode} 
+        />
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <label className="block text-sm font-medium text-[var(--color-text-secondary)] mb-1.5">Canonical URL</label>
+    <input 
+      type="text" 
+      value={formData.canonicalUrl || ''}
+      onChange={(e) => {
+        const urlValue = e.target.value;
+        handleInputChange('canonicalUrl', urlValue);
+        if (isCreateMode && urlValue) {
+          try {
+            const url = new URL(urlValue);
+            let path = url.pathname.replace(/^\/+/, '');
+            if (!path) path = 'home';
+            if (!formData.pageName) {
+              setFormData(prev => ({
+                ...prev,
+                pageName: path,
+                slug: generateSlug(path),
+                url: `/${path}`,
+                canonicalUrl: urlValue,
+              }));
+            }
+          } catch {
+            // Invalid URL — ignore
+          }
+        }
+      }}
+      className="w-full px-4 py-2.5 bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
+      placeholder="https://creatikai.com/page" 
+    />
+  </div>
+
+  {/* === AI GENERATE PANEL — INSERTED HERE === */}
+  <AIGeneratePanel
+    pageName={formData.pageName || ''}
+    canonicalUrl={formData.canonicalUrl || 'https://creatikai.com'}
+    onGenerated={(data: SEOPromptOutput) => {
+      setFormData(prev => ({
+        ...prev,
+        metaTitle: data.metaTitle,
+        metaDescription: data.metaDescription,
+        keywords: data.keywords,
+        ogTitle: data.ogTitle,
+        ogDescription: data.ogDescription,
+        ogImage: data.ogImage,
+        twitterTitle: data.twitterTitle,
+        twitterDescription: data.twitterDescription,
+        twitterImage: data.twitterImage,
+      }));
+      setKeywordInput(data.keywords.join(', '));
+      setIsDirty(true);
+      showNotification('AI generated SEO metadata!', 'success');
+    }}
+  />
+  {/* === END AI PANEL === */}
+</div>
 
                   {/* Meta Tags */}
                   <div className="space-y-4 pt-4 border-t border-[var(--color-border-light)]">

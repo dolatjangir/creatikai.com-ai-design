@@ -8,7 +8,7 @@ import { getPageBlogs } from '../../../../lib/blogs';
 
 
 export const generateMetadata = generateSEOMetadata;
-
+export const dynamic = 'force-dynamic';
 
 export default async function  page() {
    const blogs = await getPageBlogs('technology');

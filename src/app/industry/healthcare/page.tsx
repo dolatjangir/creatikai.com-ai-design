@@ -5,7 +5,7 @@ import RelatedBlogs from '@/components/related-blogs';
 import { getPageBlogs } from '../../../../lib/blogs';
 
 
-
+export const dynamic = 'force-dynamic';
 export const generateMetadata = generateSEOMetadata;
 
 export default async function  page() {
