@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa6';
+import { useState } from "react";
 
 // ── Types ───────────────────────────────────────────────────────────────
 interface SubmenuItem {
@@ -75,7 +76,61 @@ const submenuResources: SubmenuCategory[] = [
 
 ];
 
+
+
 export default function Footer() {
+
+    const [email, setEmail] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState('');
+
+ const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+
+      const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+
+    if (!email.trim()) {
+      setError('Please enter your email address');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Replace with your actual API endpoint
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+   const data = await res.json(); 
+
+    if (!res.ok || !data.success) {
+   
+      setError(data.message || 'Something went wrong. Please try again.');
+      return;
+    }
+
+      setIsSuccess(true);
+      sessionStorage.setItem('newsletter-seen', 'true');
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+   
   return (
     <footer className="relative w-[95%] mx-auto bg-[var(--color-section-alt-2)] shadow-2xl shadow-purple-500/30 border border-[var(--color-border)] rounded-t-lg text-[var(--color-text-secondary)] font-sans overflow-hidden py-16 px-6 md:px-12 lg:px-24">
 
@@ -217,16 +272,33 @@ export default function Footer() {
               </div>
 
               {/* Form Input Group */}
+              <form onSubmit={handleSubmit} >
               <div className="relative flex items-center bg-[var(--color-bg)] border border-[var(--color-border)] rounded-full p-1.5 shadow-sm mt-4">
                 <input 
                   type="email" 
+                  value={email}
+                   onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (error) setError('');
+                    }}
                   placeholder="Enter your email" 
                   className="w-full bg-transparent pl-3 pr-10 py-1.5 text-xs text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] outline-none border-none"
-                />
-                <button className="absolute right-1.5 p-2 rounded-full bg-[var(--color-purple)] text-white hover:bg-[var(--color-purple)]/90 transition-all cursor-pointer">
-                  <Send className="w-3 h-3 transform -rotate-12" />
+               disabled={isSubmitting}
+               />
+                <button  type="submit"
+                  disabled={isSubmitting}
+                   className="absolute right-1.5 p-2 rounded-full bg-[var(--color-purple)] text-white hover:bg-[var(--color-purple)]/90 transition-all cursor-pointer">
+                
+                                       <Send className="w-3 h-3 transform -rotate-12" /> 
+                                      
                 </button>
               </div>
+               {error && (
+                  <p className="text-red-500 text-sm font-medium animate-pulse">
+                    {error}
+                  </p>
+                )}
+              </form>
 
               {/* Embedded Glass Envelope Graphic */}
               <div className="pt-2 flex justify-center opacity-90">

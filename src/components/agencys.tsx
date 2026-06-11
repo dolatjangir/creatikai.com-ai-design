@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { forwardRef } from "react";
 
 const steps = [
@@ -95,14 +96,14 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
               </div>
 
               {/* Buttons */}
-              <div className="mt-12 flex flex-wrap gap-5">
+              {/* <div className="mt-12 flex flex-wrap gap-5">
                 <button className="rounded-md bg-[var(--color-bg)] px-9 py-3 text-[14px] font-semibold text-[var(--color-primary-dark)] shadow-xl transition-all duration-300 hover:-translate-y-1">
                Get a Free Consultation
                 </button>
                 <button className="rounded-md border border-[var(--text-inverse)]/40 px-9 py-3 text-[14px] font-semibold text-[var(--text-inverse)] transition-all duration-300 hover:bg-[var(--color-bg)] hover:text-[var(--color-primary-dark)]">
                  Explore Services
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -135,9 +136,9 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
                  UI/UX design, and digital transformation. We combine creativity, 
                 technology, and strategy to help organizations achieve measurable business results.
               </p>
-              <button className="mt-10 rounded-md bg-[var(--color-primary)] px-10 py-3 text-[14px] font-semibold text-[var(--text-inverse)] shadow-xl transition-all duration-300 hover:-translate-y-1">
+             <Link href="/resourses/about-us"> <button className="mt-10 rounded-md bg-[var(--color-primary)] px-10 py-3 text-[14px] font-semibold text-[var(--text-inverse)] shadow-xl transition-all duration-300 hover:-translate-y-1">
                About CreatikAI
-              </button>
+              </button></Link>
             </div>
 
             {/* Right Image (ref attached for GSAP fade-out replacement) */}

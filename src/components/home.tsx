@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import AgencySection from "@/components/agencys";
+import Link from "next/link";
 
 
 
@@ -145,7 +146,7 @@ export default function HomePage(): JSX.Element {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button
+               <Link href="/resourses/about-us"> <button
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-white font-semibold rounded-xl transition-all text-sm"
                   style={{
                     backgroundColor: "var(--color-primary)",
@@ -160,10 +161,10 @@ export default function HomePage(): JSX.Element {
                     e.currentTarget.style.boxShadow = "var(--shadow-btn-primary)";
                   }}
                 >
-                  Explore Services
+                  Explore Us
                   <ArrowRight className="w-4 h-4" />
-                </button>
-                <button
+                </button></Link>
+                {/* <button
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold rounded-xl border transition-all text-sm"
                   style={{
                     backgroundColor: "var(--color-bg)",
@@ -179,7 +180,7 @@ export default function HomePage(): JSX.Element {
                 >
                   View Case Studies
                   <Award className="w-4 h-4" style={{ color: "var(--color-text-muted)" }} />
-                </button>
+                </button> */}
               </div>
 
               {/* <div className="flex items-center gap-4">
@@ -400,7 +401,7 @@ export default function HomePage(): JSX.Element {
       <p className="text-sm mb-5" style={{ color: "var(--color-text-muted)" }}>
         Ready to eliminate manual work and let AI handle the heavy lifting?
       </p>
-      <button
+      <Link href="/training/ai-courses/ai-training"><button
         className="inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-xl transition-all text-sm"
         style={{
           backgroundColor: "var(--color-primary)",
@@ -419,7 +420,7 @@ export default function HomePage(): JSX.Element {
       >
         Start Your Automation Journey
         <ArrowRight className="w-4 h-4" />
-      </button>
+      </button></Link>
     </div>
   </div>
 </section>
@@ -460,10 +461,10 @@ export default function HomePage(): JSX.Element {
                 ))}
               </ul>
 
-              <button className="group inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-[var(--transition-base)] shadow-[var(--shadow-btn-primary)] hover:shadow-[var(--shadow-btn-primary-hover)]">
+             <Link href="/training/digital-marketing/digital-marketing-training-in-jaipur"> <button className="group inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-[var(--transition-base)] shadow-[var(--shadow-btn-primary)] hover:shadow-[var(--shadow-btn-primary-hover)]">
                 Know More About Us
                 <ArrowRight className="w-4 h-4 transition-transform duration-[var(--transition-base)] group-hover:translate-x-1" />
-              </button>
+              </button></Link>
             </div>
 
             {/* Right Image */}
@@ -494,7 +495,7 @@ export default function HomePage(): JSX.Element {
       </div>
 
       {/* CTA Bar */}
-      <section className="px-[var(--container-padding)] pb-[var(--section-py)]">
+      {/* <section className="px-[var(--container-padding)] pb-[var(--section-py)]">
         <div className="max-w-[var(--container-max)] mx-auto">
           <div className="bg-[var(--color-section-alt)] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
@@ -537,7 +538,7 @@ export default function HomePage(): JSX.Element {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </section>
    
 <AgencySection/>
