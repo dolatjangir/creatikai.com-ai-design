@@ -127,7 +127,7 @@ export default function HomePage(): JSX.Element {
               </div>
 
               <h1
-                className="text-4xl font-extrabold tracking-tight leading-[1.1] mb-6"
+                className="text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 Work Smarter.
