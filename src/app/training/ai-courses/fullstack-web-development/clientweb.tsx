@@ -806,7 +806,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                     }}
                   >
                     <Send className="w-4 h-4" />
-                    Start Application — ₹12,999
+                    Start Application — ₹17,999
                   </button>
                   <button
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold rounded-xl border transition-all text-sm"
@@ -1483,7 +1483,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                     }}
                   >
                     <Send className="w-4 h-4" />
-                    Apply Now — ₹12,999
+                    Apply Now — ₹17,999
                   </button>
 
                   <div className="flex items-center justify-center gap-4 pt-2">
