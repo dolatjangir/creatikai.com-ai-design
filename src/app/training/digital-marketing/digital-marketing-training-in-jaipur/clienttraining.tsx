@@ -573,7 +573,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                     }}
                   >
                     <Phone className="w-4 h-4" />
-                    Call: +91 98765 43210
+                    Call: +91 9649902000
                   </button>
                 </div>
 

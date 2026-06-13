@@ -244,7 +244,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: <Phone className="w-5 h-5 text-[var(--color-purple)]" />,
       title: "Call Us",
-      value: "9876543210",
+      value: "9649902000",
       subtext: "Mon–Fri, 9am–6pm EST",
       color: "bg-[var(--color-icon-bg-2)]",
     },

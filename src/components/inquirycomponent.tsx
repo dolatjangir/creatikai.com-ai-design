@@ -164,7 +164,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                       color: "var(--color-text-primary)",
                      
                     }}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 9649902000"
                   />
                 </div>
               </div>

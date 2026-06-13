@@ -364,7 +364,7 @@ const InquiryModal = ({
                       backgroundColor: "var(--color-bg)",
                       color: "var(--color-text-primary)",
                     }}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 9649902000"
                   />
                 </div>
               </div>
@@ -1349,7 +1349,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                   </div>
                   <div>
                     <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>Questions? Talk to us</p>
-                    <p className="text-lg font-bold" style={{ color: "var(--color-text-primary)" }}>+91 98765 43210</p>
+                    <p className="text-lg font-bold" style={{ color: "var(--color-text-primary)" }}>+91 9649902000</p>
                   </div>
                 </div>
               </div>
@@ -1427,7 +1427,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                         backgroundColor: "var(--color-bg)",
                         color: "var(--color-text-primary)",
                       }}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9649902000"
                     />
                   </div>
                   <div>
