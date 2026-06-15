@@ -172,8 +172,8 @@ const featuredCourses = [
     modules: 24,
     projects: 8,
     certificate: true,
-    price: "$299",
-    originalPrice: "$599",
+    price: "₹18,999",
+    originalPrice: "₹24,999",
     tag: "Bestseller",
     tagColor: "var(--color-tag-bestseller)",
   },
@@ -191,8 +191,8 @@ const featuredCourses = [
     modules: 16,
     projects: 12,
     certificate: true,
-    price: "$249",
-    originalPrice: "$499",
+    price: "₹18,999",
+    originalPrice: "₹24,999",
     tag: "Popular",
     tagColor: "var(--color-tag-popular)",
   },
@@ -210,8 +210,8 @@ const featuredCourses = [
     modules: 20,
     projects: 15,
     certificate: true,
-    price: "$279",
-    originalPrice: "$559",
+    price: "₹18,999",
+    originalPrice: "₹24,999",
     tag: "New",
     tagColor: "var(--color-tag-new)",
   },
@@ -229,8 +229,8 @@ const featuredCourses = [
     modules: 32,
     projects: 10,
     certificate: true,
-    price: "$399",
-    originalPrice: "$799",
+    price: "₹19,999",
+    originalPrice: "₹28,999",
     tag: "Bestseller",
     tagColor: "var(--color-tag-bestseller)",
   },
@@ -461,7 +461,7 @@ export default function AIToolsCoursePage() {
 
               <motion.h1
                 variants={fadeInUp}
-                className="text-[var(--hero-title-size)] font-extrabold tracking-tight leading-[1.1] mb-6"
+                className="text-3xl font-extrabold tracking-tight leading-[1.1] mb-6"
               >
                 Master AI Tools That{" "}
                 <span className="gradient-text">
@@ -572,8 +572,8 @@ export default function AIToolsCoursePage() {
                     </div>
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-2xl font-bold text-[var(--color-text-primary)]">$299</span>
-                        <span className="text-sm text-[var(--color-text-muted)] line-through ml-2">$599</span>
+                        <span className="text-2xl font-bold text-[var(--color-text-primary)]">₹18,999</span>
+                        <span className="text-sm text-[var(--color-text-muted)] line-through ml-2">₹24,999</span>
                       </div>
                       <button className="rounded-lg bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--color-primary-hover)] transition-colors">
                         Enroll Now

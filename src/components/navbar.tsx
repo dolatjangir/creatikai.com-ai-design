@@ -310,7 +310,7 @@ export default function Navbar() {
         </div>
 
         {/* Center: Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-1 bg-slate-50/50  p-1 rounded-full">
+        <div className="hidden lg:flex items-center gap-1 bg-slate-50/50  p-1 rounded-full">
           {navItems.map((item, index) => {
             const isActive = activeTab === item.label;
             const hasSubmenu = !!item.submenu;
@@ -365,7 +365,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Side: CTA Button */}
-        <div className="hidden md:flex items-center relative pr-4">
+        <div className="hidden lg:flex items-center relative pr-4">
         <Link href="/resourses/contact-us">  <button className="relative group overflow-hidden bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm px-6 py-2.5 rounded-full flex items-center gap-2 shadow-md shadow-indigo-500/10 hover:shadow-indigo-500/20 active:scale-95 transition-all duration-200 cursor-pointer">
             <span>Get Started</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -377,7 +377,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 text-slate-600  hover:bg-slate-100  rounded-full transition-colors"
@@ -390,7 +390,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-       <div className="absolute top-24 left-4 right-4 bg-white  border border-slate-100  rounded-3xl shadow-xl md:hidden flex flex-col z-40 overflow-hidden"
+       <div className="absolute top-24 left-4 right-4 bg-white  border border-slate-100  rounded-3xl shadow-xl lg:hidden flex flex-col z-40 overflow-hidden"
   style={{ maxHeight: "80vh", animation: "mobileMenuDown 0.35s cubic-bezier(0.4,0,0.2,1) forwards" }}>
          <div className="flex flex-col gap-1 overflow-y-auto px-5 pt-5 pb-2">
             {navItems.map((item) => {
@@ -460,10 +460,10 @@ export default function Navbar() {
 
            {/* Sticky Register Button */}
         <div className="sticky bottom-0 left-0 right-0 bg-white  pt-3 pb-5 px-5 border-t border-slate-100 ">
-          <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/10 active:scale-95 transition-transform">
-            <span>Register</span>
+          <Link href="/resourses/contact-us"><button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium text-sm py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/10 active:scale-95 transition-transform">
+            <span>Get Started</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </button></Link>
         </div>
       </div>
       )}

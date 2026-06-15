@@ -479,7 +479,7 @@ export default function HelpCenterPage() {
               <Sparkles className="w-4 h-4" />
               CreatiKai Help Center
             </div>
-            <h1 className="text-2xl font-bold text-[var(--color-text-primary)] leading-tight mb-4">
+            <h1 className="text-2xl sm:text-4xl font-bold text-[var(--color-text-primary)] leading-tight mb-4">
               How Can We{" "}
               <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-purple)] to-[var(--color-cyan)] bg-clip-text text-transparent">
                 Help You?

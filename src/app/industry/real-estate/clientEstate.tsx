@@ -455,7 +455,7 @@ function Hero() {
             href="#pricing"
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f172a] font-bold text-base hover:bg-[#f8fafc] transition-all shadow-lg hover:shadow-xl"
           >
-            Enroll Now — $797
+            Enroll Now — ₹18,999
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">
@@ -766,10 +766,10 @@ function Pricing() {
               <p className="text-[#475569] mb-8">Complete system for agent productivity & deal growth</p>
 
               <div className="flex items-end justify-center gap-2 mb-2">
-                <span className="text-5xl md:text-6xl font-extrabold text-[#0f172a]">$797</span>
-                <span className="text-lg text-[#94a3b8] line-through mb-2">$3,497</span>
+                <span className="text-5xl md:text-6xl font-extrabold text-[#0f172a]">₹18,999</span>
+                <span className="text-lg text-[#94a3b8] line-through mb-2">₹24,999</span>
               </div>
-              <p className="text-sm text-[#10b981] font-semibold mb-8">Save $2,700 — Limited Time Offer</p>
+              <p className="text-sm text-[#10b981] font-semibold mb-8">Save ₹6,000 — Limited Time Offer</p>
 
               <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
                 {[
@@ -891,7 +891,7 @@ function CTA() {
               href="#pricing"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-bold text-base hover:bg-[#1d4ed8] transition-all shadow-[0_4px_6px_-1px_rgba(37,99,235,0.2)] hover:shadow-[0_10px_15px_-3px_rgba(37,99,235,0.3)]"
             >
-              Enroll Now for $797
+              Enroll Now for ₹18,999
               <ArrowRight className="w-5 h-5" />
             </a>
             <a

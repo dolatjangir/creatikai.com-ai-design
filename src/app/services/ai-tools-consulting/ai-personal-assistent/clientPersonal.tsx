@@ -400,7 +400,7 @@ function ChatDemo() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  useEffect(() => scrollToBottom(), [messages]);
+  // useEffect(() => scrollToBottom(), [messages]);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -840,7 +840,7 @@ export default function AIPersonalAssistantPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="text-[var(--hero-title-size)] font-bold text-[var(--color-text-primary)] leading-tight mb-6"
+                className="text-3xl font-bold text-[var(--color-text-primary)] leading-tight mb-6"
               >
                 Your{" "}
                 <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-purple)] to-[var(--color-cyan)] bg-clip-text text-transparent">
@@ -910,7 +910,7 @@ export default function AIPersonalAssistantPage() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="hidden lg:block"
               >
-                <TaskDashboard />
+                {/* <TaskDashboard /> */}
               </motion.div>
 
               {/* Floating Elements */}

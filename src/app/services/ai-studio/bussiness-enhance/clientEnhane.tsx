@@ -196,10 +196,10 @@ const testimonials = [
   },
   {
     quote:
-      "The predictive analytics capability alone saved us $2.4M in the first quarter by preventing supply chain disruptions before they happened.",
+      "The predictive analytics capability alone saved us ₹18.32 LAC in the first quarter by preventing supply chain disruptions before they happened.",
     author: "Amara Okafor",
     role: "VP Operations, Apex Manufacturing",
-    metric: "$2.4M",
+    metric: "₹84L",
     metricLabel: "Q1 Savings",
   },
   {
@@ -380,7 +380,7 @@ export default function BusinessEnhancePage() {
                     <div className="grid grid-cols-4 gap-3">
                       {[
                         { label: "Efficiency", val: "+147%", color: "text-[var(--color-emerald)]" },
-                        { label: "Cost Saved", val: "$1.2M", color: "text-[var(--color-primary)]" },
+                        { label: "Cost Saved", val: "₹18.32L", color: "text-[var(--color-primary)]" },
                         { label: "Tasks Auto", val: "24.5K", color: "text-[var(--color-purple)]" },
                         { label: "Uptime", val: "99.98%", color: "text-[var(--color-cyan)]" },
                       ].map((m) => (

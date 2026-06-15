@@ -234,103 +234,7 @@ export default function ConsumerGoodsRetailPage() {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text-primary)] font-[var(--font-family)] antialiased">
-      {/* Navigation */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[var(--color-nav-bg-scroll)] shadow-[var(--shadow-nav)] backdrop-blur-[var(--blur-nav)]"
-            : "bg-[var(--color-nav-bg)]"
-        }`}
-      >
-        <div className="mx-auto max-w-[var(--container-max)] px-[var(--container-padding)]">
-          <div className="flex h-[var(--nav-height)] lg:h-[var(--nav-height-lg)] items-center justify-between">
-            <a href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-primary)]">
-                <Sparkles className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-[var(--color-text-primary)]">
-                Creatik AI
-              </span>
-            </a>
-
-            <nav className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-
-            <div className="hidden lg:flex items-center gap-4">
-              <a
-                href="/contact"
-                className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
-              >
-                Contact Sales
-              </a>
-              <a
-                href="/demo"
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-btn-primary)] hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-btn-primary-hover)] transition-all"
-              >
-                Get Demo
-              </a>
-            </div>
-
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-[var(--color-bg-hover)]"
-            >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-[var(--color-border)] bg-[var(--color-nav-bg)] overflow-hidden"
-            >
-              <div className="mx-auto max-w-[var(--container-max)] px-[var(--container-padding)] py-4 flex flex-col gap-3">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-base font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] py-2"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <div className="pt-3 border-t border-[var(--color-border)] flex flex-col gap-3">
-                  <a
-                    href="/contact"
-                    className="text-base font-medium text-[var(--color-text-secondary)]"
-                  >
-                    Contact Sales
-                  </a>
-                  <a
-                    href="/demo"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-white"
-                  >
-                    Get Demo
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
+    
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-[var(--hero-pt)] pb-[var(--hero-pb)]">
@@ -358,7 +262,7 @@ export default function ConsumerGoodsRetailPage() {
 
               <motion.h1
                 variants={fadeInUp}
-                className="text-[var(--hero-title-size)] font-extrabold tracking-tight leading-[1.1] mb-6"
+                className="text-2xl font-extrabold tracking-tight leading-[1.1] mb-6"
               >
                 The AI Commerce Platform Built for{" "}
                 <span className="gradient-text">
@@ -436,7 +340,7 @@ export default function ConsumerGoodsRetailPage() {
                           Revenue (MTD)
                         </div>
                         <div className="text-xl font-bold text-[var(--color-text-primary)]">
-                          $1.24M
+                        ₹84.4L
                         </div>
                         <div className="text-xs text-[var(--color-emerald)] font-medium mt-1">
                           +12.4%
@@ -458,7 +362,7 @@ export default function ConsumerGoodsRetailPage() {
                           Avg. Order Value
                         </div>
                         <div className="text-xl font-bold text-[var(--color-text-primary)]">
-                          $87.50
+                        ₹18,247
                         </div>
                         <div className="text-xs text-[var(--color-emerald)] font-medium mt-1">
                           +3.1%
@@ -826,7 +730,7 @@ export default function ConsumerGoodsRetailPage() {
                       Jane Doe
                     </div>
                     <div className="text-sm text-[var(--color-text-muted)]">
-                      Customer since 2021 • LTV: $4,280
+                      Customer since 2021 • LTV: ₹48,149
                     </div>
                     <div className="flex gap-2 mt-2">
                       <span className="rounded-md bg-[var(--color-badge-bg)] px-2 py-0.5 text-[10px] font-semibold text-[var(--color-badge-text)] border border-[var(--color-badge-border)]">
@@ -851,9 +755,9 @@ export default function ConsumerGoodsRetailPage() {
                     </div>
                     <div className="space-y-2">
                       {[
-                        { item: "Running Shoes - Black", price: "$129", date: "2 days ago", channel: "Online" },
-                        { item: "Sports Socks (3-pack)", price: "$24", date: "2 days ago", channel: "Online" },
-                        { item: "Water Bottle 1L", price: "$35", date: "3 weeks ago", channel: "Retail POS" },
+                        { item: "Running Shoes - Black", price: "₹12,900", date: "2 days ago", channel: "Online" },
+                        { item: "Sports Socks (3-pack)", price: "₹2700", date: "2 days ago", channel: "Online" },
+                        { item: "Water Bottle 1L", price: "₹3500", date: "3 weeks ago", channel: "Retail POS" },
                       ].map((order, i) => (
                         <div
                           key={i}

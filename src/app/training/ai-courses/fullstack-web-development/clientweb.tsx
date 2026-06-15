@@ -907,7 +907,7 @@ export default function FullStackTrainingPage(): JSX.Element {
                       <div>
                         <p className="text-xs mb-1" style={{ color: "var(--color-text-muted)" }}>Early Bird Price</p>
                         <div className="flex items-baseline gap-2">
-                          <span className="text-3xl font-extrabold" style={{ color: "var(--color-text-primary)" }}>₹12,999</span>
+                          <span className="text-3xl font-extrabold" style={{ color: "var(--color-text-primary)" }}>₹16,999</span>
                           <span className="text-sm line-through" style={{ color: "var(--color-text-faint)" }}>₹19,999</span>
                         </div>
                       </div>

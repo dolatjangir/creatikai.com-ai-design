@@ -721,7 +721,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
             <span className="hidden sm:block w-px h-4" style={{ backgroundColor: "var(--color-border)" }} />
             <span className="flex items-center gap-2" style={{ color: "var(--color-text-secondary)" }}>
               <Phone className="w-4 h-4" style={{ color: "var(--color-primary)" }} />
-              <span className="font-semibold">+91 98765 43210</span>
+              <span className="font-semibold">+91 9649902000</span>
             </span>
             <span className="hidden sm:block w-px h-4" style={{ backgroundColor: "var(--color-border)" }} />
             <span className="flex items-center gap-2" style={{ color: "var(--color-text-secondary)" }}>
@@ -1095,7 +1095,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                     </div>
                     <div>
                       <p className="text-[10px]" style={{ color: "var(--color-text-muted)" }}>Call Us</p>
-                      <p className="text-sm font-bold" style={{ color: "var(--color-text-primary)" }}>+91 98765 43210</p>
+                      <p className="text-sm font-bold" style={{ color: "var(--color-text-primary)" }}>+91 9649902000</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 rounded-xl border"
@@ -1191,7 +1191,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                         backgroundColor: "var(--color-bg)",
                         color: "var(--color-text-primary)",
                       }}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9649902000"
                     />
                   </div>
                   <div>
@@ -1440,7 +1440,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl transition-all text-sm hover:bg-white/10"
               >
                 <Phone className="w-4 h-4" />
-                Call: +91 98765 43210
+                Call: +91 9649902000
               </button>
             </div>
           </Reveal>
