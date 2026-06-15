@@ -551,7 +551,9 @@ function Hero() {
         {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent" /> */}
       </div>
 
-      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]  flex sm:flex-col flex-row items-center justify-between relative z-10 w-full">
+      <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]   relative z-10 w-full">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* left */}
         <div className="max-w-3xl">
           <div className="anim-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
             <Sparkles className="w-4 h-4 text-[#fbbf24]" />
@@ -629,6 +631,7 @@ function Hero() {
             className="relative w-full h-auto rounded-2xl border border-white/10 shadow-2xl"
           />
         </div>
+      </div>
       </div>
       </div>
     </section>
