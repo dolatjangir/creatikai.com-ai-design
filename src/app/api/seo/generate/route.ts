@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     if (!body.pageName?.trim() || !body.pageContent?.trim()) {
       return NextResponse.json(
         { error: 'pageName and pageContent are required' },
-        { status: 400 }
+        { status: 400 } 
       );
     }
 

@@ -70,7 +70,7 @@ const fullPrompt = `${getSEOSystemPrompt()}\n\n${buildUserPrompt(input)}`;
 
   const text = result.text || '';
   
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  const jsonMatch = text.match(/\{[\s\S]*\}/); 
   if (!jsonMatch) {
     throw new Error('AI returned invalid format');
   }

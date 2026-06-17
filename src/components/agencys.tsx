@@ -54,7 +54,7 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
             >
               <div className="relative h-[500px] w-[500px]">
                 <Image
-                  src="/laptop.png"
+                  src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672207/laptop_yw3pep.png"
                   alt="Laptop"
                  width={500}
                  height={500}
@@ -153,7 +153,7 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
               {/* Image */}
               <div className="relative z-10 h-[420px] w-[650px] max-w-full">
                 <Image
-                  src="/about-hero-img.png"
+                  src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672175/about-hero-img_wwowlv.png"
                   alt="Agency"
                   fill
                   className="object-contain  drop-shadow-[0_35px_35px_rgba(0,0,0,0.16)]"

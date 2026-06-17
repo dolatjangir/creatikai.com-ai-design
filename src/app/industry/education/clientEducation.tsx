@@ -441,7 +441,7 @@ function Hero() {
   {/* Background Image */}
   <div
     className="absolute inset-0 w-full bg-contain bg-no-repeat"
-    style={{ backgroundImage: "url('/education-systm.png')" }}
+    style={{ backgroundImage: "url('https://res.cloudinary.com/djipgt6vc/image/upload/v1781672201/education-systm_zneuet.png')" }}
   />
   
   {/* Dark Overlay for text readability */}

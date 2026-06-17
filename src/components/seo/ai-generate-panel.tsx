@@ -66,7 +66,7 @@ export default function AIGeneratePanel({ pageName, canonicalUrl, onGenerated }:
         disabled={!isReady || isGenerating}
         className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r  from-[var(--color-primary)] to-violet-600 hover:from-violet-700 hover:to-[var(--color-primary-hover)] cursor-pointer
          disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-medium rounded-xl shadow-lg transition-all active:scale-95"
-      >
+      > 
         {isGenerating ? (
           <>
             <Loader2 className="w-4 h-4 animate-spin" />

@@ -223,7 +223,7 @@ export default function HomePage(): JSX.Element {
               <div className="relative w-full max-w-md  sm:ml-10 lg:ml-16 lg:max-w-xl">
            
 
-                <img  src="/new12.png"/>
+                <img  src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672201/new12_dpfrvo.png"/>
             
               </div>
             </div>
@@ -250,29 +250,33 @@ export default function HomePage(): JSX.Element {
             className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-16 transition-all duration-500"
           
           >
-            {["/jaipur-rental.png", "/jaipur-plots.png", "/makemylead-logo.png", "/estateai.png", "ibigdata.in"].map((brand,index) => (
+            {["https://res.cloudinary.com/djipgt6vc/image/upload/v1781672196/jaipur-rental_ae6egq.png",
+             "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672157/jaipur-plots_ham4dt.png",
+              "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672201/makemylead-logo_dpdbpt.png",
+               "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672190/estateai_b6njch.png",
+                "ibigdata.in"].map((brand,index) => (
               <span
                 key={index}
                 className="text-lg lg:text-xl font-bold  tracking-tight"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                {brand === "/jaipur-rental.png" && (
+                {brand === "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672196/jaipur-rental_ae6egq.png" && (
                   <span className="flex items-center gap-1">
                   
                     <img className="w-48" src={brand}  alt="jaipurrental-logo"/>
                   </span>
                 )}
-                {brand === "/jaipur-plots.png" && (
+                {brand === "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672157/jaipur-plots_ham4dt.png" && (
                   <span className="flex items-center gap-1">
                     <img className="w-48" src={brand} alt="jaipur-plots-logo" />
                   </span>
                 )}
-                {brand === "/makemylead-logo.png" && (
+                {brand === "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672201/makemylead-logo_dpdbpt.png" && (
                   <span className="flex items-center gap-1">
                    <img className="w-48" src={brand} alt="makemylead-logo"/>
                   </span>
                 )}
-                {brand === "/estateai.png" && (
+                {brand === "https://res.cloudinary.com/djipgt6vc/image/upload/v1781672190/estateai_b6njch.png" && (
                   <span className="font-semibold" style={{ color: "var(--color-text-secondary)" }}>
                     <img className="w-48" src={brand} alt="estateai-logo"/></span>
                 )}
@@ -471,7 +475,7 @@ export default function HomePage(): JSX.Element {
             <div className="order-1 lg:order-2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-xl)]">
                 <Image
-                  src="/company.png"
+                  src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672187/company_ejur2t.png"
                   alt="Creatik IT Solution Office Building"
                   width={600}
                   height={450}
@@ -494,51 +498,7 @@ export default function HomePage(): JSX.Element {
         </div>
       </div>
 
-      {/* CTA Bar */}
-      {/* <section className="px-[var(--container-padding)] pb-[var(--section-py)]">
-        <div className="max-w-[var(--container-max)] mx-auto">
-          <div className="bg-[var(--color-section-alt)] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-[var(--color-text-primary)] text-xl md:text-2xl font-bold mb-2">
-                Ready to Transform Your Business?
-              </h3>
-              <p className="text-[var(--color-text-secondary)] text-sm md:text-base">
-                Let&apos;s build something extraordinary together.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center gap-6">
-              <button className="group inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-[var(--transition-base)] shadow-[var(--shadow-btn-primary)] hover:shadow-[var(--shadow-btn-primary-hover)] whitespace-nowrap">
-                Get in Touch
-                <ArrowRight className="w-4 h-4 transition-transform duration-[var(--transition-base)] group-hover:translate-x-1" />
-              </button>
-
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 rounded-full bg-[var(--color-avatar-bg)] border-2 border-white flex items-center justify-center overflow-hidden"
-                    >
-                      <Image
-                        src={`https://i.pravatar.cc/150?img=${i + 10}`}
-                        alt="Client avatar"
-                        width={32}
-                        height={32}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <p className="text-[var(--color-text-secondary)] text-xs sm:text-sm leading-tight">
-                  Join <span className="text-[var(--color-text-primary)] font-semibold">150+</span> happy clients
-                  <br className="hidden sm:block" /> who trust us
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+   
     </section>
    
 <AgencySection/>

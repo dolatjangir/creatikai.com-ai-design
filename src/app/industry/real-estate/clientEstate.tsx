@@ -504,7 +504,7 @@ function Hero() {
           
           {/* Image */}
           <img
-            src="/real-estate.png"
+            src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672216/real-estate_wo6wpz.png"
             alt="Real Estate CRM Dashboard"
             className="relative w-full h-auto rounded-2xl border border-white/10 shadow-2xl"
           />
