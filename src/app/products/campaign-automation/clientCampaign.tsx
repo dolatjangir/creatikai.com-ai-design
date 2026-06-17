@@ -213,7 +213,7 @@ export default function CampaignAutomationAgentLanding() {
             <section ref={heroRef} 
             className="relative min-h-screen flex items-center px-4 py-20 overflow-hidden perspective-1000">
            <div className="max-w-7xl mx-auto w-full relative z-10">
-             <div className="grid lg:grid-cols-12  items-center">
+             <div className="grid lg:grid-cols-12 pt-8  items-center">
    
                  {/* Left: Content */}
                     <div
@@ -288,7 +288,7 @@ export default function CampaignAutomationAgentLanding() {
            <div className="relative transform-style-3d">
              
              <img
-               src="/assets/campaign-auto-hero-robo.png"
+               src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335512/campaign-auto-hero-robo_iggt3q.png"
                alt="AI Robot"
                className="w-[90%] max-w-none lg:w-[90%] xl:w-[70%] object-contain translate-x-6 lg:translate-x-10"
              />

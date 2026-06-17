@@ -360,7 +360,7 @@ export default function AISocialMediaAgentLanding() {
      <section ref={heroRef} 
                         className="relative min-h-screen flex items-center px-4 py-20 overflow-hidden perspective-1000">
                        <div className="max-w-7xl mx-auto w-full relative z-10">
-                         <div className="grid lg:grid-cols-12  items-center">
+                         <div className="grid lg:grid-cols-12 pt-9 items-center">
                
                              {/* Left: Content */}
                                 <div
@@ -435,7 +435,7 @@ export default function AISocialMediaAgentLanding() {
                        <div className="relative transform-style-3d">
                          
                          <img
-                           src="/assets/social-media-hero-robo.png"
+                           src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335598/social-media-hero-robo_s3edew.png"
                            alt="AI Robot"
                            className="w-[100%] max-w-none lg:w-[90%] xl:w-[80%] object-contain translate-x-2 lg:translate-x-10"
                          />

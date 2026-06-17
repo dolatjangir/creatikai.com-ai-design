@@ -467,7 +467,7 @@ export default function AISEOContentAgentLanding() {
                     <div className="relative transform-style-3d">
                       
                       <img
-                        src="/assets/seo-hero-robo.png"
+                        src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335603/seo-hero-robo_x8czmz.png"
                         alt="AI Robot"
                         className="w-fit xl:w-full object-contain translate-x-6 lg:translate-x-10"
                       />

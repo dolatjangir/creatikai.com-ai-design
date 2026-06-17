@@ -368,7 +368,7 @@ export default function AICallingAgentLanding() {
    
                {/* Right: Property Matching Interface */}
              <div
-           className={`lg:col-span-5 xl:col-span-5  relative order-1 lg:order-2 right-10  flex items-center justify-center transition-all duration-1000 delay-300 ${
+           className={`lg:col-span-5 xl:col-span-5  relative order-1 lg:order-2 lg:right-10  flex items-center justify-center transition-all duration-1000 delay-300 ${
              isVisible
                ? "opacity-100 translate-y-0"
                : "opacity-0 translate-y-10"
@@ -379,7 +379,7 @@ export default function AICallingAgentLanding() {
              <img
                src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774338876/ai-calling_jfgxup.png"
                alt="AI Robot"
-               className="w-[100%] max-w-none pt-8 lg:pt-0 lg:w-[90%] xl:w-[70%] object-contain translate-x-2 lg:translate-x-10"
+               className=" pt-8 lg:pt-5 w-[80%] max-w-none lg:w-[80%] xl:w-[80%]  object-contain translate-x-2 lg:translate-x-10"
              />
    
            </div>

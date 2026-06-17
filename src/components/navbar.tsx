@@ -34,8 +34,8 @@ const submenuProducts: SubmenuCategory[] = [
     items: [
       { label: "Campaign Automation", href: "/products/campaign-automation",icon:"/img-6.png" },
       { label: "Lead Capture Agent", href: "/products/lead-capture-agent",icon:"/img-7.png" },
-      { label: "Lead Qualification Agent", href: "/products/lead-qualification-agent",icon:"/img-8.png" },
-      { label: "Property Matching Agent", href: "/products/property-matching-agent",icon:"/img-9.png" },
+      { label: "Lead Qualification Agent", href: "/products/lead-qualifiction-agent",icon:"/img-8.png" },
+      { label: "Property Matching Agent", href: "/products/property-maching-agent",icon:"/img-9.png" },
       { label: "Social Media Agent", href: "/products/social-media-agent",icon:"/img-10.png" },
     ],
   },
@@ -45,25 +45,25 @@ const submenuService: SubmenuCategory[] = [
   {
     title: "AI Studio",
     items: [
-      { label: "Business Enhance", href: "/services/ai-studio/bussiness-enhance" },
-      { label: "Video Creation", href: "/services/ai-studio/video-creation" },
-      { label: "Content Creation", href: "/services/ai-studio/content-creation" },
+      { label: "Business Enhance", href: "/services/bussiness-enhance" },
+      { label: "Video Creation", href: "/services/video-creation" },
+      { label: "Content Creation", href: "/services/content-creation" },
     ],
   },
   {
     title: "AI Automation",
     items: [
-      { label: "Business Automation", href: "/services/ai-automation/bussiness-automation" },
-      { label: "Lead Automation", href: "/services/ai-automation/lead-automation" },
-      { label: "Workflow Automation", href: "/services/ai-automation/workflow-automation" },
+      { label: "Business Automation", href: "/services/bussiness-automation" },
+      { label: "Lead Automation", href: "/services/lead-automation" },
+      { label: "Workflow Automation", href: "/services/workflow-automation" },
     ],
   },
     {
     title: "Ai Tools Consulting",
     items: [
-      { label: "AI Chatbot", href: "/services/ai-tools-consulting/ai-chatbot" },
-      { label: "Ai Personal Assistent", href: "/services/ai-tools-consulting/ai-personal-assistent" },
-      { label: "Ai Tools Course", href: "/services/ai-tools-consulting/ai-tools-course" },
+      { label: "AI Chatbot", href: "/services/ai-chatbot" },
+      { label: "AI Personal Assistant", href: "/services/ai-personal-assistant" },
+      { label: "AI Tools", href: "/services/ai-tools" },
     ],
   },
 ];
@@ -72,17 +72,17 @@ const submenuTraining: SubmenuCategory[] = [
   {
     title: "AI Courses",
     items: [
-      { label: "AI Training", href: "/training/ai-courses/ai-training" },
-      { label: "Machine Learning Training", href: "/training/ai-courses/ai-machine-learning" },
-      { label: "Fullstack Training", href: "/training/ai-courses/fullstack-web-development" },
+      { label: "AI Automation", href: "/training/ai-automation" },
+      { label: "Machine Learning", href: "/training/ai-machine-learning" },
+      { label: "Fullstack Web Development", href: "/training/fullstack-web-development" },
     ],
   },
   {
     title: "Digital Marketing",
     items: [
-      { label: "Digital Marketing Training", href: "/training/digital-marketing/digital-marketing-training-in-jaipur" },
-      { label: "Social Media Campaign", href: "/training/digital-marketing/social-media-campaign" },
-      { label: "Google Ads", href: "/training/digital-marketing/google-ads" },
+      { label: "Digital Marketing Training", href: "/training/digital-marketing" },
+      { label: "Social Media Campaign", href: "/training/social-media" },
+      { label: "Google Ads", href: "/training/google-ads" },
     ],
   },
 ];
@@ -305,7 +305,7 @@ export default function Navbar() {
            <img width={40} src="/creatikai-logo.png" alt="Creatik AI Logo" />
             <Sparkles className="w-3 h-3 text-indigo-400 absolute -top-1 -right-1 opacity-80" />
           </div>
-          <span className="font-bold text-lg md:text-xl tracking-tight text-slate-900 ">
+          <span className="font-bold text-lg md:text-2xl tracking-tight sm:tracking-wide text-slate-900 ">
             Creatik <span className="text-indigo-600  font-extrabold">AI</span>
           </span>
         </div></Link>

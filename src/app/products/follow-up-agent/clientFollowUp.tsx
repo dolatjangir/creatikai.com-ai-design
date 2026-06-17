@@ -285,7 +285,7 @@ export default function FollowUpAgentLanding() {
    <section ref={heroRef} 
                   className="relative min-h-screen flex items-center px-4 py-20 overflow-hidden perspective-1000">
                  <div className="max-w-7xl mx-auto w-full relative z-10">
-                   <div className="grid lg:grid-cols-12  items-center">
+                   <div className="grid lg:grid-cols-12  pt-10 items-center">
          
                        {/* Left: Content */}
                           <div
@@ -360,9 +360,9 @@ export default function FollowUpAgentLanding() {
                  <div className="relative transform-style-3d">
                    
                    <img
-                     src="/assets/follo-up-hero-robo.png"
+                     src="https://res.cloudinary.com/djipgt6vc/image/upload/v1778912064/follo-up-hero-robo_hfehsv.png"
                      alt="AI Robot"
-                     className="w-[80%] max-w-none lg:w-[80%] xl:w-[80%] object-contain translate-x-6 lg:translate-x-10"
+                     className="w-[80%] max-w-none lg:w-[80%] xl:w-[80%]  object-contain translate-x-6 lg:translate-x-10"
                    />
          
                  </div>

@@ -282,7 +282,7 @@ return (
    <section ref={heroRef} 
                     className="relative min-h-screen flex items-center px-4 py-20 overflow-hidden perspective-1000">
                    <div className="max-w-7xl mx-auto w-full relative z-10">
-                     <div className="grid lg:grid-cols-12  items-center">
+                     <div className="grid lg:grid-cols-12 pt-7  items-center">
            
                          {/* Left: Content */}
                             <div
@@ -353,7 +353,7 @@ return (
                    <div className="relative transform-style-3d">
                      
                      <img
-                       src="/assets/lead-capture-hero-robo.png"
+                       src="https://res.cloudinary.com/djipgt6vc/image/upload/v1778912100/lead-capture-hero-robo_smut8a.png"
                        alt="AI Robot"
                        className="w-[90%] xs:w-[50%] xl:w-[70%] object-contain translate-x-6 lg:translate-x-10"
                      />
