@@ -21,7 +21,7 @@ const withPWA = withPWAInit({
 
 const nextConfig = {
   reactCompiler: true,
-
+  turbopack: {},
   images: {
     domains: ["res.cloudinary.com"],
     unoptimized: true,
