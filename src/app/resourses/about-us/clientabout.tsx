@@ -507,7 +507,7 @@ export default function AboutPage(): JSX.Element {
                     className="w-full h-full flex items-center justify-center"
                    
                   >
-                   <img src="/our-devlopment-team.png" alt="our development Team"/>
+                   <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672211/our-devlopment-team_u8a2qc.png" alt="our development Team"/>
                   </div>
                 </div>
                 {/* Floating badge */}
@@ -677,7 +677,7 @@ export default function AboutPage(): JSX.Element {
                     className="w-full h-full flex items-center justify-center"
                    
                   >
-                   <img src="/Ai-invovation-lab.png" alt="Ai Innovation Lab"/>
+                   <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672186/AI-invovation-lab_h1is5x.png" alt="Ai Innovation Lab"/>
                   </div>
                 </div>
                 {/* Floating stat */}
@@ -732,7 +732,7 @@ export default function AboutPage(): JSX.Element {
                     className="w-full h-full flex items-center justify-center"
                    
                   >
-                   <img src="/ai-chatbot.png" alt="ai-chatbot-solution"/>
+                   <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672190/aI-chatbot_ugvvju.png" alt="ai-chatbot-solution"/>
                   </div>
                 </div>
               </div>
@@ -947,7 +947,7 @@ export default function AboutPage(): JSX.Element {
                     className="w-full h-full flex items-center justify-center"
                  
                   >
-                   <img src="/growth-analytics.png" alt="growth-analytics"/>
+                   <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672208/growth-analytics_c6kaid.png" alt="growth-analytics"/>
                   </div>
                 </div>
                 {/* Floating badge */}
