@@ -1,4 +1,4 @@
-const BASE_URL = "https://appapi.estateai.in/api"
+const BASE_URL = "https://appapi.creatikai.com/api"
 
 export const API_ROUTES = {
 
