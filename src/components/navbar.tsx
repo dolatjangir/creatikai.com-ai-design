@@ -299,15 +299,16 @@ export default function Navbar() {
       <nav className="w-full max-w-6xl bg-white/80  backdrop-blur-xl rounded-full border border-slate-100  shadow-[0_8px_30px_rgb(0,0,0,0.04)] px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 relative">
         
         {/* Left Side: Brand Logo */}
+         <Link href="/"> 
         <div className="flex items-center gap-2.5 group cursor-pointer select-none">
           <div className="relative flex items-center justify-center">
-           <Link href="/"> <img width={40} src="/creatikai-logo.png" alt="Creatik AI Logo" /></Link>
+           <img width={40} src="/creatikai-logo.png" alt="Creatik AI Logo" />
             <Sparkles className="w-3 h-3 text-indigo-400 absolute -top-1 -right-1 opacity-80" />
           </div>
           <span className="font-bold text-lg md:text-xl tracking-tight text-slate-900 ">
             Creatik <span className="text-indigo-600  font-extrabold">AI</span>
           </span>
-        </div>
+        </div></Link>
 
         {/* Center: Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-1 bg-slate-50/50  p-1 rounded-full">
