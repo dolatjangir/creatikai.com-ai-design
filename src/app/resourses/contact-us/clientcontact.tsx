@@ -237,8 +237,8 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: <Mail className="w-5 h-5 text-[var(--color-primary)]" />,
       title: "Email Us",
-      value: "sharan@creatik.com",
-      subtext: "We reply within 2 hours",
+      value: "sharan@creatikai.com",
+      subtext: "We reply within 24 hours",
       color: "bg-[var(--color-icon-bg-1)]",
     },
     {
@@ -248,17 +248,11 @@ const handleSubmit = async (e: React.FormEvent) => {
       subtext: "Mon–Fri, 9am–6pm EST",
       color: "bg-[var(--color-icon-bg-2)]",
     },
-    {
-      icon: <MapPin className="w-5 h-5 text-[var(--color-cyan)]" />,
-      title: "Visit Us",
-      value: "30A,sultan nagar,gurjar ki thadi,jaipur-302019",
-      subtext: "168 Innovation Drive",
-      color: "bg-[var(--color-icon-bg-3)]",
-    },
+  
     {
       icon: <Clock className="w-5 h-5 text-[var(--color-emerald)]" />,
       title: "Response Time",
-      value: "< 2 Hours",
+      value: "< 48 Hours",
       subtext: "Average first response",
       color: "bg-[var(--color-icon-bg-4)]",
     },
@@ -334,7 +328,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="grid grid-cols-2 gap-4"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               >
                 {contactCards.map((card, i) => (
                   <ContactCard key={card.title} {...card} index={i} />
