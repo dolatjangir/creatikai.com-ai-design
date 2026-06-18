@@ -32,9 +32,9 @@ const submenuService: SubmenuCategory[] = [
   {
     title: "",
     items: [
-      { label: "Business Enhance", href: "/services/ai-studio/bussiness-enhance" },
-      { label: "Video Creation", href: "/services/ai-studio/video-creation" },
-      { label: "Content Creation", href: "/services/ai-studio/content-creation" },
+      { label: "Business Enhance", href: "/services/bussiness-enhance" },
+      { label: "Video Creation", href: "/services/video-creation" },
+      { label: "Content Creation", href: "/services/content-creation" },
     ],
   },
   
@@ -44,9 +44,9 @@ const submenuTraining: SubmenuCategory[] = [
   {
     title: "",
     items: [
-      { label: "AI Training", href: "/training/ai-courses/ai-training" },
-      { label: "Machine Learning Training", href: "/training/ai-courses/ai-machine-learning" },
-      { label: "Fullstack Training", href: "/training/ai-courses/fullstack-web-development" },
+      { label: "AI Training", href: "/training/ai-automation" },
+      { label: "Machine Learning Training", href: "/training/ai-machine-learning" },
+      { label: "Fullstack Training", href: "/training/fullstack-web-development" },
     ],
   },
  

@@ -405,7 +405,7 @@ export default function HomePage(): JSX.Element {
       <p className="text-sm mb-5" style={{ color: "var(--color-text-muted)" }}>
         Ready to eliminate manual work and let AI handle the heavy lifting?
       </p>
-      <Link href="/training/ai-courses/ai-training"><button
+      <Link href="/training/ai-automation"><button
         className="inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-xl transition-all text-sm"
         style={{
           backgroundColor: "var(--color-primary)",
@@ -465,7 +465,7 @@ export default function HomePage(): JSX.Element {
                 ))}
               </ul>
 
-             <Link href="/training/digital-marketing/digital-marketing-training-in-jaipur"> <button className="group inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-[var(--transition-base)] shadow-[var(--shadow-btn-primary)] hover:shadow-[var(--shadow-btn-primary-hover)]">
+             <Link href="/training/digital-marketing"> <button className="group inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-[var(--transition-base)] shadow-[var(--shadow-btn-primary)] hover:shadow-[var(--shadow-btn-primary-hover)]">
                 Know More About Us
                 <ArrowRight className="w-4 h-4 transition-transform duration-[var(--transition-base)] group-hover:translate-x-1" />
               </button></Link>
