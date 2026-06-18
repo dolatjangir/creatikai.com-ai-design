@@ -1,8 +1,10 @@
 import React from 'react'
 import AITrainingPage from './clientai'
-import { generateSEOMetadata } from '../../../../../lib/seometadata';
+
 import RelatedBlogs from '@/components/related-blogs';
-import { getPageBlogs } from '../../../../../lib/blogs';
+import { generateSEOMetadata } from '../../../../lib/seometadata';
+import { getPageBlogs } from '../../../../lib/blogs';
+
 
 
 

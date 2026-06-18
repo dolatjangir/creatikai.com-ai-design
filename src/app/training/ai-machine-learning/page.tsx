@@ -1,8 +1,8 @@
 import React from 'react'
 import AIMachineLearningPage from './clientmachine'
-import { generateSEOMetadata } from '../../../../../lib/seometadata';
+import { generateSEOMetadata } from '../../../../lib/seometadata';
 import RelatedBlogs from '@/components/related-blogs';
-import { getPageBlogs } from '../../../../../lib/blogs';
+import { getPageBlogs } from '../../../../lib/blogs';
 
 export const generateMetadata = generateSEOMetadata;
 
