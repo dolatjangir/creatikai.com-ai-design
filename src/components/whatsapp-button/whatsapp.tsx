@@ -41,7 +41,7 @@ const QUICK_REPLIES = [
 const WELCOME_MESSAGE: Message = {
   id: 'welcome',
   type: 'bot',
-  text: "👋 Welcome to EstateAI!\n\nI'm your AI assistant, here to help you discover how our intelligent agents can transform your real estate business.\n\nWhat brings you here today?",
+  text: "👋 Welcome to CreatikAI!\n\nI'm your AI assistant, here to help you discover how our intelligent agents can transform your real estate business.\n\nWhat brings you here today?",
   time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   quickReplies: true,
   showForm: false
@@ -269,7 +269,7 @@ const handleDemoSubmit = async () => {
       {
         id: Date.now().toString(),
         type: "bot",
-        text: "❌ Something went wrong. Please try again or contact us directly at sales@estateai.com",
+        text: "❌ Something went wrong. Please try again or contact us directly at sales@creatikai.com",
         time: new Date().toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",
@@ -300,7 +300,7 @@ const handleDemoSubmit = async () => {
         {/* Main Button */}
         <button
           onClick={handleOpen}
-          className="relative group flex items-center gap-3 pr-4 pl-4 sm:pr-6 sm:pl-4 py-4 bg-gradient-to-r from-[#0066cc]/60 to-[#0052a3]/60 rounded-full shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 active:scale-95"
+          className="relative group flex items-center gap-3 pr-4 pl-4 sm:pr-6 sm:pl-4 py-4 bg-gradient-to-r from-[var(--color-primary-dark)]/60 to-[var(--color-primary)]/60 rounded-full shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 active:scale-95"
         >
           <div className="relative">
             <MessageCircle className="w-7 h-7 text-white" />
@@ -351,14 +351,14 @@ const handleDemoSubmit = async () => {
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="font-bold text-xl">EstateAI</h2>
+              <h2 className="font-bold text-xl">CreatikAI</h2>
               <p className="text-slate-400 text-xs">AI-Powered Real Estate</p>
             </div>
           </div>
 
           {/* Features */}
           <div className="flex-1">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-6">Why EstateAI?</p>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-6">Why CreatikAI?</p>
             <div className="space-y-4">
               {FEATURES.map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3 group">
@@ -416,7 +416,7 @@ const handleDemoSubmit = async () => {
                 <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-400 rounded-full border-3 border-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900">EstateAI Assistant</h3>
+                <h3 className="font-bold text-gray-900">CreatikAI Assistant</h3>
                 <p className="text-green-600 text-xs sm:text-sm flex items-center gap-1.5">
                   <span className="min-w-2 min-h-2 bg-green-500 rounded-full animate-pulse" />
                   Online now · Typically replies instantly
