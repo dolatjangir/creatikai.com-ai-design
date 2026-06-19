@@ -41,11 +41,15 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
         {/* ================================================= */}
         <section className="relative overflow-hidden bg-[var(--color-primary-dark)]">
           {/* Background Circles */}
-          <div className="absolute -left-[220px] top-[-120px] h-[700px] w-[700px] rounded-full bg-[var(--color-primary)]" />
-          <div className="absolute left-[-70px] top-[40px] h-[540px] w-[540px] rounded-full bg-[var(--color-bg)]" />
+          <div className="hidden sm:block absolute -left-[220px] top-[-120px]  h-[700px] w-[700px] rounded-full bg-[var(--color-primary)]" />
+          <div className="hidden sm:block absolute left-[-70px] top-[40px]  h-[540px] w-[540px] rounded-full bg-[var(--color-bg)]" />
+
+          {/* Background Circles for mobile screen */}
+            <div className="block sm:hidden absolute -left-[220px] top-[-120px] h-[600px] w-[600px]  rounded-full bg-[var(--color-primary)]" />
+          <div className="block sm:hidden absolute left-[-70px] top-[40px] h-[350px] w-[350px]  rounded-full bg-[var(--color-bg)]" />
 
           {/* Main Content */}
-          <div className="relative z-10 mx-auto flex min-h-[760px] max-w-[1400px] flex-col items-center justify-between gap-20 px-6 py-24 lg:flex-row lg:px-20">
+          <div className="relative z-10 mx-auto flex min-h-[760px] max-w-[1400px] flex-col items-center justify-between gap-0 sm:gap-20 px-6 py-24 lg:flex-row lg:px-20">
             
             {/* Left Image — Laptop (ref attached for GSAP slide-down) */}
             <div 
@@ -111,7 +115,7 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
         {/* ================================================= */}
         {/* SECTION 4 — Gray (Agency Image) */}
         {/* ================================================= */}
-        <section className="relative overflow-hidden bg-[var(--color-section-alt)] py-28">
+        <section className="relative overflow-hidden bg-[var(--color-section-alt)] py-6 lg:py-28">
           {/* Floating Dots */}
           <div className="absolute left-[40%] top-[14%] h-3 w-3 rounded-full bg-[var(--color-glow-strong)]/50" />
           <div className="absolute left-[43%] top-[19%] h-2 w-2 rounded-full bg-[var(--color-glow)]/60" />
@@ -120,10 +124,10 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
           <div className="absolute bottom-[14%] right-[6%] h-2 w-2 rounded-full bg-[var(--color-glow)]/60" />
 
           {/* Main Content */}
-          <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-24 px-6 lg:flex-row lg:px-20">
+          <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-4 sm:gap-24 px-6 lg:flex-row lg:px-20">
             
             {/* Left Text */}
-            <div className="w-full max-w-[430px]">
+            <div className="w-full max-w-[430px] order-2 lg:order-1">
               <h2 className="text-[44px] font-bold leading-tight tracking-[-1px] text-[var(--color-text-primary)]">
               Who We Are
               </h2>
@@ -142,16 +146,16 @@ const AgencySection = forwardRef<HTMLDivElement, AgencySectionProps>(
             </div>
 
             {/* Right Image (ref attached for GSAP fade-out replacement) */}
-            <div 
-              ref={section4ImageRef} 
-              className="relative flex w-full justify-center lg:w-1/2"
-            >
+           <div
+  ref={section4ImageRef}
+  className="order-1 relative sm:mt-10 sm:mb-8  flex  w-full justify-center lg:order-2 lg:mt-0 lg:mb-0 lg:w-1/2"
+>
               {/* Background Circles */}
               {/* <div className="absolute top-[-40px] h-[420px] w-[420px] rounded-full bg-[var(--color-primary)]" /> */}
               {/* <div className="absolute top-[40px] h-[380px] w-[380px] rounded-full bg-[var(--color-section-alt)]" /> */}
               
               {/* Image */}
-              <div className="relative z-10 h-[420px] w-[650px] max-w-full">
+              <div className="relative z-10 h-[250px] sm:h-[420px] w-[650px]  max-w-full">
                 <Image
                   src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672175/about-hero-img_wwowlv.png"
                   alt="Agency"

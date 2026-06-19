@@ -1215,7 +1215,7 @@ export default function AIPersonalAssistantPage() {
       {/* ═══════════════════════════════════════
           INTEGRATIONS
       ═══════════════════════════════════════ */}
-      <section className="py-[var(--section-py)] bg-[var(--color-section-alt)]">
+      {/* <section className="py-[var(--section-py)] bg-[var(--color-section-alt)]">
         <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1257,7 +1257,7 @@ export default function AIPersonalAssistantPage() {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══════════════════════════════════════
           TESTIMONIALS
@@ -1334,7 +1334,7 @@ export default function AIPersonalAssistantPage() {
           >
             <PricingCard
               tier="Starter"
-              price="$0"
+              price="₹0"
               period="/month"
               features={[
                 "1,000 AI actions/mo",
@@ -1348,7 +1348,7 @@ export default function AIPersonalAssistantPage() {
             />
             <PricingCard
               tier="Professional"
-              price="$29"
+              price="₹2900"
               period="/month"
               features={[
                 "Unlimited AI actions",

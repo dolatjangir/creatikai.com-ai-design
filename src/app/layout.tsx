@@ -39,7 +39,7 @@ export default function RootLayout({
         <AuthProvider>
     <LayoutWrapper>
         {children}
-        <NewsletterPopup delay={5000}/>
+      
 </LayoutWrapper>
 </AuthProvider>
         </body>

@@ -312,9 +312,9 @@ export default function Footer() {
         </div>
 
         {/* --- VALUE PROPOSITION STRIP --- */}
-        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-6 px-8 rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-bg)]/70 backdrop-blur-md shadow-sm">
+        {/* <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-6 px-8 rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-bg)]/70 backdrop-blur-md shadow-sm">
 
-          {/* Blazing Fast */}
+          
           <div className="flex items-center space-x-4 border-r-0 sm:border-r border-[var(--color-border)] last:border-none pr-2">
             <div className="w-12 h-12 rounded-2xl bg-[var(--color-icon-bg-1)] flex items-center justify-center text-[var(--color-primary)]">
               <Rocket className="w-5 h-5" />
@@ -325,7 +325,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Enterprise Secure */}
           <div className="flex items-center space-x-4 border-r-0 lg:border-r border-[var(--color-border)] last:border-none pr-2">
             <div className="w-12 h-12 rounded-2xl bg-[var(--color-icon-bg-2)] flex items-center justify-center text-[var(--color-purple)]">
               <ShieldCheck className="w-5 h-5" />
@@ -336,7 +335,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* AI-Powered */}
+         
           <div className="flex items-center space-x-4 border-r-0 sm:border-r border-[var(--color-border)] last:border-none pr-2">
             <div className="w-12 h-12 rounded-2xl bg-[var(--color-icon-bg-2)] flex items-center justify-center text-[var(--color-purple)]">
               <Sparkles className="w-5 h-5" />
@@ -347,7 +346,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 24/7 Support */}
           <div className="flex items-center space-x-4 last:border-none">
             <div className="w-12 h-12 rounded-2xl bg-[var(--color-icon-bg-1)] flex items-center justify-center text-[var(--color-primary-dark)]">
               <Headphones className="w-5 h-5" />
@@ -358,7 +356,7 @@ export default function Footer() {
             </div>
           </div>
 
-        </div>
+        </div> */}
 
         {/* --- BOTTOM ACTIONS & CREDITS BAR --- */}
         <div className="mt-12 pt-6 border-t border-[var(--color-border-light)] flex flex-col md:flex-row items-center justify-between gap-6">

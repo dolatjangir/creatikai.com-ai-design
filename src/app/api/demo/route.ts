@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 
     // Send email to admin
     await resend.emails.send({
-      from: `EstateAI <${process.env.FROM_EMAIL}>`,
+      from: `CreatikAi <${process.env.FROM_EMAIL}>`,
       to: process.env.ADMIN_EMAIL!,
       subject: `New Demo Request: ${name}`,
       html: `
