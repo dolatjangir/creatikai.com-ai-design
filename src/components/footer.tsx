@@ -12,8 +12,8 @@ import {
   Globe, 
   Sun 
 } from 'lucide-react';
-import { FaTwitter } from 'react-icons/fa';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa6';
+import { FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaThreads } from 'react-icons/fa6';
 import { useState } from "react";
 
 // ── Types ───────────────────────────────────────────────────────────────
@@ -170,11 +170,17 @@ export default function Footer() {
 
             {/* Social Media Links */}
             <div className="flex items-center space-x-3 pt-2">
+              {/*
+
+https://www.threads.com/@creatikai1
+ */}
               {[
-                { icon: <FaTwitter className="w-4 h-4" />, href: "#" },
-                { icon: <FaLinkedin className="w-4 h-4" />, href: "#" },
-                { icon: <Disc className="w-4 h-4" />, href: "#" },
-                { icon: <FaInstagram className="w-4 h-4" />, href: "#" }
+                { icon: <FaTwitter className="w-4 h-4" />, href: "https://x.com/Creatikai0" },
+                 { icon: <FaThreads className="w-4 h-4" />, href: "https://www.threads.com/@creatikai1" },
+                { icon: <FaLinkedin className="w-4 h-4" />, href: "https://www.linkedin.com/in/creatik-ai-2b1370418/" },
+                { icon: <FaFacebook className="w-4 h-4" />, href: "https://www.facebook.com/profile.php?id=61591002214672" },
+                { icon: <FaYoutube className="w-4 h-4" />, href: "https://www.youtube.com/@Creatikai0" },
+                { icon: <FaInstagram className="w-4 h-4" />, href: "https://www.instagram.com/creatikai1/" }
               ].map((item, idx) => (
                 <a key={idx} href={item.href} className="flex items-center justify-center w-9 h-9 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all duration-200">
                   {item.icon}

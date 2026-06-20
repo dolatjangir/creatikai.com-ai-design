@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { 
   Search, Plus, Edit3, Trash2, CheckCircle, AlertCircle, FileText,
   Layout, Settings, X, Upload, Download, Filter, BarChart3, Users,
-  Shield, Zap, Eye, Loader2, Globe, Save, Menu, ChevronDown, ChevronUp
+  Shield, Zap, Eye, Loader2, Globe, Save, Menu, ChevronDown, ChevronUp,
+  Check
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { LogOut } from 'lucide-react';
@@ -51,6 +52,49 @@ interface Stats {
   total: number;
   totalKeywords: number;
 }
+
+const canonicalUrl = [
+  {pagename:"home",url:`${process.env.NEXT_PUBLIC_APP_URL}`},
+ {pagename:"Calling Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/calling-agent`},
+ {pagename:"Content Creation Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/content-creation-agent`},
+ {pagename:"Seo Content Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/seo-content-agent`},
+ {pagename:"Follow Up Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/follow-up-agent`},
+ {pagename:"Data Mining Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/data-mining-agent`},
+ {pagename:"Campaign Automation",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/campaign-automation`},
+ {pagename:"Lead Capture Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/lead-capture-agent`},
+ {pagename:"lead Qualifiction Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/lead-qualifiction-agent`},
+ {pagename:"Property Maching Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/property-maching-agent`},
+ {pagename:"Social Media Agent",url:`${process.env.NEXT_PUBLIC_APP_URL}/products/social-media-agent`},
+ {pagename:"Ai Automation",url:`${process.env.NEXT_PUBLIC_APP_URL}/training/ai-automation`},
+ {pagename:"Ai Machine Learning",url:`${process.env.NEXT_PUBLIC_APP_URL}/training/ai-machine-learning`},
+ {pagename:"Fullstack Web Development",url:`${process.env.NEXT_PUBLIC_APP_URL}/training/fullstack-web-development`},
+ {pagename:"Digital Marketing",url:`${process.env.NEXT_PUBLIC_APP_URL}/training/digital-marketing`},
+
+ {pagename:"Social-Media",url:`${process.env.NEXT_PUBLIC_APP_URL}/training/social-media`},
+ {pagename:"Google Ads",url:`${process.env.NEXT_PUBLIC_APP_URL}/training/google-ads`},
+ {pagename:"Education",url:`${process.env.NEXT_PUBLIC_APP_URL}/industry/education`},
+ {pagename:"Real Estate",url:`${process.env.NEXT_PUBLIC_APP_URL}/industry/real-estate`},
+ {pagename:"Healthcare",url:`${process.env.NEXT_PUBLIC_APP_URL}/industry/healthcare`},
+ {pagename:"Technology",url:`${process.env.NEXT_PUBLIC_APP_URL}/industry/technology`},
+ {pagename:"Travel Tourism",url:`${process.env.NEXT_PUBLIC_APP_URL}/industry/travel-tourism`},
+ {pagename:"Consumer Goods Retail",url:`${process.env.NEXT_PUBLIC_APP_URL}/industry/consumer-goods-retail`},
+ {pagename:"Bussiness Enhance",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/bussiness-enhance`},
+ {pagename:"Video Creation",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/video-creation`},
+ {pagename:"Content Creation",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/content-creation`},
+ {pagename:"Bussiness Automation",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/bussiness-automation`},
+ {pagename:"Lead Automation",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/lead-automation`},
+ {pagename:"Workflow Automation",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/workflow-automation`},
+ {pagename:"AI Chatbot",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/ai-chatbot`},
+ {pagename:"AI Personal Assistant",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/ai-personal-assistant`},
+ {pagename:"AI Tools",url:`${process.env.NEXT_PUBLIC_APP_URL}/services/ai-tools`},
+ {pagename:"About Us",url:`${process.env.NEXT_PUBLIC_APP_URL}/resourses/about-us`},
+  {pagename:"Contact Us",url:`${process.env.NEXT_PUBLIC_APP_URL}/resourses/contact-us`},
+  {pagename:"Why Choose Us",url:`${process.env.NEXT_PUBLIC_APP_URL}/resourses/why-choose-us`},
+  {pagename:"Help Center",url:`${process.env.NEXT_PUBLIC_APP_URL}/resourses/help-center`},
+  {pagename:"Community",url:`${process.env.NEXT_PUBLIC_APP_URL}/resourses/community`},
+  {pagename:"Blog",url:`${process.env.NEXT_PUBLIC_APP_URL}/resourses/blog`},
+
+]
 
 // ── API Functions (untouched) ────────────────────────────────────────────────
 const api = {
@@ -331,6 +375,8 @@ export default function SEODashboard() {
   const [previewMode, setPreviewMode] = useState<'google' | 'facebook' | 'twitter'>('google');
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+const dropdownRef = useRef<HTMLDivElement>(null);
   // Responsive-only state
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
@@ -350,6 +396,44 @@ const [keywordInput, setKeywordInput] = useState('');
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
+
+  useEffect(() => {
+  const handleClickOutside = (e: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
+const selectedLabel =
+  canonicalUrl.find((v) => v.url === formData.canonicalUrl)?.pagename ||
+  "Select Canonical URL";
+
+  const handleSelect = (selectedUrl: string) => {
+  handleInputChange("canonicalUrl", selectedUrl);
+
+  try {
+    const url = new URL(selectedUrl);
+
+    const path = url.pathname; // "/resources/about"
+    const slug = path.replace(/^\/+/, ""); // "resources/about"
+
+    const pageName = path.split("/").filter(Boolean).pop() || "home";
+
+    setFormData((prev) => ({
+      ...prev,
+      canonicalUrl: selectedUrl,
+      pageName,
+      slug: slug,
+      url: slug,
+    }));
+  } catch (error) {
+    console.error("Invalid URL");
+  }
+
+  setIsOpen(false);
+};
 
   const loadData = useCallback(async () => {
     setIsLoading(true);
@@ -1026,34 +1110,60 @@ useEffect(() => {
   
   <div>
     <label className="block text-sm font-medium text-[var(--color-text-secondary)] mb-1.5">Canonical URL</label>
-    <input 
-      type="text" 
-      value={formData.canonicalUrl || ''}
-      onChange={(e) => {
-        const urlValue = e.target.value;
-        handleInputChange('canonicalUrl', urlValue);
-        if (isCreateMode && urlValue) {
-          try {
-            const url = new URL(urlValue);
-            let path = url.pathname.replace(/^\/+/, '');
-            if (!path) path = 'home';
-            if (!formData.pageName) {
-              setFormData(prev => ({
-                ...prev,
-                pageName: path,
-                slug: generateSlug(path),
-                url: `/${path}`,
-                canonicalUrl: urlValue,
-              }));
-            }
-          } catch {
-            // Invalid URL — ignore
-          }
-        }
-      }}
-      className="w-full px-4 py-2.5 bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
-      placeholder="https://creatikai.com/page" 
+    <div className="relative" ref={dropdownRef}>
+  {/* Trigger */}
+  <button
+    type="button"
+    onClick={() => setIsOpen((prev) => !prev)}
+    className={`w-full flex items-center justify-between px-4 py-2.5 bg-white border rounded-xl text-sm text-left transition-all duration-150
+      ${isOpen
+        ? "border-blue-500 ring-2 ring-blue-100"
+        : "border-slate-200 hover:border-blue-300"
+      }
+      ${!formData.canonicalUrl ? "text-slate-400" : "text-slate-700"}
+    `}
+  >
+    <span className="truncate">{selectedLabel}</span>
+    <ChevronDown
+      size={16}
+      className={`ml-2 shrink-0 text-blue-500 transition-transform duration-200 ${
+        isOpen ? "rotate-180" : ""
+      }`}
     />
+  </button>
+
+  {/* Dropdown panel */}
+  {isOpen && (
+    <div
+      className="absolute z-20 mt-2 w-full bg-white border border-blue-100 rounded-xl shadow-lg shadow-blue-900/5 py-1.5 h-64 overflow-y-auto
+                 animate-in fade-in slide-in-from-top-1 duration-150"
+    >
+      {canonicalUrl.length === 0 && (
+        <div className="px-4 py-2.5 text-sm text-slate-400">No options available</div>
+      )}
+
+      {canonicalUrl.map((value, index) => {
+        const isSelected = formData.canonicalUrl === value.url;
+        return (
+          <button
+            key={index}
+            type="button"
+            onClick={() => handleSelect(value.url)}
+            className={`w-full flex items-center justify-between px-4 py-2.5 text-sm text-left transition-colors
+              ${isSelected
+                ? "bg-blue-50 text-blue-700 font-medium"
+                : "text-slate-700 hover:bg-blue-50/60"
+              }
+            `}
+          >
+            <span className="truncate">{value.pagename}</span>
+            {isSelected && <Check size={15} className="text-blue-600 shrink-0 ml-2" />}
+          </button>
+        );
+      })}
+    </div>
+  )}
+</div>
   </div>
 
   {/* === AI GENERATE PANEL — INSERTED HERE === */}
