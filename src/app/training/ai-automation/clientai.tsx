@@ -745,7 +745,7 @@ export default function AITrainingPage(): JSX.Element {
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="relative min-h-[92vh]  pt-32 flex items-center overflow-hidden">
+      <section className="relative min-h-[100vh]  pt-32 flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0" style={{ backgroundColor: "var(--color-section-alt)" }} />
         <div className="absolute inset-0">
@@ -793,19 +793,18 @@ export default function AITrainingPage(): JSX.Element {
                 </div>
 
                 <h1
-                  className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold tracking-tight leading-[1.05] mb-6"
+                  className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.0] mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  Master Artificial Intelligence with
+                 AI Training in Jaipur Master Artificial Intelligence with 
                   <span className="gradient-text"> Industry Experts</span>
                 </h1>
 
                 <p
-                  className="text-lg leading-relaxed mb-8 max-w-lg"
+                  className="text-md leading-relaxed mb-8 max-w-lg"
                   style={{ color: "var(--color-text-muted)" }}
                 >
-                  From zero to AI hero. Comprehensive, hands-on training programs designed by professionals who built AI systems at top tech companies.
-                </p>
+Creatik AI Training in Jaipur offers hands-on training in AI technologies, coding, and automation. Earn an industry-recognized certification to boost your job prospects. Designed for students and professionals,stay ahead in today’s rapidly evolving technology landscape.                </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
                   <button
@@ -841,7 +840,7 @@ export default function AITrainingPage(): JSX.Element {
                   </button>
                 </div>
 
-                <div className="flex items-center gap-6 text-sm" style={{ color: "var(--color-text-muted)" }}>
+                {/* <div className="flex items-center gap-6 text-sm" style={{ color: "var(--color-text-muted)" }}>
                   <span className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4" style={{ color: "var(--color-emerald)" }} />
                     Live Classes
@@ -854,7 +853,7 @@ export default function AITrainingPage(): JSX.Element {
                     <CheckCircle className="w-4 h-4" style={{ color: "var(--color-emerald)" }} />
                     Job Support
                   </span>
-                </div>
+                </div> */}
               </div>
             </Reveal>
 
@@ -922,17 +921,16 @@ export default function AITrainingPage(): JSX.Element {
                 Training Programs
               </span>
               <h2
-                className="text-2xl font-extrabold tracking-tight mb-4"
-                style={{ color: "var(--color-text-primary)" }}
+                className="text-3xl font-extrabold tracking-tight mb-4"
+               
               >
-                Choose Your AI Learning Path
+               Choose the Best AI Course in <span  style={{ color: "var(--color-primary)" }}>Jaipur</span> for Your Career
               </h2>
               <p
                 className="text-base max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-muted)" }}
               >
-                Six comprehensive programs designed to take you from fundamentals to advanced AI engineering.
-              </p>
+Creatik AI Jaipur helps you become job-ready with hands-on training in Artificial Intelligence (AI), Machine Learning, Generative AI, ChatGPT, Prompt Engineering, Python, and AI Automation. Work on real-world projects, earn an industry-recognized certification, and gain the practical skills needed for high-demand AI careers.              </p>
             </div>
           </Reveal>
 
@@ -1052,19 +1050,16 @@ export default function AITrainingPage(): JSX.Element {
 
           <h2
             className="text-2xl font-extrabold tracking-tight mb-6"
-            style={{ color: "var(--color-text-primary)" }}
+          
           >
-            Not Just Courses — A Complete Career Launchpad
+          Launch Your AI Career with <span   style={{ color: "var(--color-primary)" }}>Jaipur's</span> Leading AI Automation Company
           </h2>
 
           <p
             className="text-base leading-relaxed mb-8"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            We go beyond traditional online learning. Our programs combine
-            rigorous technical training with career coaching, portfolio
-            building, and direct industry connections.
-          </p>
+Start your learning journey and use your newly acquired knowledge in practice through the help of Creatik AI. Our courses provide an opportunity to learn deeply in  AI ML . We focus on AI automation training and prompt engineering  with practical skills ChatGPT and generative AI. All of the courses are designed by professionals who have relevant industry experience and who continue working within the industry.          </p>
 
           <div className="grid sm:grid-cols-2 gap-4">
             {whyChoose.map((item, i) => (
@@ -1353,11 +1348,11 @@ export default function AITrainingPage(): JSX.Element {
           <Reveal>
             <Bot className="w-16 h-16 mx-auto mb-6 text-white/80" />
             <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
-              The Future is AI. <br className="hidden sm:block" />
-              Your Future Starts Here.
+              AI Course in Jaipur –  <br className="hidden sm:block" />
+             Shape the Future with Artificial Intelligence
             </h2>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
-              Join 5,000+ professionals who transformed their careers with CreatiKai AI Training.
+             Join in Creatik AI for advanced knowledge on AI & Generative Technologies and discover ChatGPT, Prompt Engineering, Python & AI Automation. Upgrade yourself through relevant projects and practical learning sessions with helpful tutors. Change your life and join the AI revolution.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
