@@ -182,7 +182,7 @@ https://www.threads.com/@creatikai1
                 { icon: <FaYoutube className="w-4 h-4" />, href: "https://www.youtube.com/@Creatikai0" },
                 { icon: <FaInstagram className="w-4 h-4" />, href: "https://www.instagram.com/creatikai1/" }
               ].map((item, idx) => (
-                <a key={idx} href={item.href} className="flex items-center justify-center w-9 h-9 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all duration-200">
+                <a key={idx} href={item.href} target="_blank" className="flex items-center justify-center w-9 h-9 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all duration-200">
                   {item.icon}
                 </a>
               ))}
