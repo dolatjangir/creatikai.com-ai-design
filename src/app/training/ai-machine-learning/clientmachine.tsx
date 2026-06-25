@@ -453,16 +453,15 @@ export default function AIMachineLearningPage(): JSX.Element {
                   className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold tracking-tight leading-[1.05] mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  AI & Machine Learning
-                  <span className="gradient-text"> Bootcamp</span>
+                  Machine Learning Courses | Master AI & 
+                  <span className="gradient-text">Deep Learning</span>
                 </h1>
 
                 <p
                   className="text-lg leading-relaxed mb-8 max-w-lg"
                   style={{ color: "var(--color-text-muted)" }}
                 >
-                  Go from Python basics to deploying production ML models. 12 weeks of intensive, hands-on training with industry mentors who built AI at top tech companies.
-                </p>
+Kickstart your AI and Machine Learning career with Creatik AI. Explore Python, Data Science, Deep Learning, Neural Networks, and ChatGPT, work on real-world projects, and learn from industry experts. Build in-demand skills and get career-ready with certification.                </p>
 
                 <div className="flex flex-wrap items-center gap-6 mb-10">
                   {[

@@ -541,113 +541,11 @@ function ChatDemo() {
   };
 
   return (
-    <div className="relative w-full max-w-md mx-auto">
+    <div className="relative w-full  mx-auto">
       {/* Glow Effect */}
-      <motion.div
-        className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 blur-2xl"
-        animate={pulseGlow}
-      />
+    
 
-      <div className="relative bg-white rounded-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] border border-[var(--color-border)] overflow-hidden">
-        {/* Chat Header */}
-        <div className="flex items-center justify-between px-5 py-4 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-hover)]">
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-white" />
-              </div>
-              <motion.div
-                className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[var(--color-primary)]"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
-            <div>
-              <h4 className="text-white font-semibold text-sm">CreatiKai AI</h4>
-              <p className="text-blue-100 text-xs flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
-                Online now
-              </p>
-            </div>
-          </div>
-          <button
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-          >
-            {isPlaying ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white" />}
-          </button>
-        </div>
-
-        {/* Messages */}
-        <div className="h-[320px] overflow-y-auto px-4 py-4 space-y-3 bg-[var(--color-bg-hover)]">
-          <AnimatePresence>
-            {messages.map((msg) => (
-              <motion.div
-                key={msg.id}
-                initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className={`max-w-[85%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                    msg.role === "user"
-                      ? "bg-[var(--color-primary)] text-white rounded-br-md"
-                      : "bg-white text-[var(--color-text-primary)] shadow-sm rounded-bl-md border border-[var(--color-border-light)]"
-                  }`}
-                >
-                  {msg.content}
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-
-          {isTyping && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex justify-start"
-            >
-              <div className="bg-white rounded-2xl rounded-bl-md shadow-sm border border-[var(--color-border-light)]">
-                <TypingIndicator />
-              </div>
-            </motion.div>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-
-        {/* Input */}
-        <div className="px-4 py-3 bg-white border-t border-[var(--color-border-light)]">
-          <div className="flex items-center gap-2">
-            <button className="w-8 h-8 rounded-full hover:bg-[var(--color-bg-hover)] flex items-center justify-center text-[var(--color-text-muted)] transition-colors">
-              <ImageIcon className="w-4 h-4" />
-            </button>
-            <button className="w-8 h-8 rounded-full hover:bg-[var(--color-bg-hover)] flex items-center justify-center text-[var(--color-text-muted)] transition-colors">
-              <Mic className="w-4 h-4" />
-            </button>
-            <div className="flex-1 relative">
-              <input
-                ref={inputRef}
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                placeholder="Ask me anything..."
-                className="w-full px-4 py-2.5 bg-[var(--color-bg-hover)] rounded-full text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-faint)] border border-transparent focus:border-[var(--color-primary)] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-all"
-              />
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleSend}
-              className="w-9 h-9 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] flex items-center justify-center text-white shadow-[var(--shadow-btn-primary)] transition-colors"
-            >
-              <Send className="w-4 h-4" />
-            </motion.button>
-          </div>
-        </div>
-      </div>
+    <img  src="/meet-workforce.png"/>
     </div>
   );
 }
@@ -1034,7 +932,7 @@ export default function AIChatbotPage() {
         />
 
         <div className="relative z-10 w-full max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] py-[var(--hero-pt)]">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-5 items-center">
             {/* Left Content */}
             <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="max-w-xl">
               <motion.div
@@ -1115,38 +1013,7 @@ export default function AIChatbotPage() {
             >
               <ChatDemo />
 
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ y: [0, -15, 0], rotate: [0, 3, 0] }}
-                transition={{ duration: 5, repeat: Infinity }}
-                className="absolute -top-6 -right-4 bg-white rounded-xl p-3 shadow-[var(--shadow-lg)] border border-[var(--color-border)] z-20"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--color-icon-bg-4)] flex items-center justify-center">
-                    <ThumbsUp className="w-4 h-4 text-[var(--color-emerald)]" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-[var(--color-text-primary)]">98% CSAT</p>
-                    <p className="text-[10px] text-[var(--color-text-muted)]">Customer rating</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 12, 0], rotate: [0, -2, 0] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                className="absolute -bottom-4 -left-6 bg-white rounded-xl p-3 shadow-[var(--shadow-lg)] border border-[var(--color-border)] z-20"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--color-icon-bg-1)] flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-[var(--color-text-primary)]">0.18s</p>
-                    <p className="text-[10px] text-[var(--color-text-muted)]">Response time</p>
-                  </div>
-                </div>
-              </motion.div>
+             
             </motion.div>
           </div>
         </div>

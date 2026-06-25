@@ -758,21 +758,20 @@ export default function FullStackTrainingPage(): JSX.Element {
                 </div>
 
                 <h1
-                  className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold tracking-tight leading-[1.05] mb-6"
+                  className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.05] mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  Become a
-                  <span className="gradient-text"> Full Stack Developer</span>
+                  Master Full Stack 
+                  <span className="gradient-text"> Web Development in Jaipur </span>
                   <br />
-                  in 16 Weeks
+                  with Live Projects
                 </h1>
 
                 <p
                   className="text-lg leading-relaxed mb-8 max-w-lg"
                   style={{ color: "var(--color-text-muted)" }}
                 >
-                  Master React, Node.js, PostgreSQL, AWS, and DevOps. Build 25+ real projects, get 1-on-1 mentorship, and land your dream tech job with our hiring partner network.
-                </p>
+Master Full Stack Web Development by building 25+ real-world projects. Gain practical skills in modern technologies and transform into an employable developer with Creatik AI.                </p>
 
                 <div className="flex flex-wrap items-center gap-6 mb-10">
                   {[
@@ -1001,14 +1000,15 @@ export default function FullStackTrainingPage(): JSX.Element {
                 className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
-                Everything You Need to Build Production Apps
+Master Full Stack Web Development in Jaipur with Live Projects
               </h2>
               <p
                 className="text-base max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-muted)" }}
               >
-                Master the modern development stack used by top tech companies worldwide.
-              </p>
+Join Creatik AI's Full Stack Developer Course and master modern web development with React.js,
+ Node.js, MongoDB, and JavaScript. Work on real-world projects, learn from industry experts,
+ and gain the practical skills needed to become a successful Full Stack Developer.      </p>
             </div>
           </Reveal>
 
@@ -1149,14 +1149,15 @@ export default function FullStackTrainingPage(): JSX.Element {
                 className="text-2xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
-                Build 25+ Production-Ready Projects
+                Learn Full Stack Development Through 25+ Real Projects
               </h2>
               <p
                 className="text-base max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-muted)" }}
               >
-                Every project is designed to impress recruiters and demonstrate real-world skills.
-              </p>
+Master Full Stack Web Development by building 25+ real-world projects. Gain practical skills in 
+modern technologies and transform into an employable developer with Creatik AI.   
+           </p>
             </div>
           </Reveal>
 
@@ -1639,12 +1640,13 @@ export default function FullStackTrainingPage(): JSX.Element {
           <Reveal>
             <Layers className="w-16 h-16 mx-auto mb-6 text-white/70" />
             <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
-              Build the Future. <br className="hidden sm:block" />
-              Start Your Full Stack Journey.
+              Kickstart Your Career  <br className="hidden sm:block" />
+              with Full Stack Developer Training
             </h2>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
-              Join 3,200+ developers who transformed their careers. Next batch starts July 1 — only 8 seats left.
-            </p>
+Become a full-stack developer through practical training and projects. 
+Joining Creatik AI will definitely assist you in learning practical knowledge 
+and web technologies that the real world will need you to know.            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => setFormOpen(true)}
