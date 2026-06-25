@@ -333,13 +333,14 @@ function Curriculum() {
             variants={fadeUp}
             className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-[#0f172a] mb-4"
           >
-            Everything You Need to{" "}
+            Master Social Media Marketing  {" "}
             <span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] bg-clip-text text-transparent">
-              Dominate Social Media
+                & Campaign Optimization
             </span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-[#475569] max-w-2xl mx-auto">
-            5 comprehensive modules, 78 video lessons, and 28 hours of actionable training designed to take you from beginner to expert.
+Learn how to create high-performing social media campaigns,
+ increase engagement, generate leads, and improve ROI with proven marketing strategies. 
           </motion.p>
         </motion.div>
 
@@ -823,24 +824,23 @@ export default function SocialMediaTrainingPage() {
 
             <motion.h1
               variants={fadeUp}
-              className="text-[clamp(2.5rem,6vw,3.75rem)] font-extrabold leading-[1.1] tracking-tight text-[#0f172a] mb-6"
+              className="text-3xl sm:text-5xl font-extrabold leading-[1.1] tracking-tight text-[#0f172a] mb-6"
             >
-              Master{" "}
+              Master Social Media{" "}
               <span
                 className="bg-gradient-to-r from-[#2563eb] via-[#1d4ed8] to-[#1e40af] bg-clip-text text-transparent"
               >
-                Social Media
+                Marketing Campaigns
               </span>{" "}
-              Campaigns That Convert
+            That Drive Results
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
-              className="text-lg md:text-xl text-[#475569] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-md md:text-lg text-[#475569] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              The complete blueprint for building, launching, and scaling profitable
-              social media campaigns across every major platform. From zero to
-              campaign mastery.
+             
+Learn how to create, launch, and scale high-converting social media campaigns on Instagram, Facebook, LinkedIn, YouTube, and other leading platforms. Master audience targeting, content strategy, paid advertising, and performance optimization with hands-on training.
             </motion.p>
 
             <motion.div

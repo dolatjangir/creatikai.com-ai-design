@@ -434,14 +434,15 @@ function Curriculum() {
             variants={fadeUp}
             className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-[#0f172a] mb-4"
           >
-            Everything You Need to{" "}
+            Complete Google Ads{" "}
             <span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] bg-clip-text text-transparent">
-              Dominate Google Ads
+              Training Program
             </span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-[#475569] max-w-2xl mx-auto">
-            6 comprehensive modules, 83 video lessons, and 32 hours of actionable training designed to make you a Google Ads expert.
-          </motion.p>
+6 modules, 83 lessons, and 32+ hours of hands-on Google Ads training to help you create,
+ optimize, and scale profitable campaigns.        
+   </motion.p>
         </motion.div>
 
         <div className="space-y-4">
@@ -552,14 +553,15 @@ function Outcomes() {
             variants={fadeUp}
             className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-[#0f172a] mb-4"
           >
-            What You Will{" "}
+           What You'll Achieve with{" "}
             <span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] bg-clip-text text-transparent">
-              Achieve
+               This Google Ads Course
             </span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-lg text-[#475569] max-w-2xl mx-auto">
-            By the end of this course, you'll have the skills, systems, and confidence to run Google Ads campaigns that deliver measurable business results.
-          </motion.p>
+Gain the skills to create, manage, and optimize Google Ads campaigns that drive leads, sales, and measurable ROI. Master campaign strategy, 
+audience targeting, conversion tracking, and performance optimization.  
+        </motion.p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -840,13 +842,14 @@ function CTA() {
             variants={fadeUp}
             className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-white mb-4"
           >
-            Start Running Google Ads That{" "}
-            <span className="text-[#60a5fa]">Actually Convert</span>
+            Master Google Ads & {" "}
+            <span className="text-[#60a5fa]">Performance Marketing</span>
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-lg text-[#94a3b8] max-w-2xl mx-auto mb-8">
-            Join 9,800+ marketers who have already transformed their Google Ads performance. Your next high-performing campaign starts today.
-          </motion.p>
+Learn Search Ads, Performance Max, keyword research, bidding strategies,
+ and conversion tracking to maximize ROI and campaign performance.        
+   </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -880,12 +883,12 @@ export default function GoogleAdsTrainingPage() {
       <div className="absolute inset-0">
         {/* Base Gradient */}
         <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #1e3a5f 50%, #1e40af 75%, #2563eb 100%)",
-          }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10"
+         style={{
+    backgroundImage: "url('/google-ads-hero.png')",
+  }}
         />
-
+<div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/90 via-[#1e3a8a]/70 to-[#0f172a]/90" />
         {/* Animated Gradient Orbs */}
         <div
           className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-30 blur-[100px]"
@@ -954,13 +957,13 @@ export default function GoogleAdsTrainingPage() {
           {/* Headline */}
           <motion.h1
             variants={fadeUp}
-            className="text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6"
+            className="text-2xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight text-white mb-6"
           >
-            Master{" "}
+           Google Ads Course{" "}
             <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
-              Google Ads
+               Create High-Performing 
             </span>{" "}
-            and Turn Every Click Into Profit
+            PPC Campaigns
           </motion.h1>
 
           {/* Subheadline */}
@@ -968,9 +971,9 @@ export default function GoogleAdsTrainingPage() {
             variants={fadeUp}
             className="text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl"
           >
-            The complete system for building, optimizing, and scaling Google Ads campaigns 
-            that deliver predictable revenue. From Search to Performance Max — 
-            master every campaign type with confidence.
+           Learn Google Ads, Search Ads, Display Ads, Shopping Ads,
+            and Performance Max campaigns. Master keyword research, bidding strategies, 
+           conversion tracking, and campaign optimization to generate more leads, sales, and ROI.
           </motion.p>
 
           {/* CTA Buttons */}

@@ -515,18 +515,20 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                 </div>
 
                 <h1
-                  className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold tracking-tight leading-[1.05] mb-6"
+                  className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.05] mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  Master Digital Marketing in
-                  <span className="gradient-text"> Pink City</span>
+               AI-Powered Digital Marketing Course 
+                  <span className="gradient-text">  in Jaipur | Creatik AI</span>
                 </h1>
 
                 <p
                   className="text-lg leading-relaxed mb-8 max-w-lg"
                   style={{ color: "var(--color-text-muted)" }}
                 >
-                  Join Jaipur's most practical digital marketing course. Learn SEO, Google Ads, Social Media, and AI Marketing with live projects on real Jaipur businesses. 100% placement support.
+Master AI-Powered Digital Marketing in Jaipur with Creatik AI. Learn SEO, Google Ads,
+ Social Media Marketing, ChatGPT, Gemini, 
+and AI Marketing through live projects. Get certified and receive 100% placement assistance.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-6 mb-10">
@@ -577,7 +579,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                   </button>
                 </div>
 
-                <div className="flex items-center gap-4 mt-8 pt-8 border-t" style={{ borderColor: "var(--color-border-light)" }}>
+                {/* <div className="flex items-center gap-4 mt-8 pt-8 border-t" style={{ borderColor: "var(--color-border-light)" }}>
                   <div className="flex -space-x-2">
                     {["P", "R", "N", "A"].map((letter, i) => (
                       <div
@@ -603,7 +605,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                       Rated by 2,800+ Jaipur students
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </Reveal>
 
@@ -705,7 +707,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
       {/* ============================================
           JAIPUR LOCATION BAR
           ============================================ */}
-      <section
+      {/* <section
         className="py-6 border-y"
         style={{
           backgroundColor: "var(--color-card-bg)",
@@ -735,7 +737,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============================================
           STATS BAR
@@ -785,16 +787,17 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                 Course Curriculum
               </span>
               <h2
-                className="text-2xl font-extrabold tracking-tight mb-4"
+                className="text-3xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
-                6 Modules. 10 Weeks. Zero to Pro.
+                6 Comprehensive Modules. 10 Weeks of Hands-On Training.
               </h2>
               <p
                 className="text-base max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-muted)" }}
               >
-                Industry-relevant curriculum designed by marketers who've managed crores in ad spend.
+Learn Digital Marketing, SEO, Google Ads, Social Media Marketing, Performance Marketing, and AI Marketing from experts who have managed multi-crore campaigns. Build real-world skills, work on live projects, 
+and become job-ready with industry-focused training from Creatik AI.
               </p>
             </div>
           </Reveal>
@@ -869,17 +872,18 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                   Why CreatiKai Jaipur
                 </span>
                 <h2
-                  className="text-2xl font-extrabold tracking-tight mb-6"
+                  className="text-3xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  Why We're Jaipur's #1 Digital Marketing Institute
+                  Why Creatik AI is Jaipur's Leading Digital Marketing Institute
                 </h2>
                 <p
                   className="text-base leading-relaxed mb-8"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  5 years, 2,800+ students, and 150+ hiring partners. We don't just teach marketing — we create marketers who deliver results.
-                </p>
+5+ years, 2,800+ trained students, and 150+ hiring partners.
+ Learn practical digital marketing and AI skills that employers value.   
+              </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   {whyChoose.map((item, i) => (
@@ -926,7 +930,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
       {/* ============================================
           PLACEMENTS / HIRING PARTNERS
           ============================================ */}
-      <section className="py-[var(--section-py)]">
+      {/* <section className="py-[var(--section-py)]">
         <div className="max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]">
           <Reveal>
             <div className="text-center mb-14">
@@ -1000,7 +1004,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============================================
           INQUIRY SECTION — Content Left, Sticky Form Right
@@ -1041,17 +1045,18 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                   Free Demo Class
                 </span>
                 <h2
-                  className="text-2xl font-extrabold tracking-tight mb-6"
+                  className="text-3xl font-extrabold tracking-tight mb-6"
                   style={{ color: "var(--color-text-primary)" }}
                 >
-                  Start Your Digital Marketing Journey Today
+                  Join Jaipur's Leading AI Digital Marketing Course
                 </h2>
                 <p
                   className="text-base leading-relaxed mb-8"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  Book a FREE demo class at our Jaipur center. Experience our teaching methodology, meet the trainers, and get your career roadmap — all before paying a single rupee.
-                </p>
+Attend a free demo session, experience hands-on learning, 
+and see how Creatik AI helps students become job-ready marketers.  
+              </p>
 
                 <div className="space-y-4 mb-8">
                   {[
@@ -1301,7 +1306,7 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
                 Student Reviews
               </span>
               <h2
-                className="text-2xl font-extrabold tracking-tight mb-4"
+                className="text-3xl font-extrabold tracking-tight mb-4"
                 style={{ color: "var(--color-text-primary)" }}
               >
                 What Jaipur Students Say
@@ -1422,12 +1427,11 @@ export default function DigitalMarketingJaipurPage(): JSX.Element {
           <Reveal>
             <MapPin className="w-16 h-16 mx-auto mb-6 text-white/70" />
             <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
-              Your Marketing Career <br className="hidden sm:block" />
-              Starts in Pink City.
+              Launch Your Digital Marketing Career  <br className="hidden sm:block" />
+              in Jaipur with Creatik AI
             </h2>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
-              Join 2,800+ Jaipur students who transformed their careers. Next batch starts July 5 — only 5 seats left.
-            </p>
+     Learn SEO, Google Ads, Social Media, ChatGPT, and AI Marketing. Join 2,800+ students and build a job-ready digital marketing career with Creatik AI.            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => setFormOpen(true)}
