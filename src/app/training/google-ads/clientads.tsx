@@ -888,7 +888,7 @@ export default function GoogleAdsTrainingPage() {
     backgroundImage: "url('/google-ads-hero.png')",
   }}
         />
-<div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/90 via-[#1e3a8a]/70 to-[#0f172a]/90" />
+<div className="absolute inset-0 bg-black/90" />
         {/* Animated Gradient Orbs */}
         <div
           className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-30 blur-[100px]"

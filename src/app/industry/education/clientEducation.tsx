@@ -457,19 +457,19 @@ function Hero() {
       </div>
 
       {/* Headline */}
-      <h1 className="text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-blue-500 mb-6">
-        The Complete{" "}
+      <h1 className="text-2xl sm:text-4xl font-extrabold leading-[1.05] tracking-tight text-blue-500 mb-6">
+      The Ultimate {" "}
         <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
-          Education Marketing
+          Education Marketing &
         </span>{" "}
-        & Enrollment System
+         Student Enrollment System
       </h1>
 
       {/* Subheadline */}
       <p className="text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-2xl">
-        Master the art and science of student recruitment. Build automated enrollment 
-        engines that fill seats — from first inquiry to campus arrival — for schools, 
-        colleges, universities, and online educators.
+       Build a complete education marketing and admissions engine that consistently
+        generates qualified student leads, automates follow-ups, improves conversions,
+        and increases enrollments—from awareness to admission and onboarding..
       </p>
 
       {/* CTA Buttons */}
@@ -559,13 +559,14 @@ function Curriculum() {
             <span className="text-sm font-semibold text-[#475569]">Complete Curriculum</span>
           </div>
           <h2 className="anim-fade-up delay-100 text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-[#0f172a] mb-4">
-            Everything You Need to{" "}
+           Fill More Seats with {" "}
             <span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] bg-clip-text text-transparent">
-              Fill Every Seat
+             a Proven Enrollment System
             </span>
           </h2>
           <p className="anim-fade-up delay-200 text-lg text-[#475569] max-w-2xl mx-auto">
-            6 comprehensive modules, 105 video lessons, and 36 hours of education-specific training designed for real enrollment results.
+          
+Learn through 6 comprehensive modules, 105 expert-led video lessons, and 36+ hours of hands-on training designed to help schools, colleges, universities, coaching institutes, and online educators attract, convert, and enroll more students.
           </p>
         </div>
 
@@ -663,8 +664,7 @@ function Outcomes() {
             </span>
           </h2>
           <p className="anim-fade-up delay-200 text-lg text-[#475569] max-w-2xl mx-auto">
-            By the end of this course, you'll have the skills, systems, and confidence to drive consistent enrollment growth for any educational institution.
-          </p>
+Build a complete student enrollment system that generates qualified leads, automates follow-ups, and increases admissions with confidence.          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
@@ -699,12 +699,11 @@ function Testimonials() {
             <span className="text-sm font-semibold text-white">Education Leaders Speak</span>
           </div>
           <h2 className="anim-fade-up delay-100 text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-white mb-4">
-            Results That{" "}
-            <span className="text-[#60a5fa]">Fill Classrooms</span>
+            Build a Student Enrollment{" "}
+            <span className="text-[#60a5fa]"> Engine That Never Stops Growing</span>
           </h2>
           <p className="anim-fade-up delay-200 text-lg text-[#94a3b8] max-w-2xl mx-auto">
-            Join education marketers worldwide who have transformed their enrollment numbers with our proven systems.
-          </p>
+Learn proven strategies, AI-powered automation, and digital marketing techniques to consistently generate qualified student enrollments.          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 stagger-children">

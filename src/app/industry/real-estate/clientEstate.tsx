@@ -435,18 +435,18 @@ function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-[clamp(2.5rem,7vw,3.5rem)] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
-          The Complete{" "}
+        <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+          The CompleteThe {" "}
           <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#dbeafe] bg-clip-text text-transparent">
-            Real Estate CRM
+          Ultimate Real Estate CRM,
           </span>{" "}
-          & Lead Generation System
+         Lead Generation System
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-[#94a3b8] leading-relaxed mb-10 max-w-xl">
-          Master the technology, marketing, and systems that top-producing agents use to 
-          close more deals, nurture every lead, and scale from solo agent to brokerage owner.
+         Master Real Estate CRM, Lead Generation, Sales Funnels, Marketing Automation, and Client Management 
+         to generate high-quality leads, close more deals, and scale your real estate business.
         </p>
 
         {/* CTA Buttons */}
@@ -649,14 +649,13 @@ function Outcomes() {
             <span className="text-sm font-semibold text-[#1d4ed8]">Learning Outcomes</span>
           </div>
           <h2 className="anim-fade-up delay-100 text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-[#0f172a] mb-4">
-            What You Will{" "}
+            Build the Real Estate{" "}
             <span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] bg-clip-text text-transparent">
-              Achieve
+               Business You Deserve
             </span>
           </h2>
           <p className="anim-fade-up delay-200 text-lg text-[#475569] max-w-2xl mx-auto">
-            By the end of this course, you'll have the systems, automations, and strategies to become a top-producing agent in any market.
-          </p>
+Master proven systems to generate quality leads, close more deals, and grow your real estate business.          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
