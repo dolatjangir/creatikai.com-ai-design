@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import {
   Eye,
   EyeOff,
@@ -194,7 +194,7 @@ export default function RegisterPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2.5 mb-6 group">
             <div className="relative">
-              <Image
+              <img
                 src="/creatikai-logo.png"
                 alt="Creatik AI"
                 width={40}

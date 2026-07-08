@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 
@@ -132,7 +132,7 @@ setLoading(false);
       {/* logo creatikai */}
  <Link href="/" className="hidden  absolute left-10 top-10 sm:inline-flex items-center gap-2.5 mb-6 group">
             <div className="relative">
-              <Image
+              <img
                 src="/creatikai-logo.png"
                 alt="Creatik AI"
                 width={40}

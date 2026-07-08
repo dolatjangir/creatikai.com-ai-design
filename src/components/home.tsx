@@ -28,7 +28,6 @@ import {
   Sparkles,
   Check,
 } from "lucide-react";
-import Image from "next/image";
 import AgencySection from "@/components/agencys";
 import Link from "next/link";
 
@@ -164,58 +163,10 @@ export default function HomePage(): JSX.Element {
                   Explore Us
                   <ArrowRight className="w-4 h-4" />
                 </button></Link>
-                {/* <button
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold rounded-xl border transition-all text-sm"
-                  style={{
-                    backgroundColor: "var(--color-bg)",
-                    color: "var(--color-text-secondary)",
-                    borderColor: "var(--color-border)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "var(--color-bg-hover)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "var(--color-bg)";
-                  }}
-                >
-                  View Case Studies
-                  <Award className="w-4 h-4" style={{ color: "var(--color-text-muted)" }} />
-                </button> */}
+              
               </div>
 
-              {/* <div className="flex items-center gap-4">
-                <div className="flex -space-x-2.5">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-9 h-9 rounded-full border-2 overflow-hidden"
-                      style={{
-                        borderColor: "var(--color-bg)",
-                        backgroundColor: "var(--color-avatar-bg)",
-                      }}
-                    >
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Users className="w-4 h-4" style={{ color: "var(--color-text-muted)" }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <div className="flex items-center gap-1 mb-0.5">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star
-                        key={i}
-                        className="w-3.5 h-3.5"
-                        style={{ fill: "var(--color-star)", color: "var(--color-star)" }}
-                      />
-                    ))}
-                  </div>
-                  <p className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>
-                    Trusted by <span className="font-semibold" style={{ color: "var(--color-text-primary)" }}>500+</span> businesses
-                    <br className="sm:hidden" /> worldwide for AI automation
-                  </p>
-                </div>
-              </div> */}
+           
             </div>
 
             {/* Right Visual */}
@@ -223,7 +174,13 @@ export default function HomePage(): JSX.Element {
               <div className="relative w-full max-w-md  sm:ml-10 lg:ml-16 lg:max-w-xl">
            
 
-                <img  src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672201/new12_dpfrvo.png"/>
+                <img
+                  src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672201/new12_dpfrvo.png"
+                  alt="hero-robot-img"
+                     loading="eager"
+  fetchPriority="high"
+  decoding="async"
+                  />
             
               </div>
             </div>
@@ -474,13 +431,13 @@ export default function HomePage(): JSX.Element {
             {/* Right Image */}
             <div className="order-1 lg:order-2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-xl)]">
-                <Image
+                <img
                   src="https://res.cloudinary.com/djipgt6vc/image/upload/v1781672187/company_ejur2t.png"
                   alt="Creatik IT Solution Office Building"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
-                  priority
+             
                 />
               </div>
 
