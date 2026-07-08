@@ -1,15 +1,4 @@
-// import type { NextConfig } from "next";
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-//   reactCompiler: true,
-//    images: {
-//       domains: ['res.cloudinary.com'],
-//     unoptimized: true,
-//   },
-// };
-
-// export default nextConfig;
 import withPWAInit from "next-pwa";
 
 const withPWA = withPWAInit({
@@ -23,9 +12,16 @@ const nextConfig = {
   reactCompiler: true,
   turbopack: {},
   images: {
-    domains: ["res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+      },
+    ],
     unoptimized: true,
   },
 };
+
 
 export default withPWA(nextConfig);
