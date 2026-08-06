@@ -177,7 +177,7 @@ https://www.threads.com/@creatikai1
               {[
                 { icon: <FaTwitter className="w-4 h-4" />, href: "https://x.com/Creatikai0" },
                  { icon: <FaThreads className="w-4 h-4" />, href: "https://www.threads.com/@creatikai1" },
-                { icon: <FaLinkedin className="w-4 h-4" />, href: "https://www.linkedin.com/in/creatik-ai-2b1370418/" },
+                { icon: <FaLinkedin className="w-4 h-4" />, href: "https://www.linkedin.com/in/creatik-ai-0616a2389/" },
                 { icon: <FaFacebook className="w-4 h-4" />, href: "https://www.facebook.com/profile.php?id=61591002214672" },
                 { icon: <FaYoutube className="w-4 h-4" />, href: "https://www.youtube.com/@Creatikai0" },
                 { icon: <FaInstagram className="w-4 h-4" />, href: "https://www.instagram.com/creatikai1/" }
