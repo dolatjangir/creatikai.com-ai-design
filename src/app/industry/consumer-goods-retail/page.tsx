@@ -11,7 +11,7 @@ export const generateMetadata = generateSEOMetadata;
 export default async function  page() {
    const blogs = await getPageBlogs('customer-goods-retail');
   return(
-    <>
+    <>  
      <ConsumerGoodsRetailPage/>
      <RelatedBlogs blogs={blogs} />
      </>
