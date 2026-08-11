@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import Script from "next/script";
 import LayoutWrapper from "@/components/layoutwrapper/layoutwrapper";
 import { AuthProvider } from "@/context/AuthContext";
 import NewsletterPopup from "@/components/newsLetterPopup";
 
-
+const GA_ID = "G-XY5T063WXL";
 
 
 export const metadata: Metadata = {
@@ -101,9 +101,23 @@ export default function RootLayout({
         <AuthProvider>
     <LayoutWrapper>
         {children}
-      
+       {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
 </LayoutWrapper>
 </AuthProvider>
+
         </body>
     </html>
   );
